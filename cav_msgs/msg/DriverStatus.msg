@@ -25,3 +25,4 @@ bool    position
 bool    comms
 bool    lon_controller
 bool    lat_controller
+bool    camera

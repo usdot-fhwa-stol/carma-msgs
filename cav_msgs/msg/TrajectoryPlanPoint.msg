@@ -9,11 +9,11 @@ float64 x
 # Y coordinate of the trajectory plan point
 float64 y
 
-# Desired time when reaching the trajectory plan point
-uint64 timestamp
+# Target time when the host vehicle reaches the trajectory plan point
+uint64 target_time
 
-# Lane Id of the trajectory plan point
-uint8 lane_id
+# Lane Id of the trajectory plan point based on HD map lane descriptions
+string lane_id
 
 # Controller plugin name required by the trajectory plan point
 string controller_plugin_name

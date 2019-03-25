@@ -1,2 +1,10 @@
-string  plan_id
+# TrajectoryPlan.msg
 
+# This message describes a trajectory planned one or more plugins
+# Each trajectory plan contains an unique ID and a list of trajectory plan points
+
+# The unique GUID of this trajectory
+string  trajectory_id
+
+# A list of trajectory plan points describe the detailed trajectory plan
+cav_msgs/TrajectoryPlanPoint[] trajectory_points

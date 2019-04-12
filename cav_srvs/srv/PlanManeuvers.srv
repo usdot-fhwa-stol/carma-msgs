@@ -14,4 +14,5 @@ time start_time
 
 #response
 
-cav_msgs/ManeuverPlan
+# The returned maneuver plan
+cav_msgs/ManeuverPlan maneuver_plan

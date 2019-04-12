@@ -6,11 +6,15 @@
 
 #request
 
-# TODO populate this with the vehicle starting state
-cav_msgs/ManeuverPlan
+# The starting state of the vehicle
+cav_msgs/VehicleState vehicle_state
+
+# The set of maneuvers to be executed
+cav_msgs/ManeuverPlan maneuver_plan
 
 ---
 
 #response
 
-cav_msgs/TrajectoryPlan
+# The returned trajectory
+cav_msgs/TrajectoryPlan trajectory_plan

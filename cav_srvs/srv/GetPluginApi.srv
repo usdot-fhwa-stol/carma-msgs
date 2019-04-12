@@ -1,0 +1,16 @@
+# GetDriverApi.srv
+#
+# This is a service provided by each device driver to describe its API
+# in terms of ROS topics and services that it provides.
+#
+
+# Request - no arguments
+
+---
+
+# Response
+
+# The fully qualified ROS graph name of the plugin's plan_maneuvers service
+string plan_maneuvers_service
+# The fully qualified ROS graph name of the plugin's plan_trajectory service
+string plan_trajectory_service

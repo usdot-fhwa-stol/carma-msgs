@@ -1,0 +1,16 @@
+# PlanTrajectory.srv
+#
+# Service used to request a trajectory plan from a plugin
+#
+#
+
+#request
+
+# TODO populate this with the vehicle starting state
+cav_msgs/ManeuverPlan
+
+---
+
+#response
+
+cav_msgs/TrajectoryPlan

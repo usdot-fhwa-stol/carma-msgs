@@ -8,13 +8,12 @@
 uint8 type
 
 # enum values for type:
-uint8 UNKNOWN = 0 # Indicates a poorly formed message. Do we need this?
-uint8 LANE_FOLLOWING = 1
-uint8 LANE_CHANGE = 2
-uint8 INTERSECTION_TRANSIT_STRAIGHT = 3
-uint8 INTERSECTION_TRANSIT_LEFT_TURN = 4
-uint8 INTERSECTION_TRANSIT_RIGHT_TURN = 5
-uint8 STOP_AND_WAIT = 6
+uint8 LANE_FOLLOWING = 0
+uint8 LANE_CHANGE = 1
+uint8 INTERSECTION_TRANSIT_STRAIGHT = 2
+uint8 INTERSECTION_TRANSIT_LEFT_TURN = 3
+uint8 INTERSECTION_TRANSIT_RIGHT_TURN = 4
+uint8 STOP_AND_WAIT = 5
 # Remaining enum values reserved for future use
 
 # The maneuver type objects which this maneuver wraps

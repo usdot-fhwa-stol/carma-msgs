@@ -3,6 +3,11 @@
 # Message defining shared parameters of Maneuvers in the CARMA platform
 #
 
+# The unique GUID of this maneuver
+# The maneuver ID assigns a unique ID to the physical maneuver being performed not the ros message or code object
+# Therefore maneuver ID is independant of the message and can persit across maneuver plans
+string  maneuver_id
+
 # Enum indicating the type of negotiation this maneuver is involved in
 uint8 neogition_type
 

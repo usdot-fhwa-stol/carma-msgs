@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2018 LEIDOS.
+# Copyright (C) 2018-2019 LEIDOS.
 #
 # Licensed under the Apache License, Version 2.0 (the "License"); you may not
 # use this file except in compliance with the License. You may obtain a copy of
@@ -27,6 +27,7 @@ find_package(catkin REQUIRED COMPONENTS
   message_generation
   std_msgs
   geometry_msgs
+  j2735_msgs
 )
 
 ## System dependencies are found with CMake's conventions
@@ -129,7 +130,7 @@ generate_messages(
 catkin_package(
  # INCLUDE_DIRS include
 #  LIBRARIES cav_msgs
- CATKIN_DEPENDS message_runtime std_msgs geometry_msgs
+ CATKIN_DEPENDS message_runtime std_msgs geometry_msgs j2735_msgs
 #  DEPENDS system_lib
 )
 

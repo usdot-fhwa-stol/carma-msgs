@@ -1,0 +1,18 @@
+# PlanManeuvers.srv
+#
+# Service used to request a maneuver plan from a plugin
+#
+#
+
+#request
+
+# Vehicle starting state for use with maneuvers
+float64 start_dist # downtrack distance in m
+float64 start_speed # spedometer speed in m/s
+time start_time
+---
+
+#response
+
+# The returned maneuver plan
+cav_msgs/ManeuverPlan maneuver_plan

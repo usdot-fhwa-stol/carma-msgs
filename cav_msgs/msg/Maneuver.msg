@@ -1,47 +1,26 @@
 # Maneuver.msg
 #
-# Helper message for MobilityPlan.msg describes the details of a given type of maneuver,
-# specifically to be used in definition of a new plan for future coordinated movement.
+# Message defining a Maneuver for use in CARMA planning. 
+# This message wraps the possible maneuver types
 #
 
 # the type of maneuver
-uint8       type
+uint8 type
 
 # enum values for type:
-uint8       UNKNOWN = 0
-uint8       CONSTANT_SPEED = 1
-uint8       SPEEDUP = 2
-uint8       SLOWDOWN = 3
-uint8       MAINTAIN_LANE = 4
-uint8       CHANGE_LANE_LEFT = 5
-uint8       CHANGE_LANE_RIGHT = 6
-# the rest value in not defined in J2735 specification
-uint8       TURN_CORNER_LEFT = 7
-uint8       TURN_CORNER_RIGHT = 8
+uint8 LANE_FOLLOWING = 0
+uint8 LANE_CHANGE = 1
+uint8 INTERSECTION_TRANSIT_STRAIGHT = 2
+uint8 INTERSECTION_TRANSIT_LEFT_TURN = 3
+uint8 INTERSECTION_TRANSIT_RIGHT_TURN = 4
+uint8 STOP_AND_WAIT = 5
+# Remaining enum values reserved for future use
 
-# Bitflags indicating which participants in the plan are performing this maneuver
-# (possibly multiple vehicles are performing the same maneuver simultaneously).
-# Bit 0 (LSb) is plan originator, bit positions 1-31 represent index to MobilityPlan
-# participant_ids array.
-uint8[]      performers
-
-# unique ID of the roadway link in which this maneuver will begin
-string      start_roadway_link
-
-# Location on the link, according to the linear reference model (typically
-# centerline distance from one end of the link) at which the maneuver will begin, meters.
-# This refers to the position of the plan originator (other participants will 
-# obviously be at a different position at that time).
-uint16     start_roadway_originator_position
-
-# lane that the originator will be in (on the indicated start_roadway_link) when this
-# maneuver is to begin.
-uint8       start_roadway_lane_id
-
-# anticipated length of the maneuver - how much distance will be covered from 
-# beginning to end, meters
-uint16      length
-
-# maneuver parameters which may indicate target speed, lane ID, etc
-# the format should be <startDistance>:<endDistance>:<startSpeed>:<endSpeed>
-string      parameters
+# The maneuver type objects which this maneuver wraps
+# Only one of these fields will be populated at a time to match the maneuver type of this message
+cav_msgs/LaneFollowingManeuver lane_following_maneuver
+cav_msgs/LaneChangeManeuver lane_change_maneuver
+cav_msgs/IntersectionTransitStraightManeuver intersection_transit_straight_maneuver
+cav_msgs/IntersectionTransitLeftTurnManeuver intersection_transit_left_turn_maneuver
+cav_msgs/IntersectionTransitRightTurnManeuver intersection_transit_right_turn_maneuver
+cav_msgs/StopAndWaitManeuver stop_and_wait_maneuver

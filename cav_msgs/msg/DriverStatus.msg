@@ -21,7 +21,7 @@ uint8  FAULT=3
 # These are the possible categories - at least one must be true
 bool    can
 bool    radar
-bool    gps
+bool    gnss
 bool    lidar
 bool    roadway_sensor
 bool    comms

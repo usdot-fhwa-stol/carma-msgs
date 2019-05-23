@@ -19,13 +19,13 @@ uint8  FAULT=3
 #					<other values reserved for future expansion>
 
 # These are the possible categories - at least one must be true
-bool    can_bus
-bool    sensor
-bool    position
-bool    gps
+bool    can
+bool    radar
+bool    gnss
+bool    lidar
+bool    roadway_sensor
 bool    comms
-bool    lon_controller
-bool    lat_controller
+bool    controller
 bool    camera
 bool    imu
 

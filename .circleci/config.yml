@@ -3,7 +3,7 @@ jobs:
   build:
     # Setup docker
     docker:
-      - image: usdotfhwastol/carma-base:2.8.2
+      - image: usdotfhwastol/carma-base:3.1.0
         user: carma
         environment:
           TERM: xterm # use xterm to get full display output from build

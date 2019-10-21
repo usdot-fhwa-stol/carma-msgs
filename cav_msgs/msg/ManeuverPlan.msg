@@ -16,4 +16,4 @@ time planning_start_time
 time planning_completion_time
 
 # The set of maneuvers defining this plan
-cav_msgs/Maneuver maneuvers
+cav_msgs/Maneuver[] maneuvers

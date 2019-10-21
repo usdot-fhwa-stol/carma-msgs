@@ -6,13 +6,12 @@
 
 #request
 
-# Vehicle starting state for use with maneuvers
-float64 start_dist # downtrack distance in m
-float64 start_speed # spedometer speed in m/s
-time start_time
+# Maneuvers planned prior to the current planning request.
+# These maneuvers must not be modified by this process
+cav_msgs/ManeuverPlan prior_plan
 ---
 
 #response
 
-# The returned maneuver plan
-cav_msgs/ManeuverPlan maneuver_plan
+# The returned maneuver plan, must be a strict superset of prior plan
+cav_msgs/ManeuverPlan new_plan

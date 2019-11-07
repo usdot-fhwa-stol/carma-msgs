@@ -28,4 +28,5 @@ bool    comms
 bool    controller
 bool    camera
 bool    imu
+bool    trailer_angle_sensor
 

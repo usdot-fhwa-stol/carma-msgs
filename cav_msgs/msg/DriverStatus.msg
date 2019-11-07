@@ -28,4 +28,5 @@ bool    comms
 bool    controller
 bool    camera
 bool    imu
+bool    lidar_lite_v3hp
 

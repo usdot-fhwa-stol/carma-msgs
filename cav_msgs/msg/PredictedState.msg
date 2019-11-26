@@ -3,7 +3,7 @@
 # 
 # Describes the predicted states of non-stationary external objects over one time step.
 
-# Header contains the frame rest of the fields will use
+# Header contains the timestamp and frame id which the remaining fields reference.
 Header header
 
 # Predicted position of the object

@@ -16,7 +16,7 @@
 -->
 <package>
   <name>j2735_msgs</name>
-  <version>0.1.0</version>
+  <version>1.1.0</version>
   <description>The j2735_msgs package</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag -->

@@ -17,11 +17,10 @@ uint16 VELOCITY_PRESENCE_VECTOR = 4
 uint16 VELOCITY_INST_PRESENCE_VECTOR = 8
 uint16 SIZE_PRESENCE_VECTOR = 16
 uint16 CONFIDENCE_PRESENCE_VECTOR = 32
-uint16 RANGE_RATE_PRESENCE_VECTOR = 64
-uint16 AZIMUTH_RATE_PRESENCE_VECTOR = 128
-uint16 RELATIVE_LANE_PRESENCE_VECTOR = 256
-uint16 OBJECT_TYPE_PRESENCE_VECTOR = 512
-uint16 BSM_ID_PRESENCE_VECTOR = 1024
+uint16 OBJECT_TYPE_PRESENCE_VECTOR = 64
+uint16 BSM_ID_PRESENCE_VECTOR = 128
+uint16 DYNAMIC_OBJ_PRESENCE = 256
+uint16 PREDICTION_PRESENCE_VECTOR = 512
 
 #Object id. Matching ids on a topic should refer to the same object within some time period, expanded
 uint32 id
@@ -45,20 +44,6 @@ geometry_msgs/Vector3 size
 #Confidence [0,1]
 float64 confidence
 
-#range rate in m/s
-float64 range_rate
-
-#azimuth rate in rad/s
-float64 azimuth_rate
-
-# lane object is detected in relative to the lane the sensor is detecting from
-uint8 relative_lane
-
-# used for relative lane
-uint8 HOST_LANE = 1
-uint8 RIGHT_LANE = 2
-uint8 LEFT_LANE = 3
-
 #describes a general object type as defined in this message
 uint8 object_type
 
@@ -69,3 +54,8 @@ uint8 LARGE_VEHICLE = 2
 uint8 MOTORCYCLE = 3
 uint8 PEDESTRIAN = 4
 
+# Binary value to show if the object is static or dynamic (1: dynamic, 0: static)
+bool dynamic_obj
+
+#Predictions for the object
+cav_msgs/PredictedState[] predictions

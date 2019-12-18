@@ -26,3 +26,6 @@ bool available
 
 # Whether or not the plugin is activated by user
 bool activated
+
+# Indicate plugin's capabilitiy in a hierarchy structure: "capbilitiy_A/feature_B_of_capbilitiy_A/implementation_C_of_feature_B"
+string capability

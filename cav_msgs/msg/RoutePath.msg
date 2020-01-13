@@ -1,4 +1,4 @@
-# This contains lanelets IDs of the route shortest path
+# This contains lanelet IDs of the route and the shortest path in the route
 
 # Timestamp and frame_id of the map
 Header header
@@ -6,6 +6,9 @@ Header header
 # Route name
 string route_name
 
-# LaneLets ID of the route shortest path
-int32[] data
+# LaneLet IDs of the route shortest path
+int32[] shortest_path_lanelet_ids
+
+# LaneLet IDs of the whole route, including all lanelets in the shortest path
+int32[] route_path_lanelet_ids
 

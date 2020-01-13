@@ -1,4 +1,4 @@
-# This contains the lanelet route in binary format
+# This contains lanelets IDs of the route shortest path
 
 # Timestamp and frame_id of the map
 Header header
@@ -6,6 +6,6 @@ Header header
 # Route name
 string route_name
 
-# Binary data of the route object
+# LaneLets ID of the route shortest path
 int32[] data
 

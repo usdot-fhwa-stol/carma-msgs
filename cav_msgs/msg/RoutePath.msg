@@ -3,6 +3,12 @@
 # Timestamp and frame_id of the map
 Header header
 
+# The route id
+string route_id
+
+# The version of current route
+int32 route_version
+
 # Route name
 string route_name
 

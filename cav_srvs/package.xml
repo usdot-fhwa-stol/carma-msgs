@@ -16,7 +16,7 @@
 -->
 <package>
   <name>cav_srvs</name>
-  <version>1.1.0</version>
+  <version>1.2.0</version>
   <description>The cav_srvs package</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag -->

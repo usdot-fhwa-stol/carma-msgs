@@ -16,7 +16,7 @@
 -->
 <package>
   <name>cav_msgs</name>
-  <version>1.2.0</version>
+  <version>1.2.1</version>
   <description>The cav_msgs package</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag -->

@@ -1,4 +1,11 @@
+#
+# Route Message
+# 
 # This contains lanelet IDs of the route and the shortest path in the route
+#
+# @author Shuwei Qiang
+# @version 0.1
+#
 
 # Timestamp and frame_id of the map
 Header header

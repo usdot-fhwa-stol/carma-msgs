@@ -7,7 +7,7 @@
 # @version 0.1
 #
 
-Header header  # timestamp in the header is the time the sensor returned the angle reading
+std_msgs/Header header  # timestamp in the header is the time the sensor returned the angle reading
 
-Float64 angle #trailer angle in raidans
+float64 angle #trailer angle in raidans
 

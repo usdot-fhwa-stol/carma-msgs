@@ -10,13 +10,13 @@
 # Timestamp and frame_id of the map
 Header header
 
-# The route id
+# The route filename
 string route_id
 
-# The version of current route
+# The version of current route, monotonically increasing integer starting at 1
 uint32 route_version
 
-# Route name
+# Route name, for display purpose
 string route_name
 
 # LaneLet IDs of the route shortest path

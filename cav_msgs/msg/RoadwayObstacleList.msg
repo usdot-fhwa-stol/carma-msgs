@@ -1,7 +1,7 @@
 #
-# RoadwayEnvironment.msg
+# RoadwayObstacleList.msg
 # 
-# Provides a full picture of the roadway environment including other vehicles
+# A list of RoadwayObstacle
 #
 # @author Michael McConnell
 # @version 0.1

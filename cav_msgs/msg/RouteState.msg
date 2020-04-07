@@ -23,17 +23,17 @@ uint8 SELECTION=1
 uint8 ROUTING=2
 uint8 FOLLOWING=3
 
-# Cross-track distance of vehicle along route
+# Cross-track distance of vehicle along route in meters
 float64 cross_track
 
-# Down-track distance of vehicle along route
+# Down-track distance of vehicle along route in meters
 float64 down_track
 
-# Down-track distance of vehicle along the current lanelet
+# Down-track distance of vehicle along the current lanelet in meters
 float64 lanelet_downtrack
 
 # Current host vehicle lane index
 int64 lanelet_id
 
-# Current speed limit on current lanelet
+# Current speed limit on current lanelet in m/s
 float64 speed_limit

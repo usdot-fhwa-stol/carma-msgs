@@ -34,3 +34,6 @@ float64 lanelet_downtrack
 
 # Current host vehicle lane index
 int64 lanelet_id
+
+# Current speed limit on current lanelet
+float64 speed_limit

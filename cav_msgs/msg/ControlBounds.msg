@@ -11,7 +11,7 @@
 # Description
 # ...
 
-# Oldest timestap in seconds
+# Oldest timestamp in seconds
 #  -- timestamp of oldest control message within bounds
 time oldest
 

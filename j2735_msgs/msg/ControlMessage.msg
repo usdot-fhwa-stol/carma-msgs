@@ -8,8 +8,12 @@
 # @author  Misheel Bayartsengel 
 # @version 0.1
 #
-# Description
-# ...
+# CARMA Cloud generates control messages based on geocoordinates as of a certain date-timestamp. 
+# CARMA Platform interprets the control messages to its own map context, which is consistent with 
+# maps being used by vehicles.
+# Transportation controls in the physical view and control messages in the information view convey 
+# necessary information to affect human and ADS behavior: vehicle type, when a control is active, 
+# area of effect, and constraints.
 
 # ControlMessage ::= IMPLICIT SEQUENCE {
 # 	version IA5String,

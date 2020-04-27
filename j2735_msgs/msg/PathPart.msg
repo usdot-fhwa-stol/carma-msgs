@@ -8,8 +8,11 @@
 # @author Misheel Bayartsengel
 # @version 0.1
 #
-# Description
-# ...
+# Point tags within the path tag are relative to the path reference point, and are 
+# measured in meters. The positive x direction proceeds eastward, positive y proceeds
+# northward, and positive z proceeds away from the center of the Earth. The number of 
+# path points can vary considerably. A new point should be added to the list when the 
+# linear approximation deviates from the actual path by no more than 10 cm.
 
 # PathPart ::= IMPLICIT SEQUENCE {
 # 	id OCTET STRING (SIZE(16)),

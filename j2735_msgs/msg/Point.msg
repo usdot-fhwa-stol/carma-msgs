@@ -8,8 +8,8 @@
 # @author Misheel Bayartsengel
 # @version 0.1
 #
-# Description
-# ...
+# The positive x direction proceeds eastward, positive y proceeds
+# northward, and positive z proceeds away from the center of the Earth. 
 
 # Point ::= IMPLICIT SEQUENCE {
 # 	x INTEGER, -- units are cm for all of these

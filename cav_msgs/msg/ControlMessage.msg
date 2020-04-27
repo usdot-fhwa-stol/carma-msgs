@@ -30,7 +30,7 @@ uint64 updated
 j2735_msgs/VType[] vtypes
 
 # schedule Schedule
-j2735_msgs/Schedule schedule
+cav_msgs/Schedule schedule
 
 # Regulatory ::= BOOLEAN
 bool regulatory
@@ -52,9 +52,8 @@ string proj
 # Datum ::= IA5String (SIZE(0..50))
 string datum
 
-# Time ::= INTEGER (0..9223372036854775807)
-#  -- A UNIX timestamp in milliseconds, which indicates the time elapsed since UNIX epoch
-uint64 time
+# Time 
+time time
 
 # Longitude in degrees
 float64 longitude

@@ -11,10 +11,9 @@
 # Description
 # ...
 
-# Oldest INTEGER (0..9223372036854775807)
+# Oldest timestap in seconds
 #  -- timestamp of oldest control message within bounds
-#  -- A UNIX timestamp in milliseconds, which indicates the time elapsed since UNIX epoch
-uint64 oldest
+time oldest
 
 # Longitude in degrees
 # -- initial vertex reference longitude

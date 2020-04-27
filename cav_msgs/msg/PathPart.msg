@@ -15,20 +15,12 @@
 # linear approximation deviates from the actual path by no more than 10 cm.
 
 
-# PathPart ::= IMPLICIT SEQUENCE {
-# 	id OCTET STRING (SIZE(16)),
-# 	updated INTEGER (0..9223372036854775807),
-# 	pathindex INTEGER (1..127),
-# 	points SEQUENCE (SIZE(1..120)) OF Point
-# }
-
 # Id ::= OCTET STRING (SIZE(16))
 uint8[16] id
 
-# Updated ::= INTEGER (0..9223372036854775807)
-#  -- time when this message is updated
-#  -- A UNIX timestamp in milliseconds, which indicates the time elapsed since UNIX epoch
-uint64 updated
+# Updated 
+#  -- time when this message is updated (in s)
+time updated
 
 # Pathindex ::= INTEGER (1..127)
 uint8 path_idx

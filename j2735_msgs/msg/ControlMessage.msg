@@ -73,6 +73,7 @@ string proj
 string datum
 
 # Time ::= INTEGER (0..9223372036854775807)
+#  -- time the control applies to
 #  -- A UNIX timestamp in milliseconds, which indicates the time elapsed since UNIX epoch
 uint64 time
 

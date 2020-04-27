@@ -21,10 +21,9 @@ string version
 # Id ::= OCTET STRING (SIZE(16))
 uint8[16] id 
 
-# Updated ::= INTEGER (0..9223372036854775807)
-#  -- time when this message is updated
-#  -- A UNIX timestamp in milliseconds, which indicates the time elapsed since UNIX epoch
-uint64 updated
+# Updated time
+#  -- time when this message is last updated
+time updated
 
 # vTypes VehicleTypes ::= SET OF VehicleType
 j2735_msgs/VType[] vtypes
@@ -52,7 +51,7 @@ string proj
 # Datum ::= IA5String (SIZE(0..50))
 string datum
 
-# Time 
+# Time of control
 time time
 
 # Longitude in degrees

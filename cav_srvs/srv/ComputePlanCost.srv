@@ -12,4 +12,4 @@ cav_msgs/ManeuverPlan maneuver_plan
 
 ---
 # Response
-string plan_cost
+double plan_cost

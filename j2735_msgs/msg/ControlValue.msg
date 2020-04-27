@@ -19,7 +19,7 @@
 # 	prkingallowd ENUMERATED {no, parallel, angled}
 # }
 
-# Value ::= INTEGER (SIZE(32))
+# Value ::= INTEGER
 int32 value
 
 # Direction := ENUMERATED

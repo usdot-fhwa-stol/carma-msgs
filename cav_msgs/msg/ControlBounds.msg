@@ -11,33 +11,18 @@
 # Description
 # ...
 
-# ControlBounds ::= IMPLICIT SEQUENCE {
-# 	oldest INTEGER (0..9223372036854775807), -- timestamp of oldest control message within bounds
-# 	lon INTEGER (-1800000000..1799999999), -- initial vertex reference longitude
-# 	lat INTEGER (-900000000..900000000), -- initial vertex reference latitude
-# 	offsets SEQUENCE (SIZE(3)) OF INTEGER (-32768..32767) -- relative vertex positions in scaled meters
-# }
-
 # Oldest INTEGER (0..9223372036854775807)
 #  -- timestamp of oldest control message within bounds
 #  -- A UNIX timestamp in milliseconds, which indicates the time elapsed since UNIX epoch
 uint64 oldest
 
-# Longitude ::= INTEGER (-1799999999..1800000001)
-#  -- initial vertex reference longitude
-#  -- LSB = 1/10 micro degree
-#  -- Providing a range of plus-minus 180 degrees
-#  -- Convert to degree with factor 0.0000001 when field is used
+# Longitude in degrees
 float64 longitude
 
 float64 LONGITUDE_MAX = 180.0
 float64 LONGITUDE_MIN = -179.9999999
 
-# Latitude ::= INTEGER (-900000000..900000001)
-#  -- initial vertex reference latitude
-#  -- LSB = 1/10 micro degree
-#  -- Providing a range of plus-minus 90 degrees
-#  -- Convert to degree with factor 0.0000001 when field is used
+# Latitude in degrees
 float64 latitude
 
 float64 LATITUDE_MAX = 90.0

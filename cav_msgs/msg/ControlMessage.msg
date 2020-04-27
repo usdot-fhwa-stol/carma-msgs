@@ -15,26 +15,6 @@
 # necessary information to affect human and ADS behavior: vehicle type, when a control is active, 
 # area of effect, and constraints.
 
-# ControlMessage ::= IMPLICIT SEQUENCE {
-# 	version IA5String,
-# 	id OCTET STRING (SIZE(16)),
-# 	updated INTEGER (0..9223372036854775807),
-# 	vtypes SET OF VType,
-# 	schedule Schedule,
-# 	regulatory BOOLEAN,
-# 	controltype ControlType,
-# 	controlvalue ControlValue OPTIONAL,
-# 	pathParts INTEGER (0..127),
-# 	proj IA5String,
-# 	datum IA5String,
-# 	time INTEGER (0..9223372036854775807),
-# 	lon INTEGER (-1800000000..1799999999),
-# 	lat INTEGER (-900000000..900000000),
-# 	alt INTEGER (0..92760), -- decimeters offset by -4280, which is lowest elevation at Dead Sea, max value is mount everest
-# 	heading INTEGER (0..3599), -- tenths of degrees
-# 	points SEQUENCE (SIZE(2..100)) OF Point
-# }
-
 # Version ::= IA5String (SIZE(36))
 string version 
 
@@ -76,40 +56,30 @@ string datum
 #  -- A UNIX timestamp in milliseconds, which indicates the time elapsed since UNIX epoch
 uint64 time
 
-# Longitude ::= INTEGER (-1799999999..1800000001)
-#  -- LSB = 1/10 micro degree
-#  -- Providing a range of plus-minus 180 degrees
-#  -- Convert to degree with factor 0.0000001 when field is used
+# Longitude in degrees
 float64 longitude
 
 float64 LONGITUDE_MAX = 180.0
 float64 LONGITUDE_MIN = -179.9999999
 
-# Latitude ::= INTEGER (-900000000..900000001)
-#  -- LSB = 1/10 micro degree
-#  -- Providing a range of plus-minus 90 degrees
-#  -- Convert to degree with factor 0.0000001 when field is used
+# Latitude in degrees
 float64 latitude
 
 float64 LATITUDE_MAX = 90.0
 float64 LATITUDE_MIN = -90.0
 
-# Altitude ::= INTEGER (0..92760)
-#  -- decimeters offset by -4280, which is lowest elevation at Dead Sea, max value is mount everest
-#  -- In units of 10 cm steps above the sea level
+# Altitude in meters
+#  -- In units of 0.1m steps above the sea level
 #  -- Providing a range of 0 to + 9276.0 meters
-#  -- The value 92761 shall be used when Unknown is to be sent
-#  -- Convert to meter with factor 0.1 when field is used
+#  -- The value 9276.1 shall be used when Unknown is to be sent
 float32 altitude
 
 float32 ALTITUDE_UNAVAILABLE = 9276.1
 float32 ALTITUDE_MAX = 9276.0
 
-# Heading ::= INTEGER (0..3599)
-#  -- tenths of degrees
-#  -- LSB of 0.1 degrees
+# Heading in degrees
+#  -- In units of 0.1 deg steps
 #  -- A range of 0 to 359.9 degrees
-#  -- Convert to degree with factor 0.1 when field is used
 float32 heading
 float32 HEADING_UNAVAILABLE = 360.0
 float32 HEADING_MAX = 359.9

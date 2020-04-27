@@ -1,6 +1,8 @@
 #
 # PathPart.msg
 #
+# Part of the CARMA Cloud geo-fence specification not part of the official SAE j2735 standard
+#
 # J2735 2016 message format.
 #
 # @author Misheel Bayartsengel
@@ -17,7 +19,7 @@
 # }
 
 # Id ::= OCTET STRING (SIZE(16))
-uint8[] id
+uint8[16] id
 
 # Updated ::= INTEGER (0..9223372036854775807)
 #  -- time when this message is updated
@@ -31,6 +33,6 @@ uint8 PATH_IDX_UNAVAILABLE = 128
 uint8 PATH_IDX_MAX = 127
 uint8 PATH_IDX_MIN = 1
 
-# Points ::= SEQUENCE (SIZE(2..100)) OF Point
+# Points ::= SEQUENCE (SIZE(1..120)) OF Point
 j2735_msgs/Point[] points
 

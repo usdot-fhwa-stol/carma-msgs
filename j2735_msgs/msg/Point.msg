@@ -1,6 +1,8 @@
 #
 # Point.msg
 #
+# Part of the CARMA Cloud geo-fence specification not part of the official SAE j2735 standard
+#
 # J2735 2016 message format.
 #
 # @author Misheel Bayartsengel
@@ -26,4 +28,4 @@ bool z_exists
 
 # Width ::= INTEGER (0, 4294967295)
 #   -- units are in cm
-uint32 width
+uint16 width

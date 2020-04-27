@@ -1,6 +1,8 @@
 #
 # ControlValue.msg
 #
+# Part of the CARMA Cloud geo-fence specification not part of the official SAE j2735 standard
+#
 # J2735 2016 message format.
 #
 # @author Misheel Bayartsengel
@@ -17,7 +19,7 @@
 # 	prkingallowd ENUMERATED {no, parallel, angled}
 # }
 
-# Value ::= INTEGER (TODO:SIZE)
+# Value ::= INTEGER (SIZE(32))
 int32 value
 
 # Direction := ENUMERATED

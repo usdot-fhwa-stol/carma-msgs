@@ -1,9 +1,11 @@
 #
 # ControlBounds.msg
 #
+# Part of the CARMA Cloud geo-fence specification not part of the official SAE j2735 standard
+#
 # J2735 2016 message format.
 #
-# @author Mae Fromm
+# @author  Misheel Bayartsengel
 # @version 0.1
 #
 # Description

@@ -1,9 +1,11 @@
 #
 # ControlMessage.msg
 #
+# Part of the CARMA Cloud geo-fence specification not part of the official SAE j2735 standard
+#
 # J2735 2016 message format.
 #
-# @author Mae Fromm
+# @author  Misheel Bayartsengel 
 # @version 0.1
 #
 # Description
@@ -33,7 +35,7 @@
 string version 
 
 # Id ::= OCTET STRING (SIZE(16))
-uint8[] id 
+uint8[16] id 
 
 # Updated ::= INTEGER (0..9223372036854775807)
 #  -- time when this message is updated
@@ -60,10 +62,10 @@ bool control_value_exists
 uint8 path_parts
 uint8 PATH_PART_MAX = 127
 
-# Proj ::= IA5String (SIZE(0..255)) TODO
+# Proj ::= IA5String (SIZE(0..255))
 string proj
 
-# Datum ::= IA5String (SIZE(0..50)) TODO
+# Datum ::= IA5String (SIZE(0..50))
 string datum
 
 # Time ::= INTEGER (0..9223372036854775807)

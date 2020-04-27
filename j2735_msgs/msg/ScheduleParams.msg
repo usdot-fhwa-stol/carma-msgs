@@ -1,6 +1,8 @@
 #
 # ScheduleParams.msg
 #
+# Part of the CARMA Cloud geo-fence specification not part of the official SAE j2735 standard
+#
 # J2735 2016 message format.
 #
 # @author Misheel Bayartsengel

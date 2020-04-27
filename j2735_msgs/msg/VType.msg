@@ -1,13 +1,17 @@
 #
 # VType.msg
 #
+# Part of the CARMA Cloud geo-fence specification not part of the official SAE j2735 standard
+#
 # J2735 2016 message format.
 #
 # @author Misheel Bayartsengel
 # @version 0.1
 #
-# Description
-# ...
+# Vehicle types serve as convenient labels that classify widely varying sets of vehicle physical 
+# characteristics into a smaller and more manageable list. This is generally seen when identifying 
+# allowed commercial truck routes or restricting pedestrians and bicycles from highways. A vehicle 
+# type list shown is derived from Federal Highway publication FHWA-HRT-13-091.
 
 # VType ::= IMPLICIT ENUMERATED {
 # 	pedestrian,

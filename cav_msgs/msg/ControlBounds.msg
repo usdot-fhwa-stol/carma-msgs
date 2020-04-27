@@ -17,12 +17,14 @@
 uint64 oldest
 
 # Longitude in degrees
+# -- initial vertex reference longitude
 float64 longitude
 
 float64 LONGITUDE_MAX = 180.0
 float64 LONGITUDE_MIN = -179.9999999
 
 # Latitude in degrees
+# -- initial vertex reference latitude
 float64 latitude
 
 float64 LATITUDE_MAX = 90.0

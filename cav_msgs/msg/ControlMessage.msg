@@ -76,21 +76,19 @@ uint64 time
 #  -- LSB = 1/10 micro degree
 #  -- Providing a range of plus-minus 180 degrees
 #  -- Convert to degree with factor 0.0000001 when field is used
-int32 longitude
+float64 longitude
 
-int32 LONGITUDE_UNAVAILABLE = 1800000001
-int32 LONGITUDE_MAX = 1800000000
-int32 LONGITUDE_MIN = -1799999999
+float64 LONGITUDE_MAX = 180.0
+float64 LONGITUDE_MIN = -179.9999999
 
 # Latitude ::= INTEGER (-900000000..900000001)
 #  -- LSB = 1/10 micro degree
 #  -- Providing a range of plus-minus 90 degrees
 #  -- Convert to degree with factor 0.0000001 when field is used
-int32 latitude
+float64 latitude
 
-int32 LATITUDE_UNAVAILABLE = 900000001
-int32 LATITUDE_MAX = 900000000
-int32 LATITUDE_MIN = -900000000
+float64 LATITUDE_MAX = 90.0
+float64 LATITUDE_MIN = -90.0
 
 # Altitude ::= INTEGER (0..92760)
 #  -- decimeters offset by -4280, which is lowest elevation at Dead Sea, max value is mount everest
@@ -98,20 +96,20 @@ int32 LATITUDE_MIN = -900000000
 #  -- Providing a range of 0 to + 9276.0 meters
 #  -- The value 92761 shall be used when Unknown is to be sent
 #  -- Convert to meter with factor 0.1 when field is used
-uint32 altitude
+float32 altitude
 
-uint32 ALTITUDE_UNAVAILABLE = 92761
-uint32 ALTITUDE_MAX = 92760
+float32 ALTITUDE_UNAVAILABLE = 9276.1
+float32 ALTITUDE_MAX = 9276.0
 
 # Heading ::= INTEGER (0..3599)
 #  -- tenths of degrees
 #  -- LSB of 0.1 degrees
 #  -- A range of 0 to 359.9 degrees
 #  -- Convert to degree with factor 0.1 when field is used
-uint16 heading
-uint16 HEADING_UNAVAILABLE = 3600
-uint16 HEADING_MAX = 3599
-uint16 HEADING_MIN = 0
+float32 heading
+float32 HEADING_UNAVAILABLE = 360.0
+float32 HEADING_MAX = 359.9
+float32 HEADING_MIN = 0
 
 # Points ::= SEQUENCE (SIZE(2..100)) OF Point
-j2735_msgs/Point[] points
+cav_msgs/Point[] points

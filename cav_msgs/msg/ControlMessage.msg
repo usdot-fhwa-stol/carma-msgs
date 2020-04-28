@@ -71,7 +71,7 @@ bool altitude_available
 # Heading in degrees
 #  -- In units of 0.1 deg steps
 #  -- A range of 0 to 359.9 degrees
-#  -- The heading_available boolean shall be set false when headin is unavailable
+#  -- The heading_available boolean shall be set false when heading is unavailable
 float32 heading
 
 bool heading_available

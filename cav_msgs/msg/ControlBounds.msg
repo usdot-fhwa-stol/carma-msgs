@@ -15,21 +15,15 @@
 #  -- timestamp of oldest control message within bounds
 time oldest
 
-# Longitude in degrees
+# Longitude in degrees with a range of (-179.9999999, 180.0)
 # -- initial vertex reference longitude
 float64 longitude
 
-float64 LONGITUDE_MAX = 180.0
-float64 LONGITUDE_MIN = -179.9999999
-
-# Latitude in degrees
+# Latitude in degrees with a range of (-90.0, 90.0)
 # -- initial vertex reference latitude
 float64 latitude
 
-float64 LATITUDE_MAX = 90.0
-float64 LATITUDE_MIN = -90.0
-
-# Offsets SEQUENCE (SIZE(3)) OF INTEGER (-32768..32767) 
-#  -- relative vertex positions in scaled meters
-int16 offsets
+# Offsets
+#  -- relative vertex positions in meters
+float64[3] offsets
 

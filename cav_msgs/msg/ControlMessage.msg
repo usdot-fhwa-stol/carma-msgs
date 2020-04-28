@@ -54,34 +54,27 @@ string datum
 # Time of control
 time time
 
-# Longitude in degrees
+# Longitude in degrees with a range of (-179.9999999, 180.0)
 float64 longitude
 
-float64 LONGITUDE_MAX = 180.0
-float64 LONGITUDE_MIN = -179.9999999
-
-# Latitude in degrees
+# Latitude in degrees with a range of (-90.0, 90.0)
 float64 latitude
-
-float64 LATITUDE_MAX = 90.0
-float64 LATITUDE_MIN = -90.0
 
 # Altitude in meters
 #  -- In units of 0.1m steps above the sea level
 #  -- Providing a range of 0 to + 9276.0 meters
-#  -- The value 9276.1 shall be used when Unknown is to be sent
+#  -- The altitude_available boolean shall be set false when Unknown is to be sent
 float32 altitude
 
-float32 ALTITUDE_UNAVAILABLE = 9276.1
-float32 ALTITUDE_MAX = 9276.0
+bool altitude_available
 
 # Heading in degrees
 #  -- In units of 0.1 deg steps
 #  -- A range of 0 to 359.9 degrees
+#  -- The heading_available boolean shall be set false when headin is unavailable
 float32 heading
-float32 HEADING_UNAVAILABLE = 360.0
-float32 HEADING_MAX = 359.9
-float32 HEADING_MIN = 0
+
+bool heading_available
 
 # Points ::= SEQUENCE (SIZE(2..100)) OF Point
 cav_msgs/Point[] points

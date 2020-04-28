@@ -47,5 +47,5 @@ int32 LATITUDE_MIN = -900000000
 
 # Offsets SEQUENCE (SIZE(3)) OF INTEGER (-32768..32767) 
 #  -- relative vertex positions in scaled meters
-int16 offsets
+int16[3] offsets
 

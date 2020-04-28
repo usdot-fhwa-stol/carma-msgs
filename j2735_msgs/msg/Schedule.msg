@@ -35,7 +35,7 @@ uint64 end
 # DayOfWeek OPTIONAL ::= SEQUENCE (SIZE(7)) OF BOOLEAN
 #  -- 0=sunday, 1=monday, ...
 #  -- if monday, dow = [false, true, false, false, false, false, false]
-bool[] dow
+bool[7] dow
 bool dow_exists
 
 # between DaySchedule OPTIONAL

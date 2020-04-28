@@ -12,4 +12,4 @@ cav_msgs/ManeuverPlan maneuver_plan
 
 ---
 # Response
-double plan_cost
+float64 plan_cost

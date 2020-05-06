@@ -61,18 +61,12 @@ float64 latitude
 # Altitude in meters
 #  -- In units of 0.1m steps above the sea level
 #  -- Providing a range of 0 to + 9276.0 meters
-#  -- The altitude_available boolean shall be set false when Unknown is to be sent
 float32 altitude
-
-bool altitude_available
 
 # Heading in degrees
 #  -- In units of 0.1 deg steps
 #  -- A range of 0 to 359.9 degrees
-#  -- The heading_available boolean shall be set false when heading is unavailable
 float32 heading
-
-bool heading_available
 
 # Points ::= SEQUENCE (SIZE(2..100)) OF Point
 cav_msgs/Point[] points

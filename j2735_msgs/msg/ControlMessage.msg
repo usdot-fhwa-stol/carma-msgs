@@ -77,23 +77,21 @@ string datum
 #  -- A UNIX timestamp in milliseconds, which indicates the time elapsed since UNIX epoch
 uint64 time
 
-# Longitude ::= INTEGER (-1799999999..1800000001)
+# Longitude ::= INTEGER (-1799999999..1800000000)
 #  -- LSB = 1/10 micro degree
 #  -- Providing a range of plus-minus 180 degrees
 #  -- Convert to degree with factor 0.0000001 when field is used
 int32 longitude
 
-int32 LONGITUDE_UNAVAILABLE = 1800000001
 int32 LONGITUDE_MAX = 1800000000
 int32 LONGITUDE_MIN = -1799999999
 
-# Latitude ::= INTEGER (-900000000..900000001)
+# Latitude ::= INTEGER (-900000000..900000000)
 #  -- LSB = 1/10 micro degree
 #  -- Providing a range of plus-minus 90 degrees
 #  -- Convert to degree with factor 0.0000001 when field is used
 int32 latitude
 
-int32 LATITUDE_UNAVAILABLE = 900000001
 int32 LATITUDE_MAX = 900000000
 int32 LATITUDE_MIN = -900000000
 
@@ -105,7 +103,6 @@ int32 LATITUDE_MIN = -900000000
 #  -- Convert to meter with factor 0.1 when field is used
 uint32 altitude
 
-uint32 ALTITUDE_UNAVAILABLE = 92761
 uint32 ALTITUDE_MAX = 92760
 
 # Heading ::= INTEGER (0..3599)
@@ -114,7 +111,6 @@ uint32 ALTITUDE_MAX = 92760
 #  -- A range of 0 to 359.9 degrees
 #  -- Convert to degree with factor 0.1 when field is used
 uint16 heading
-uint16 HEADING_UNAVAILABLE = 3600
 uint16 HEADING_MAX = 3599
 uint16 HEADING_MIN = 0
 

@@ -20,15 +20,13 @@
 
 
 # reqid ::= Id64b
-uint8[8] reqseq
+uint8[8] reqid
 
 # reqseq ::= INTEGER (0..255)
-float32 reqseq
+uint8 reqseq
 
 # Bounds SEQUENCE (SIZE(1..63)) OF TrafficControlBounds
 cav_msgs/ControlBounds[] bounds
-
-
 
 
 

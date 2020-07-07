@@ -34,4 +34,4 @@ float64 reflat
 
 # Offsets
 #  -- relative vertex positions in meters
-float64[3] offsets
+cav_msgs/OffsetPoint[3] offsets

@@ -41,26 +41,26 @@ uint8 choice
 
 # enumeration values for choice:
 
-uint8 SIGNAL_CHOICE=0
-uint8 STOP_CHOICE=1
-uint8 YIELD_CHOICE=2
-uint8 NOTOWING_CHOICE=3
-uint8 RESTRICTED_CHOICE=4
-uint8 CLOSED_CHOICE=5
-uint8 CHAINS_CHOICE=6
-uint8 DIRECTION_CHOICE=7
-uint8 LATAFFINITY_CHOICE=8
-uint8 LATPERM_CHOICE=9
-uint8 PARKING_CHOICE=10
-uint8 MINSPEED_CHOICE=11
-uint8 MAXSPEED_CHOICE=12
-uint8 MINHDWY_CHOICE=13
-uint8 MAXVEHMASS_CHOICE=14
-uint8 MAXVEHHEIGHT_CHOICE=15
-uint8 MAXVEHWIDTH_CHOICE=16
-uint8 MAXVEHLENGTH_CHOICE=17
-uint8 MAXVEHAXLES_CHOICE=18
-uint8 MINVEHOCC_CHOICE=19
+uint8 SIGNALCHOICE=0
+uint8 STOPCHOICE=1
+uint8 YIELDCHOICE=2
+uint8 NOTOWINGCHOICE=3
+uint8 RESTRICTEDCHOICE=4
+uint8 CLOSEDCHOICE=5
+uint8 CHAINSCHOICE=6
+uint8 DIRECTIONCHOICE=7
+uint8 LATAFFINITYCHOICE=8
+uint8 LATPERMCHOICE=9
+uint8 PARKINGCHOICE=10
+uint8 MINSPEEDCHOICE=11
+uint8 MAXSPEEDCHOICE=12
+uint8 MINHDWYCHOICE=13
+uint8 MAXVEHMASSCHOICE=14
+uint8 MAXVEHHEIGHTCHOICE=15
+uint8 MAXVEHWIDTHCHOICE=16
+uint8 MAXVEHLENGTHCHOICE=17
+uint8 MAXVEHAXLESCHOICE=18
+uint8 MINVEHOCCCHOICE=19
 
 # signal ::= OCTET STRING SIZE(0..63)
 uint8 signal
@@ -71,17 +71,17 @@ uint8 closed
 
 # enumeration values for closed:
 
-unit8 OPEN=0
+uint8 OPEN=0
 
-unit8 CLOSED=1
+uint8 CLOSED=1
 
-unit8 TAPERLEFT=2
+uint8 TAPERLEFT=2
 
-unit8 TAPERRIGHT=3
+uint8 TAPERRIGHT=3
 
-unit8 OPENLEFT=4
+uint8 OPENLEFT=4
 
-unit8 OPENRIGHT=5
+uint8 OPENRIGHT=5
 
 #chains ENUMERATED {no, permitted, required}
 
@@ -89,11 +89,11 @@ uint8 chains
 
 # enumeration values for chains:
 
-unit8 NO=0
+uint8 NO=0
 
-unit8 PERMITTED=1
+uint8 PERMITTED=1
 
-unit8 REQUIRED=2
+uint8 REQUIRED=2
 
 
 #direction ENUMERATED {forward, reverse}
@@ -102,9 +102,9 @@ uint8 direction
 
 # enumeration values for direction:
 
-unit8 FORWARD=0
+uint8 FORWARD=0
 
-unit8 REVERSE=1
+uint8 REVERSE=1
 
 #lataffinity ENUMERATED {left, right}
 
@@ -112,9 +112,9 @@ uint8 lataffinity
 
 # enumeration values for lataffinity:
 
-unit8 LEFT=0
+uint8 LEFT=0
 
-unit8 RIGHT=1
+uint8 RIGHT=1
 
 #latperm SEQUENCE (SIZE(2)) OF ENUMERATED {none, permitted, passing-only, emergency-only}
 
@@ -122,13 +122,13 @@ uint8[2] latperm
 
 # enumeration values for latperm:
 
-unit8 NONE=0
+uint8 NONE=0
 
-unit8 PERMITTED=1
+uint8 PERMITTED=1
 
-unit8 PASSINGONLY=2
+uint8 PASSINGONLY=2
 
-unit8 EMERGENCYONLY=3
+uint8 EMERGENCYONLY=3
 
 #parking ENUMERATED {no, parallel, angled}
 
@@ -136,11 +136,11 @@ uint8 parking
 
 # enumeration values for parking:
 
-unit8 NO=0
+uint8 NO=0
 
-unit8 PARALLEL=1
+uint8 PARALLEL=1
 
-unit8 ANGLED=1
+uint8 ANGLED=1
 
 #minspeed ::= INTEGER (0..1023), -- tenths of m/s
 float64 minspeed
@@ -164,10 +164,10 @@ float64 maxvehwidth
 float64 maxvehlength
 
 #maxvehaxles ::= INTEGER (2..15)
-float64 maxvehaxles
+uint8 maxvehaxles
 
 #minvehocc ::= INTEGER (1..15)
-float64 minvehocc
+uint8 minvehocc
 
 
 

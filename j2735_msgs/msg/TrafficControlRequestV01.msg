@@ -21,7 +21,7 @@
 
 
 # reqid ::= Id64b
-uint8[8] reqseq
+uint8[8] reqid
 
 # reqseq ::= INTEGER (0..255)
 uint8 reqseq

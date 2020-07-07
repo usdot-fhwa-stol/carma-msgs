@@ -20,8 +20,8 @@
 
 uint8 choice
 
-uint8 RESERVED_CHOICE=0
-uint8 TCRV01_CHOICE=1
+uint8 RESERVEDCHOICE=0
+uint8 TCRV01CHOICE=1
 
 #tcrV01 ::= TrafficControlRequestV01
 cav_msgs/TrafficControlRequestV01 tcrV01

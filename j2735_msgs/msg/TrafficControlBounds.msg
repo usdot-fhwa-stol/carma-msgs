@@ -34,6 +34,7 @@ int32 REFLON_MAX = 1800000000
 int32 REFLON_MIN = -1799999999
 int32 REFLON_UNAVAILABLE = 1800000001
 
+
 # reflat ::= INTEGER (-900000000..900000000)
 #  -- initial vertex reference latitude
 #  -- LSB = 1/10 micro degree

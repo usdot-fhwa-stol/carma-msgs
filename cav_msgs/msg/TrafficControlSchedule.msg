@@ -32,7 +32,7 @@ j2735_msgs/DayOfWeek dow
 bool dow_exists
 
 # between [2] SEQUENCE (SIZE(1..63)) OF DailySchedule OPTIONAL, 
-cav_msgs/DailySchedule between
+cav_msgs/DailySchedule[] between
 bool between_exists
 
 # repeat [3] RepeatParams OPTIONAL

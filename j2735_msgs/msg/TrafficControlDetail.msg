@@ -41,26 +41,26 @@ uint8 choice
 
 # enumeration values for choice:
 
-uint8 SIGNAL=0
-uint8 STOP=1
-uint8 YIELD=2
-uint8 NOTOWING=3
-uint8 RESTRICTED=4
-uint8 CLOSED=5
-uint8 CHAINS=6
-uint8 DIRECTION=7
-uint8 LATAFFINITY=8
-uint8 LATPERM=9
-uint8 PARKING=10
-uint8 MINSPEED=11
-uint8 MAXSPEED=12
-uint8 MINHDWY=13
-uint8 MAXVEHMASS=14
-uint8 MAXVEHHEIGHT=15
-uint8 MAXVEHWIDTH=16
-uint8 MAXVEHLENGTH=17
-uint8 MAXVEHAXLES=18
-uint8 MINVEHOCC=19
+uint8 SIGNAL_CHOICE =0
+uint8 STOP_CHOICE =1
+uint8 YIELD_CHOICE =2
+uint8 NOTOWING_CHOICE =3
+uint8 RESTRICTED_CHOICE =4
+uint8 CLOSED_CHOICE =5
+uint8 CHAINS_CHOICE =6
+uint8 DIRECTION_CHOICE =7
+uint8 LATAFFINITY_CHOICE =8
+uint8 LATPERM_CHOICE =9
+uint8 PARKING_CHOICE =10
+uint8 MINSPEED_CHOICE =11
+uint8 MAXSPEED_CHOICE =12
+uint8 MINHDWY_CHOICE =13
+uint8 MAXVEHMASS_CHOICE =14
+uint8 MAXVEHHEIGHT_CHOICE =15
+uint8 MAXVEHWIDTH_CHOICE =16
+uint8 MAXVEHLENGTH_CHOICE =17
+uint8 MAXVEHAXLES_CHOICE =18
+uint8 MINVEHOCC_CHOICE =19
 
 # signal ::= OCTET STRING SIZE(0..63)
 uint8 signal
@@ -73,7 +73,7 @@ uint8 closed
 
 uint8 OPEN=0
 
-# uint8 CLOSED=1 redeclaration
+uint8 CLOSED=1
 
 uint8 TAPERLEFT=2
 
@@ -124,7 +124,7 @@ uint8[2] latperm
 
 uint8 NONE=0
 
-# uint8 PERMITTED=1 redeclaration
+uint8 PERMITTED=1 
 
 uint8 PASSINGONLY=2
 
@@ -136,7 +136,7 @@ uint8 parking
 
 # enumeration values for parking:
 
-# uint8 NO=0 redeclaration
+uint8 NO=0
 
 uint8 PARALLEL=1
 

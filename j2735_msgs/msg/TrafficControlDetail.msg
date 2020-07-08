@@ -73,7 +73,7 @@ uint8 closed
 
 uint8 OPEN=0
 
-uint8 CLOSED=1
+# uint8 CLOSED=1 redeclaration
 
 uint8 TAPERLEFT=2
 
@@ -124,7 +124,7 @@ uint8[2] latperm
 
 uint8 NONE=0
 
-uint8 PERMITTED=1
+# uint8 PERMITTED=1 redeclaration
 
 uint8 PASSINGONLY=2
 
@@ -136,7 +136,7 @@ uint8 parking
 
 # enumeration values for parking:
 
-uint8 NO=0
+# uint8 NO=0 redeclaration
 
 uint8 PARALLEL=1
 

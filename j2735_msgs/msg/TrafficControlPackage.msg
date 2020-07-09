@@ -20,5 +20,7 @@
 # label IA5String (SIZE(1..63)) OPTIONAL, -- label such as incident, workzone, etc.
 string label
 
+bool label_exists
+
 # tcids SEQUENCE (SIZE(1..63)) OF Id128b -- related traffic control ids
-uint8[16] tcids
+uint64[] tcids

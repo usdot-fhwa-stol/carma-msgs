@@ -63,7 +63,7 @@ uint8 MAXVEHAXLES_CHOICE=18
 uint8 MINVEHOCC_CHOICE=19
 
 # signal ::= OCTET STRING SIZE(0..63)
-uint8 signal
+uint8[] signal
 
 #closed ENUMERATED {open, closed, taperleft, taperright, openleft, openright}
 
@@ -140,7 +140,7 @@ uint8 parking
 
 uint8 PARALLEL=1
 
-uint8 ANGLED=1
+uint8 ANGLED=2
 
 #minspeed ::= INTEGER (0..1023), -- tenths of m/s
 float64 minspeed

@@ -54,6 +54,3 @@ bool params_exists
 cav_msgs/TrafficControlGeometry geometry
 bool geometry_exists
 
-# Bounds SEQUENCE (SIZE(1..63)) OF TrafficControlBounds
-cav_msgs/TrafficControlBounds[] bounds
-

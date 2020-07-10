@@ -53,7 +53,3 @@ bool params_exists
 # geometry [2] TrafficControlGeometry OPTIONAL
 j2735_msgs/TrafficControlGeometry geometry
 bool geometry_exists
-
-# Bounds SEQUENCE (SIZE(1..63)) OF TrafficControlBounds
-j2735_msgs/TrafficControlBounds[] bounds
-

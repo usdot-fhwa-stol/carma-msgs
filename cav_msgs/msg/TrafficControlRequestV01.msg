@@ -20,7 +20,7 @@
 
 
 # reqid ::= Id64b
-uint8[8] reqid
+j2735_msgs/Id64b reqid
 
 # reqseq ::= INTEGER (0..255)
 uint8 reqseq

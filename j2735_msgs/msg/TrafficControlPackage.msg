@@ -23,4 +23,4 @@ string label
 bool label_exists
 
 # tcids SEQUENCE (SIZE(1..63)) OF Id128b -- related traffic control ids
-uint64[] tcids
+j2735_msgs/Id128b[] tcids

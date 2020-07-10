@@ -25,7 +25,7 @@
 # }
 
 # reqid ::= Id64b
-uint8[8] reqid
+j2735_msgs/Id64b reqid
 
 # reqseq ::= INTEGER (0..255)
 uint8 reqseq
@@ -37,7 +37,7 @@ uint16 msgtot
 uint16 msgnum
 
 # id Id128b, -- unique traffic control id
-uint8[16] id
+j2735_msgs/Id128b id
 
 # updated EpochMins
 time updated

@@ -26,7 +26,7 @@ j2735_msgs/Id64b reqid
 uint8 reqseq
 
 # Bounds SEQUENCE (SIZE(1..63)) OF TrafficControlBounds
-cav_msgs/ControlBounds[] bounds
+cav_msgs/TrafficControlBounds[] bounds
 
 
 

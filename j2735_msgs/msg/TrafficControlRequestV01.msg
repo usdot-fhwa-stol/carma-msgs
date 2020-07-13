@@ -30,7 +30,7 @@ uint8 reqseq
 int8 scale
 
 # Bounds SEQUENCE (SIZE(1..63)) OF TrafficControlBounds
-j2735_msgs/ControlBounds[] bounds
+j2735_msgs/TrafficControlBounds[] bounds
 
 
 

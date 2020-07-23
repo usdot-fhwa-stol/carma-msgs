@@ -22,11 +22,11 @@
 # 	sat (0)
 # }
 
-uint8 dow
+uint8[7] dow
 
 # enumeration values for day of week
 uint8 SUN = 6  
-uint8 MON = 5  
+uint8 MON = 5
 uint8 TUE = 4  
 uint8 WED = 3  
 uint8 THU = 2  

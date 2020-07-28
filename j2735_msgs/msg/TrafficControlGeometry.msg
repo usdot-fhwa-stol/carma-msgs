@@ -47,12 +47,11 @@ int32 REFLAT_MAX = 900000000
 int32 REFLAT_MIN = -900000000
 
 # refelv Elevation ::= INTEGER (0..65535) -- offset by 4096, -4096 represents unknown, -409.5 to 6143.9 meters relative to referemce datum
-# above is the original spec, but CARMA generally follows the range below with -4096 (offset is handled in carma-messenger)
 int32 refelv
 
-int32 REFELV_UNKNOWN = -4096
-int32 REFELV_MAX = 61439
-int32 REFELV_MIN = -4095
+int32 REFELV_UNKNOWN = 0
+int32 REFELV_MAX = 65535
+int32 REFELV_MIN = 1
 
 # heading INTEGER (0..3599) -- initial path heading clockwise from north in tenths of degrees
 uint16 heading

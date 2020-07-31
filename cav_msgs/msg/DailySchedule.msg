@@ -17,7 +17,7 @@
 
 # Begin 
 # Specifies the start of time of the schedule.
-# If RepeatParams are not specified, this geofence is immediately activates once this start time is exceeded on a given day. 
+# If RepeatParams are not specified, this geofence immediately activates once this start time is exceeded on a given day. 
 # If the RepeatParams are specified, the start time simply bounds the activation periods.
 # Start time cannot exceed midnight as it is minutes relative to midnight local time
 duration begin

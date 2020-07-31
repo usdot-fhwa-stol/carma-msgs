@@ -17,15 +17,15 @@
 
 # Begin 
 # Specifies the start of time of the schedule.
-# If a ScheduleParams are not specified than this geofence is immediately active once this start time is exceeded on a given day. 
-# If the ScheduleParams are specified than the start time simply bounds the activation periods.
+# If RepeatParams are not specified, this geofence immediately activates once this start time is exceeded on a given day. 
+# If the RepeatParams are specified, the start time simply bounds the activation periods.
 # Start time cannot exceed midnight as it is minutes relative to midnight local time
 duration begin
 
 # Duration 
 # The number of active minutes, up to one day
-# Activation bound for this geofence. Once this point is exceeded the geofence cannot be active.
-# Ent time cannot exceed midnight or be less than start time as it
+# Activation bound for this geofence. Once this point is exceeded, the geofence cannot be active.
+# begin + duration time cannot exceed midnight 
 duration duration
 
 

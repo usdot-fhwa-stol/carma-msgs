@@ -1,5 +1,5 @@
 #
-# Point.msg
+# PathNode.msg
 #
 # Part of the CARMA Cloud geo-fence specification not part of the official SAE j2735 standard
 #
@@ -20,3 +20,5 @@ bool z_exists
 
 # Width: units in m
 float32 width
+bool width_exists
+    

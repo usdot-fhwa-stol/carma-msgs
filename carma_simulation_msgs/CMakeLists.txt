@@ -20,8 +20,7 @@ project(carma_simulation_msgs)
 ## Compile as C++11, supported in ROS Kinetic and newer
 add_compile_options(-std=c++11)
 
-set(DEPS
-message_generation
+set(MSG_DEPS
 std_msgs
 geometry_msgs
 j2735_msgs
@@ -36,11 +35,14 @@ automotive_platform_msgs
 shape_msgs
 )
 
+
+
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
-  ${DEPS}
+  message_generation
+  ${MSG_DEPS}
 )
 
 ## System dependencies are found with CMake's conventions
@@ -106,7 +108,7 @@ add_message_files(
 ## Generate added messages and services with any dependencies listed here
 generate_messages(
   DEPENDENCIES
-  ${DEPS}
+  ${MSG_DEPS}
 )
 
 ################################################
@@ -141,7 +143,7 @@ generate_messages(
 catkin_package(
  # INCLUDE_DIRS include
 #  LIBRARIES cav_msgs
- CATKIN_DEPENDS ${DEPS}
+ CATKIN_DEPENDS ${MSG_DEPS} message_runtime
 #  DEPENDS system_lib
 )
 

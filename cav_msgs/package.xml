@@ -14,7 +14,7 @@
   License for the specific language governing permissions and limitations under
   the License.
 -->
-<package>
+<package format="3">
   <name>cav_msgs</name>
   <version>1.3.0</version>
   <description>The cav_msgs package</description>
@@ -46,8 +46,8 @@
   <!-- The *_depend tags are used to specify dependencies -->
   <!-- Dependencies can be catkin packages or system dependencies -->
   <!-- Examples: -->
-  <!-- Use build_depend for packages you need at compile time: -->
-  <!--   <build_depend>message_generation</build_depend> -->
+  <!-- Use depend for packages you need at compile time: -->
+  <!--   <depend>message_generation</depend> -->
   <!-- Use buildtool_depend for build tool packages: -->
   <!--   <buildtool_depend>catkin</buildtool_depend> -->
   <!-- Use run_depend for packages you need at runtime: -->
@@ -55,32 +55,21 @@
   <!-- Use test_depend for packages you need only for testing: -->
   <!--   <test_depend>gtest</test_depend> -->
   <buildtool_depend>catkin</buildtool_depend>
-  <build_depend>geometry_msgs</build_depend>
-  <build_depend>message_generation</build_depend>
-  <build_depend>std_msgs</build_depend>
-  <build_depend>j2735_msgs</build_depend>
-  <build_depend>radar_msgs</build_depend>
-  <build_depend>sensor_msgs</build_depend>
-  <build_depend>tf2_msgs</build_depend>
-  <build_depend>derived_object_msgs</build_depend>
-  <build_depend>gps_common</build_depend>
-  <build_depend>autoware_msgs</build_depend>
-  <build_depend>automotive_platform_msgs</build_depend>
-  <build_depend>shape_msgs</build_depend>
-
-  <run_depend>message_generation</run_depend>
-  <run_depend>message_runtime</run_depend>
-  <run_depend>geometry_msgs</run_depend>
-  <run_depend>std_msgs</run_depend>
-  <run_depend>j2735_msgs</run_depend>
-  <run_depend>radar_msgs</run_depend>
-  <run_depend>sensor_msgs</run_depend>
-  <run_depend>tf2_msgs</run_depend>
-  <run_depend>derived_object_msgs</run_depend>
-  <run_depend>gps_common</run_depend>
-  <run_depend>autoware_msgs</run_depend>
-  <run_depend>automotive_platform_msgs</run_depend>
-  <run_depend>shape_msgs</run_depend>
+  <depend>geometry_msgs</depend>
+  <depend>message_generation</depend>
+  <depend>std_msgs</depend>
+  <depend>j2735_msgs</depend>
+  <depend>radar_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>tf2_msgs</depend>
+  <depend>derived_object_msgs</depend>
+  <depend>gps_common</depend>
+  <depend>autoware_msgs</depend>
+  <depend>automotive_platform_msgs</depend>
+  <depend>shape_msgs</depend>
+  
+  
+  <exec_depend>message_runtime</exec_depend>
 
 
   <!-- The export tag contains other, unspecified, tags -->

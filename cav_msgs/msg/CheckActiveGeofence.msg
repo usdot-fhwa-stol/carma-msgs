@@ -14,7 +14,7 @@ bool is_on_active_geofence
 
 
 #Geofence type value
-uint8 enum type
+uint8 type
 
 #Speed limit value
 #...

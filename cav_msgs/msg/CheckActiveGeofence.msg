@@ -20,4 +20,4 @@ uint8 type
 #...
 
 #Distance in meters to the next geofence
- double [] distance_to_next_geofence
+ float64[] distance_to_next_geofence

@@ -28,16 +28,7 @@ find_package(catkin REQUIRED COMPONENTS
   std_msgs
   geometry_msgs
   j2735_msgs
-  radar_msgs
-  sensor_msgs
-  tf2_msgs
-  derived_object_msgs
-  gps_common
-  autoware_msgs
-  automotive_platform_msgs
-  shape_msgs
 )
-
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -105,14 +96,6 @@ generate_messages(
   std_msgs
   geometry_msgs
   j2735_msgs
-  radar_msgs
-  sensor_msgs
-  tf2_msgs
-  derived_object_msgs
-  gps_common
-  autoware_msgs
-  automotive_platform_msgs
-  shape_msgs
 )
 
 ################################################
@@ -147,7 +130,7 @@ generate_messages(
 catkin_package(
  # INCLUDE_DIRS include
 #  LIBRARIES cav_msgs
- CATKIN_DEPENDS message_runtime std_msgs geometry_msgs j2735_msgs radar_msgs sensor_msgs tf2_msgs derived_object_msgs gps_common autoware_msgs automotive_platform_msgs
+ CATKIN_DEPENDS message_runtime std_msgs geometry_msgs j2735_msgs
 #  DEPENDS system_lib
 )
 

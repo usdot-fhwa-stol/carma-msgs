@@ -59,14 +59,6 @@
   <depend>message_generation</depend>
   <depend>std_msgs</depend>
   <depend>j2735_msgs</depend>
-  <depend>radar_msgs</depend>
-  <depend>sensor_msgs</depend>
-  <depend>tf2_msgs</depend>
-  <depend>derived_object_msgs</depend>
-  <depend>gps_common</depend>
-  <depend>autoware_msgs</depend>
-  <depend>automotive_platform_msgs</depend>
-  <depend>shape_msgs</depend>
   
   
   <exec_depend>message_runtime</exec_depend>

@@ -21,7 +21,7 @@ uint8 type
 uint8 SPEED_LIMIT = 1
 
 #Speed limit value
-#...
+float64 value
 
 #Distance in meters to the next geofence
  float64 distance_to_next_geofence

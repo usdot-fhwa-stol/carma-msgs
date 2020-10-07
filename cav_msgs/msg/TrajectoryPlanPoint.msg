@@ -9,7 +9,7 @@ float64 x
 # Y coordinate of the trajectory plan point; unit: meter
 float64 y
 
-# Right handed rotation around the +Z-Axis in radians
+# Vehicle orientation described as a right handed rotation around the +Z-Axis in radians.
 float64 yaw
 
 # Target time when the host vehicle reaches the trajectory plan point; unit: ms

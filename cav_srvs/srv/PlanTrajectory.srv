@@ -17,6 +17,9 @@ cav_msgs/VehicleState vehicle_state
 # The set of maneuvers to be executed
 cav_msgs/ManeuverPlan maneuver_plan
 
+# The initial trajectory plan to be modified
+cav_msgs/TrajectoryPlan initial_trajectory_plan
+
 ---
 
 #response

@@ -26,7 +26,4 @@ int64[] shortest_path_lanelet_ids
 int64[] route_path_lanelet_ids
 
 # End point of the route in map frame. Must be on the last lanelet of the route.
-cav_msgs/PathNode end_point
-
-
-
+geometry_msgs/Point end_point

@@ -9,8 +9,11 @@ float64 x
 # Y coordinate of the trajectory plan point; unit: meter
 float64 y
 
-# Target time when the host vehicle reaches the trajectory plan point; unit: ms
-uint64 target_time
+# Vehicle orientation described as a right handed rotation around the +Z-Axis in radians.
+float64 yaw
+
+# Target UTC time when the host vehicle reaches the trajectory plan point
+time target_time
 
 # Lane Id of the trajectory plan point based on HD map lane descriptions
 string lane_id

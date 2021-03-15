@@ -6,6 +6,11 @@
 
 #request
 
+# Header
+# Stamp for the header should match time that vehicle state was computed. 
+# This may be later than the maneuver_plan header and possibly in the future if multiple plan trajectory requests were sent for one maneuver plan
+std_msgs/Header header 
+
 # The starting state of the vehicle
 cav_msgs/VehicleState vehicle_state
 

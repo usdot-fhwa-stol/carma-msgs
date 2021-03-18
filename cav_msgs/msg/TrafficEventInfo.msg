@@ -8,10 +8,10 @@
 #
 
 # enumeration type for reason of Event
-uint8 EMERGENCY_VEHICLE = 0
+uint8 EVENT_EMERGENCY_VEHICLE = 0
 
 # enumeration type for type of Event
-uint8 LANE_CLOSED = 0
+uint8 EVENT_LANE_CLOSED = 0
 
 
 # Road vehicles minimum following distance (meters)

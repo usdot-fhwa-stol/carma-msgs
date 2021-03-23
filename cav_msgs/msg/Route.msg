@@ -1,7 +1,7 @@
 #
 # Route Message
 # 
-# This contains lanelet IDs of the route and the shortest path in the route
+# This contains lanelet IDs of the route and the shortest path along with the end point in the route
 #
 # @author Shuwei Qiang
 # @version 0.1
@@ -28,3 +28,5 @@ int64[] shortest_path_lanelet_ids
 # LaneLet IDs of the whole route, including all lanelets in the shortest path
 int64[] route_path_lanelet_ids
 
+# End point of the route in map frame. Must be on the last lanelet of the route.
+geometry_msgs/Point end_point

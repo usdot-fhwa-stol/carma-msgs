@@ -18,16 +18,16 @@ uint8 type
 
 
 #Geofence type enumerated values
-uint8 EVENT_LANE_CLOSED = 0
+uint8 LANE_CLOSED = 0
 uint8 SPEED_LIMIT = 1
 
 
 # Reason of boradcasting active Geofence
-uint8 event_reason
+uint8 reason
 
 
 # enumeration type for reason of boradcasting active Geofence
-uint8 EVENT_EMERGENCY_VEHICLE = 0
+uint8 EMERGENCY_VEHICLE = 0
 
 #Speed limit value
 float64 value

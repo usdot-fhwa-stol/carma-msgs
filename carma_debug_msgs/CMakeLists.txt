@@ -76,12 +76,3 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
-#############
-## Install ##
-#############
-
-## Mark cpp header files for installation
-install(DIRECTORY include/${PROJECT_NAME}/
-  DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
-)
-

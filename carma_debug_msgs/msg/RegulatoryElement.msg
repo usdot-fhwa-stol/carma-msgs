@@ -4,12 +4,6 @@
 
 string rule_name
 
-# List of Lanelet2 Ids this regulation generically refers to if applicable
-string[] refers_ids
-
-# List of Lanelet2 LineString Ids this regulation references to if applicable
-string[] reference_line_ids
-
 # Pariticpant list if applicable
 string[] participants
 

@@ -9,6 +9,8 @@ double downtrack_until_lanechange
 uint8_t lane_change
 
 # enums for lane change
+uint8_t NONE = 0
+
 uint8_t LEFT = 0
 
 uint8_t RIGHT= 1

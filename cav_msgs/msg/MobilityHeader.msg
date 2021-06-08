@@ -24,3 +24,4 @@ string  plan_id
 # A UNIX timestamp in milliseconds, which indicates the time elapsed since UNIX epoch
 # Example: "9223372036854775807"
 uint64  timestamp
+

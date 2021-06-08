@@ -12,3 +12,6 @@ string                   strategy
 # strategy parameters specified by each individual plugin/component
 # the maximum length of this string is 100
 string                   strategy_params
+
+# current location in ECEF frame
+cav_msgs/LocationECEF          location

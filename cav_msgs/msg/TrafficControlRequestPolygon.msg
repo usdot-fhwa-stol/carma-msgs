@@ -1,13 +1,9 @@
 #
-# IntersectionGeometry.msg
-#
-# J2735 2016 message format.
+# TrafficControlRequestPolygon.msg
 #
 # @author Misheel Bayartsengel
 # @version 0.1
-#
+# describes the four vertices of polygon created by CARMA to form an TrafficControlRequest zone
+# each points are in EPSG:4326 lat/long                                                       
 
-# refPoint Position3D, -- The reference from which subsequent
-# -- data points are offset until a new
-# -- point is used.
 cav_msgs/Position3D[] polygon_list

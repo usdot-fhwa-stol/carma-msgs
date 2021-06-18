@@ -14,6 +14,6 @@ uint8 lane_change
 # enums for lane change
 uint8 NONE = 0
 
-uint8 LEFT = 0
+uint8 LEFT = 1
 
-uint8 RIGHT= 1
+uint8 RIGHT= 2

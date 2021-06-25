@@ -8,7 +8,7 @@
 #
 # The LaneAttributes-Special data element relates specific properties found
 # in a tracked vehicle lane types (trolley and train lanes).
-# The term “rail vehicle” can be considered synonymous.
+# The term "rail vehicle" can be considered synonymous.
 # In this case, the term does not relate to vehicle types with tracks or treads.
 #
 # LaneAttributes-TrackedVehicle ::= BIT STRING {

@@ -16,8 +16,14 @@ string route_id
 # The version of current route, monotonically increasing integer starting at 1
 uint32 route_version
 
+# The map version used to generate this route
+uint32 map_version
+
 # Route name, for display purpose
 string route_name
+
+# Is new route after route invalidation
+bool is_rerouted
 
 # LaneLet IDs of the route shortest path
 int64[] shortest_path_lanelet_ids

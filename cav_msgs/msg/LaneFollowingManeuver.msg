@@ -16,5 +16,5 @@ float64 end_dist
 float64 end_speed
 time end_time
 
-# GUID of the lane of this maneuver
-string lane_id
+# List of lanes this maneuver will cover. They should all be contigous lanes connected end to end (ie. no lane changes)
+string[] lane_ids

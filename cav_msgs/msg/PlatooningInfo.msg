@@ -42,3 +42,6 @@ float32  host_cmd_speed
 
 # Desired gap with leader
 float32  desired_gap
+
+# Actual gap with leader
+float32 actual_gap

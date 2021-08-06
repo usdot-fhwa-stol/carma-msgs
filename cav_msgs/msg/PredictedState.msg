@@ -4,7 +4,7 @@
 # Describes the predicted states of non-stationary external objects over one time step.
 
 # Header contains the timestamp and frame id which the remaining fields reference.
-Header header
+std_msgs/Header header
 
 # Predicted position of the object
 geometry_msgs/Pose predicted_position

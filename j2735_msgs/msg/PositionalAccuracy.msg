@@ -21,8 +21,8 @@
 #   -- 254 = any value equal or greater than 12.70 meter
 #   -- 255 = unavailable semi-major axis value
 #   -- Convert to meter with factor 0.05 when this field is used
-uint8 semiMajor
-uint8 semiMinor
+uint8 semimajor
+uint8 semiminor
 
 uint8 ACCURACY_UNAVAILABLE = 255
 uint8 ACCURACY_MAX = 254

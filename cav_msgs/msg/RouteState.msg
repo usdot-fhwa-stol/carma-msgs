@@ -10,10 +10,10 @@
 # @version 0.1
 #
 
-Header header
+std_msgs/Header header
 
 # The route id for which this message applies
-string routeID
+string routeid
 
 # Enum denoting the state of the route following
 uint8 state

@@ -10,10 +10,10 @@ std_msgs/Header header
 string  maneuver_plan_id
 
 # The time planning for this maneuver plan began
-time planning_start_time
+builtin_interfaces/Time planning_start_time
 
 # The time planning for this maneuver completed
-time planning_completion_time
+builtin_interfaces/Time planning_completion_time
 
 # The set of maneuvers defining this plan
 cav_msgs/Maneuver[] maneuvers

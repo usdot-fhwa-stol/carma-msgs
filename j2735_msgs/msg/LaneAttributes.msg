@@ -13,7 +13,7 @@ j2735_msgs/LaneDirection directional_use
 j2735_msgs/LaneSharing shared_with
 
 # laneType LaneTypeAttributes, -- specific lane type data
-j2735_msgs/LaneTypeAttributes laneType
+j2735_msgs/LaneTypeAttributes lanetype
 
 # regional RegionalExtension {{REGION.Reg-LaneAttributes}} OPTIONAL
 #TODO: RegionalExtensions are not yet implemented in asn1c

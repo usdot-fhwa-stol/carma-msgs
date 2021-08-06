@@ -21,4 +21,4 @@ float64 length
 # Y-Axis: Right of segment
 # Z-Axis: Into ground (not necessarily toward earth center if there is a change in elevation)
 # A pose is used instead of a transform as it will not be added to the tfTree and will have no frame id.
-geometry_msgs/Pose FRD_pose
+geometry_msgs/Pose frd_pose

@@ -8,7 +8,7 @@
 #
 
 # standard ROS header
-Header header
+std_msgs/Header header
 
 uint8 event
 

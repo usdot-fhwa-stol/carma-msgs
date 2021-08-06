@@ -9,11 +9,11 @@ cav_msgs/ManeuverParameters parameters
 # Approximate starting state of the maneuver
 float64 start_dist # downtrack distance in m
 float64 start_speed # vehicle speed in m/s
-time start_time
+builtin_interfaces/Time start_time
 
 # Approximate ending state of the maneuver
 float64 end_dist
-time end_time
+builtin_interfaces/Time end_time
 # The end speed is always zero
 
 # GUID of the starting lane of this maneuver

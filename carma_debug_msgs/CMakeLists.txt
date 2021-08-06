@@ -14,65 +14,31 @@
 # the License.
 #
 
-cmake_minimum_required(VERSION 2.8.3)
+cmake_minimum_required(VERSION 3.5)
 project(carma_debug_msgs)
+set(CMAKE_CXX_STANDARD 14)
 
-## Compile as C++14, supported in ROS Noetic and newer
-add_compile_options(-std=c++14)
+## Find ament macros and libraries
+find_package(rosidl_default_generators REQUIRED)
+find_package(ament_cmake REQUIRED)
+find_package(std_msgs REQUIRED)
+find_package(cav_msgs REQUIRED)
 
-## Find catkin macros and libraries
-## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
-## is used, also find other catkin packages
-find_package(catkin REQUIRED COMPONENTS
-  message_generation
-  std_msgs
-  geometry_msgs
-  cav_msgs
+rosidl_generate_interfaces(
+    ${PROJECT_NAME}
+      msg/LaneletIdRegulatoryElementPair.msg
+      msg/MapUpdateReadable.msg
+      msg/RegulatoryElement.msg
+      msg/TrajectoryCurvatureSpeeds.msg
+    DEPENDENCIES
+        cav_msgs
+        std_msgs
 )
+ament_export_dependencies(rosidl_default_runtime)
+ament_package()
 
 
-################################################
-## Declare ROS messages, services and actions ##
-################################################
 
 
-file(GLOB msg_files msg/*.msg)
-set(msgs )
-foreach(filePath ${msg_files})
-  get_filename_component(name ${filePath} NAME)
-  set(msgs ${msgs} ${name})
-endforeach(filePath)
 
-## Generate messages in the 'msg' folder
-add_message_files(
-  FILES
-  ${msgs}
-)
-
-
-## Generate added messages and services with any dependencies listed here
-generate_messages(
-  DEPENDENCIES
-  std_msgs
-  geometry_msgs
-  cav_msgs
-)
-
-###################################
-## catkin specific configuration ##
-###################################
-
-catkin_package(
- CATKIN_DEPENDS message_runtime std_msgs geometry_msgs cav_msgs
-)
-
-###########
-## Build ##
-###########
-
-## Specify additional locations of header files
-## Your package locations should be listed before other locations
-include_directories(
-  ${catkin_INCLUDE_DIRS}
-)
 

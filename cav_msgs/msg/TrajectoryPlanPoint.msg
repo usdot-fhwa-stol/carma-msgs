@@ -13,7 +13,7 @@ float64 y
 float64 yaw
 
 # Target UTC time when the host vehicle reaches the trajectory plan point
-time target_time
+builtin_interfaces/Time target_time
 
 # Lane Id of the trajectory plan point based on HD map lane descriptions
 string lane_id

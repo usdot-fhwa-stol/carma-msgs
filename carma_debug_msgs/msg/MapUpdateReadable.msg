@@ -7,7 +7,7 @@
 ####
 # Map Bin Details
 ####
-Header header # Exact header of the origin autoware_lanelet2_msgs/MapBin.msg
+std_msgs/Header header# Exact header of the origin autoware_lanelet2_msgs/MapBin.msg
 
 # version of map format. keep this as empty string if unnecessary
 string format_version

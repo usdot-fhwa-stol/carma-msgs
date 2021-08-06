@@ -9,8 +9,8 @@
 
 # Lane Change Direction
 uint8    direction
-uint8    ToLeft=0
-uint8    ToRight=1
+uint8    TOLEFT=0
+uint8    TORIGHT=1
 
 # downtrack distance to start of the lane change
 float32  distance_to_lanechange

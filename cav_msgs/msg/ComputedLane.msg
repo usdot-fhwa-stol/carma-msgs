@@ -63,7 +63,7 @@ cav_msgs/OffsetAxis offset_y_axis
 #  -- Unsigned units of 1 degree, in 1 octet
 #  -- the true north is 0, positive is clockwise
 #  -- the values 360 to 381 shall not be sent
-float32 rotateXY
+float32 rotatexy
 bool rotatexy_exists
 
 # Scale-B12 ::= INTEGER (-2048..2047)

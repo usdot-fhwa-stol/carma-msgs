@@ -7,7 +7,7 @@
 #
 
 # Time stamp
-time stamp
+builtin_interfaces/Time stamp
 
 # The message to send
 string msg

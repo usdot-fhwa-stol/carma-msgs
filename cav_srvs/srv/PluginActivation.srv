@@ -10,14 +10,14 @@
 std_msgs/Header header
 
 # The name of the plugin to change the activation state for
-string pluginName
+string pluginname
 
 # The version of the plugin to change the activation state for
-string pluginVersion
+string pluginversion
 
 # The state to change to
 bool activated
 
 ---
 #Response
-bool newState
+bool newstate

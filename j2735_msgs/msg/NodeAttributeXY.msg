@@ -47,7 +47,7 @@
 # }
 
 
-uint8  node_attribute_xy
+uint8 node_attribute_xy
 
 # enumeration values for status:
 uint8 RESERVED=0

@@ -8,7 +8,7 @@
 #
 
 # Timestamp and frame_id of the map
-Header header
+std_msgs/Header header
 
 # The route filename
 string route_id

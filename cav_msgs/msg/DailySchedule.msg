@@ -20,12 +20,12 @@
 # If RepeatParams are not specified, this geofence immediately activates once this start time is exceeded on a given day. 
 # If the RepeatParams are specified, the start time simply bounds the activation periods.
 # Start time cannot exceed midnight as it is minutes relative to midnight local time
-duration begin
+builtin_interfaces/Duration begin
 
 # Duration 
 # The number of active minutes, up to one day
 # Activation bound for this geofence. Once this point is exceeded, the geofence cannot be active.
 # begin + duration time cannot exceed midnight 
-duration duration
+builtin_interfaces/Duration duration
 
 

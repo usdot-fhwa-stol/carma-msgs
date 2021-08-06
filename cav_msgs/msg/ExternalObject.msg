@@ -4,7 +4,7 @@
 # Describes a tracked object
 
 #Header contains the frame rest of the fields will use
-Header header
+std_msgs/Header header
 
 #a presence vector, this message is used to describe objects coming from potentially
 #different sources. The presence vector is used to determine what items are set

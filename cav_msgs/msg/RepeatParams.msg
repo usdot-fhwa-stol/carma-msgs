@@ -11,12 +11,12 @@
 
 # Offset 
 # shift repetition start relative to midnight local time
-duration offset
+builtin_interfaces/Duration offset
 
 # Period
 # minutes between successive time spans
-duration period
+builtin_interfaces/Duration period
 
 # Span
 # number of minutes schedule is active, must be less than the period
-duration span
+builtin_interfaces/Duration span

@@ -40,7 +40,7 @@ uint16 msgnum
 j2735_msgs/Id128b id
 
 # updated EpochMins
-time updated
+builtin_interfaces/Time updated
 
 # package [0] TrafficControlPackage OPTIONAL, -- related traffic control ids
 j2735_msgs/TrafficControlPackage package

@@ -40,4 +40,4 @@ bool[] bool_valued_meta_data
 int64[] int_valued_meta_data
 float64[] float_valued_meta_data
 string[] string_valued_meta_data
-time[] time_valued_meta_data
+builtin_interfaces/Time[] time_valued_meta_data

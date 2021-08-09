@@ -14,7 +14,7 @@
 std_msgs/Header header
 
 # Need to know the type before parsing. MessageTypes are MAP, SPAT, TIM, BSM, Mobility.
-string messagetype
+string message_type
 
 # The DSRC message content
 uint8[] content

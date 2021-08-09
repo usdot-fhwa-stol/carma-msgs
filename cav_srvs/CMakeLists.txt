@@ -22,37 +22,18 @@ find_package(rosidl_default_generators REQUIRED)
 find_package(ament_cmake REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(cav_msgs REQUIRED)
-# find_package(geometry_msgs REQUIRED)
 
+file(GLOB srv_files srv/*.srv)
+set(srvs )
+foreach(filePath ${srv_files})
+  get_filename_component(name ${filePath} NAME)
+  set(srvs ${srvs} srv/${name})
+endforeach(filePath)
+
+# Generate services in the 'srv' folder
 rosidl_generate_interfaces(
     ${PROJECT_NAME}
-    srv/AbortActiveRoute.srv
-    srv/Bind.srv
-    srv/ClearFaults.srv
-    srv/ComputePlanCost.srv
-    srv/EngineBrakeControl.srv
-    srv/GetAvailableRoutes.srv
-    srv/GetDriverApi.srv
-    srv/GetDriverStatus.srv
-    srv/GetDriversWithCapabilities.srv
-    srv/GetLights.srv
-    srv/GetPluginApi.srv
-    srv/GetRegisteredPlugins.srv
-    srv/GetSystemVersion.srv
-    srv/GetTransform.srv
-    srv/PlanManeuvers.srv
-    srv/PlanTrajectory.srv
-    srv/PluginActivation.srv
-    srv/PluginList.srv
-    srv/ReleaseIndicatorControl.srv
-    srv/RequestIndicatorControl.srv
-    srv/SendMessage.srv
-    srv/SetActiveRoute.srv
-    srv/SetEnableRobotic.srv
-    srv/SetGuidanceActive.srv
-    srv/SetLightBarIndicator.srv
-    srv/SetLights.srv
-    srv/SetTrafficEvent.srv
+    ${srvs}
     DEPENDENCIES
         std_msgs
         cav_msgs

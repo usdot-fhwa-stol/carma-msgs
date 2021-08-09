@@ -24,12 +24,17 @@ find_package(ament_cmake REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(cav_msgs REQUIRED)
 
+# Generate Messages
+file(GLOB msg_files msg/*.msg)
+set(msgs )
+foreach(filePath ${msg_files})
+  get_filename_component(name ${filePath} NAME)
+  set(msgs ${msgs} msg/${name})
+endforeach(filePath)
+
 rosidl_generate_interfaces(
     ${PROJECT_NAME}
-      msg/LaneletIdRegulatoryElementPair.msg
-      msg/MapUpdateReadable.msg
-      msg/RegulatoryElement.msg
-      msg/TrajectoryCurvatureSpeeds.msg
+        ${msgs}
     DEPENDENCIES
         cav_msgs
         std_msgs

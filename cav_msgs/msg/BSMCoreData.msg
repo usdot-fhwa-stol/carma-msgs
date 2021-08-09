@@ -106,7 +106,7 @@ float32 STEER_WHEEL_ANGLE_MAX = 189.0
 float32 STEER_WHEEL_ANGLE_MIN = -189.0
 
 # Set of acceleration values in 3 orthogonal directions of the vehicle and with yaw rotation rates expressed as a structure.
-cav_msgs/AccelerationSet4Way accel_set
+cav_msgs/AccelerationSet4Way accelSet
 
 # Conveys a variety of information about the current brake and system control activity of the vehicle.
 j2735_msgs/BrakeSystemStatus brakes

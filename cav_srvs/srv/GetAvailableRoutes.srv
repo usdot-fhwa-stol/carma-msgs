@@ -14,5 +14,5 @@
 
 # A list of available routes
 # For efficiency the routes provided in this list contain only an empty list segments
-cav_msgs/Route[] available_routes
+cav_msgs/Route[] availableRoutes
 

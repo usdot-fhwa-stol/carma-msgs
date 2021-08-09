@@ -30,7 +30,7 @@ string proj
 string datum
 
 # reftime EpochMins,
-builtin_interfaces/Time reftime
+time reftime
 
 # reflon Longitude,
 float64 reflon

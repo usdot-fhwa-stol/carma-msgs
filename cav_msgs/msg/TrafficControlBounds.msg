@@ -22,7 +22,7 @@
 
 # Oldest timestamp in seconds
 #  -- timestamp of oldest control message within bounds
-builtin_interfaces/Time oldest
+time oldest
 
 # Longitude in degrees with a range of (-179.9999999, 180.0)
 # -- initial vertex reference longitude

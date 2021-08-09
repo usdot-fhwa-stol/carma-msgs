@@ -30,7 +30,7 @@ string reason
 float64 value
 
 #Distance in meters to the next geofence
-float64 distance_to_next_geofence
+ float64 distance_to_next_geofence
 
 # Road vehicles minimum following distance (meters) within geofence
 float64 minimum_gap

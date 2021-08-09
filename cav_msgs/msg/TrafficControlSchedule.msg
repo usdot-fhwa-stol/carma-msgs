@@ -21,10 +21,10 @@
 # }
 
 # start EpochMins, -- start time required, even if it's the epoch value zero
-builtin_interfaces/Time start
+time start
 
 # end [0] EpochMins OPTIONAL, -- default to max value 153722867280912
-builtin_interfaces/Time end
+time end
 bool end_exists
 
 # dow [1] DayOfWeek OPTIONAL, 

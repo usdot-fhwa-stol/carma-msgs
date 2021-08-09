@@ -10,12 +10,12 @@
 # 2d x-axis position of the vehicle center of gravity in meters
 # This position is in a fixed inertial frame which vehicle motion is described in
 # 
-float64 x_pos_global
+float64 X_pos_global
 #
 # 2d y-axis position of the vehicle center of gravity in meters
 # This position is in a fixed inertial frame which vehicle motion is described in
 # 
-float64 y_pos_global
+float64 Y_pos_global
 #
 # The orientation of the vehicle's longitudinal axis in radians
 # This orientation is in a fixed inertial frame which vehicle motion is described in

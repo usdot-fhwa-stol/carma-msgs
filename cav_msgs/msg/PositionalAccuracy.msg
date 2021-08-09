@@ -29,8 +29,8 @@ uint16 ACCURACY_ORIENTATION_AVAILABLE = 2
 #   -- 254 = any value equal or greater than 12.70 meter
 #   -- 255 = unavailable semi-major axis value
 #   -- Convert to meter with factor 0.05 when this field is used
-float32 semimajor
-float32 semiminor
+float32 semi_major
+float32 semi_minor
 
 float32 ACCURACY_MAX = 12.7
 float32 ACCURACY_MIN = 0.0

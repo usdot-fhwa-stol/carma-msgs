@@ -24,4 +24,4 @@ uint8 RESERVED=0
 uint8 TCMV01=1
 
 #tcrV01 ::= TrafficControlRequestV01
-j2735_msgs/TrafficControlMessageV01 tcmv01
+j2735_msgs/TrafficControlMessageV01 tcm_v01

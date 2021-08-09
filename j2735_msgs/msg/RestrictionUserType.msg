@@ -22,6 +22,6 @@ uint8 choice
 uint8 BASIC_TYPE=0
 uint8 REGIONAL=1 #TODO: cannot select at this time but we shoudl move forward with treating it as a choice.
 
-j2735_msgs/RestrictionAppliesTo basictype
+j2735_msgs/RestrictionAppliesTo basic_type
 
 #regional #TODO: RegionalExtensions are not yet implemented in asn1c

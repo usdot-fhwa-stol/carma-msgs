@@ -13,7 +13,7 @@
 std_msgs/Header header
 
 # The route id for which this message applies
-string routeid
+string route_id
 
 # Enum denoting the state of the route following
 uint8 state

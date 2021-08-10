@@ -1,0 +1,13 @@
+# SetActivateRobotic.srv
+
+# Request 
+
+uint8 set
+
+uint8 DEACTIVATE = 0
+uint8 ACTIVATE = 1
+
+---
+
+# Response
+

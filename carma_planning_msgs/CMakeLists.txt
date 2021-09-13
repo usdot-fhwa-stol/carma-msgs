@@ -23,6 +23,7 @@ find_package(rosidl_default_generators REQUIRED)
 find_package(ament_cmake REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(builtin_interfaces REQUIRED)
+find_package(geometry_msgs REQUIRED)
 
 ## Generate messages 
 file(GLOB msg_files msg/*.msg)
@@ -46,6 +47,7 @@ rosidl_generate_interfaces(
     DEPENDENCIES
       std_msgs
       builtin_interfaces
+      geometry_msgs
 )
 
 ament_export_dependencies(rosidl_default_runtime)

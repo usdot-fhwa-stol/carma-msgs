@@ -28,11 +28,11 @@ uint8 STRIPING=5
 uint8 TRACKED_VEHICLE=6
 uint8 PARKING=7
 
-j2735_msgs/LaneAttributesVehicle vehicle
-j2735_msgs/LaneAttributesCrosswalk crosswalk
-j2735_msgs/LaneAttributesBike bike_lane
-j2735_msgs/LaneAttributesSidewalk sidewalk
-j2735_msgs/LaneAttributesBarrier median
-j2735_msgs/LaneAttributesStriping striping
-j2735_msgs/LaneAttributesTrackedVehicle tracked_vehicle
-j2735_msgs/LaneAttributesParking parking
+j2735_v2x_msgs/LaneAttributesVehicle vehicle
+j2735_v2x_msgs/LaneAttributesCrosswalk crosswalk
+j2735_v2x_msgs/LaneAttributesBike bike_lane
+j2735_v2x_msgs/LaneAttributesSidewalk sidewalk
+j2735_v2x_msgs/LaneAttributesBarrier median
+j2735_v2x_msgs/LaneAttributesStriping striping
+j2735_v2x_msgs/LaneAttributesTrackedVehicle tracked_vehicle
+j2735_v2x_msgs/LaneAttributesParking parking

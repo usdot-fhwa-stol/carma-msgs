@@ -59,6 +59,6 @@ uint16 HEADING_MAX = 3599
 uint16 HEADING_MIN = 0
 
 # nodes SEQUENCE (SIZE(1..255)) OF PathNode
-j2735_msgs/PathNode[] nodes
+j2735_v2x_msgs/PathNode[] nodes
 
 

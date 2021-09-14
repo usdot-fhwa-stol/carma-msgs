@@ -45,21 +45,21 @@
 string name
 bool name_exists
 
-j2735_msgs/RoadSegmentReferenceID id
+j2735_v2x_msgs/RoadSegmentReferenceID id
 
 #MsgCount ::= INTEGER (0..127)
 uint8 revision
 
-j2735_msgs/Position3D ref_point
+j2735_v2x_msgs/Position3D ref_point
 
 # LaneWidth OPTIONAL ::= INTEGER (0..32767) -- units of 1 cm
 uint16 lane_width
 bool lane_width_exists
 
-j2735_msgs/SpeedLimitList speed_limits
+j2735_v2x_msgs/SpeedLimitList speed_limits
 bool speed_limits_exists
 
-j2735_msgs/RoadLaneSetList road_lane_set
+j2735_v2x_msgs/RoadLaneSetList road_lane_set
 
 #regional #TODO: RegionalExtensions are not yet implemented in asn1c
 

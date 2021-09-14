@@ -12,4 +12,4 @@
 #
 # ConnectsToList ::= SEQUENCE (SIZE(1..16)) OF Connection
 
-j2735_msgs/Connection[] connect_to_list
+j2735_v2x_msgs/Connection[] connect_to_list

@@ -47,4 +47,4 @@ int32 REFLAT_MIN = -900000000
 int32 REFLAT_UNAVAILABLE = 900000001
 
 #offsets ::= SEQUENCE (SIZE(3)) OF OffsetPoint 
-j2735_msgs/OffsetPoint[3] offsets
+j2735_v2x_msgs/OffsetPoint[3] offsets

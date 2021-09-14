@@ -4,4 +4,4 @@
 
 ---
 
-cav_msgs/LightBarStatus status
+carma_driver_msgs/LightBarStatus status

@@ -12,7 +12,7 @@
 
 std_msgs/Header header
 
-cav_msgs/BSMCoreData core_data
+carma_v2x_msgs/BSMCoreData core_data
 
 # -- Part II Content is for future use. 
 

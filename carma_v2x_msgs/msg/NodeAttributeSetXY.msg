@@ -39,19 +39,19 @@
 
 # The NodeAttributeXYList data frame consists of a list of NodeAttributeXY entries.
 # NodeAttributeXYList ::= SEQUENCE (SIZE(1..8)) OF NodeAttributeXY
-j2735_msgs/NodeAttributeXY[] local_node
+j2735_v2x_msgs/NodeAttributeXY[] local_node
 bool local_node_exists
 # The DF_SegmentAttributeXYList data frame consists of a list of SegmentAttributeXY entries.
 # SegmentAttributeXYList ::= SEQUENCE (SIZE(1..8)) OF SegmentAttributeXY
-j2735_msgs/SegmentAttributeXY[] disabled
+j2735_v2x_msgs/SegmentAttributeXY[] disabled
 bool disabled_exists
 
-j2735_msgs/SegmentAttributeXY[] enabled
+j2735_v2x_msgs/SegmentAttributeXY[] enabled
 bool enabled_exists
 
 # The LaneDataAttributeList data frame consists of a list of LaneDataAttribute entries.
 # LaneDataAttributeList ::= SEQUENCE (SIZE(1..8)) OF LaneDataAttribute
-cav_msgs/LaneDataAttribute[] lane_attribute_list
+carma_v2x_msgs/LaneDataAttribute[] lane_attribute_list
 bool data_exists
 
 # Deviates from J2735 standard:

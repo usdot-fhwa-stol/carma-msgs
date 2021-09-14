@@ -10,7 +10,7 @@
 # IntersectionID that is unique within that region
 uint16 intersection_id
 
-# Outcome of cav_msgs/MovementState signal_state
+# Outcome of carma_v2x_msgs/MovementState signal_state
 uint8 state
 
 uint8 UNLIT=0

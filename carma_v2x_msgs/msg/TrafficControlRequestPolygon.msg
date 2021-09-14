@@ -10,4 +10,4 @@
 # describes the four vertices of polygon created by CARMA to form an TrafficControlRequest zone
 # each points are in EPSG:4326 lat/long                                                       
 
-cav_msgs/Position3D[] polygon_list
+carma_v2x_msgs/Position3D[] polygon_list

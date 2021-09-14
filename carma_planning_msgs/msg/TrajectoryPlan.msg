@@ -13,4 +13,4 @@ string  trajectory_id
 float64 initial_longitudinal_velocity
 
 # A list of trajectory plan points describe the detailed trajectory plan
-cav_msgs/TrajectoryPlanPoint[] trajectory_points
+carma_planning_msgs/TrajectoryPlanPoint[] trajectory_points

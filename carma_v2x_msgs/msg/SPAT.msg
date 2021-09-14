@@ -42,6 +42,6 @@ string name
 bool name_exists
 
 # IntersectionStateList ::= SEQUENCE (SIZE(1..32)) OF IntersectionState
-cav_msgs/IntersectionState[] intersection_state_list
+carma_v2x_msgs/IntersectionState[] intersection_state_list
 
 # regional #TODO: RegionalExtensions are not yet implemented in asn1c

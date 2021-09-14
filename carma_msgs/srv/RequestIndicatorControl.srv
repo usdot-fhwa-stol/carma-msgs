@@ -16,11 +16,11 @@
 #
 
 # Request - List of indicators the component requests control of
-cav_msgs/LightBarIndicator[] ind_list
-cav_msgs/LightBarCDAType[] cda_list
+carma_msgs/LightBarIndicator[] ind_list
+carma_msgs/LightBarCDAType[] cda_list
 string requester_name
 ---
 # Response - List of indicators that were dinied of control. CDATypes match
 # correctly with its indicator in the response
-cav_msgs/LightBarIndicator[] ind_list
-cav_msgs/LightBarCDAType[] cda_list
+carma_msgs/LightBarIndicator[] ind_list
+carma_msgs/LightBarCDAType[] cda_list

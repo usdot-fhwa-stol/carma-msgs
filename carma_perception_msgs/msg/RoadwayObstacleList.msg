@@ -8,4 +8,4 @@
 #
 
 # A list of other vehicle obstacles on the roadway
-cav_msgs/RoadwayObstacle[] roadway_obstacles
+carma_perception_msgs/RoadwayObstacle[] roadway_obstacles

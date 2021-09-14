@@ -5,7 +5,7 @@
 # Used by lighbar driver
 # This should contain the desired state of all lights, not just the ones
 # intended to be changed
-cav_msgs/LightBarStatus set_state
+carma_driver_msgs/LightBarStatus set_state
 
 ---
 

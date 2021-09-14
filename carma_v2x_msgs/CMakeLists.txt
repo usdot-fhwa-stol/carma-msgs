@@ -22,7 +22,7 @@ set(CMAKE_CXX_STANDARD 14)
 find_package(rosidl_default_generators REQUIRED)
 find_package(ament_cmake REQUIRED)
 find_package(std_msgs REQUIRED)
-find_package(j2735_msgs REQUIRED)
+find_package(j2735_v2x_msgs REQUIRED)
 find_package(builtin_interfaces REQUIRED)
 
 ## Generate messages 
@@ -46,7 +46,7 @@ rosidl_generate_interfaces(
       ${srvs}
     DEPENDENCIES
       std_msgs
-      j2735_msgs
+      j2735_v2x_msgs
       builtin_interfaces
 )
 

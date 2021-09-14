@@ -8,10 +8,10 @@
 
 # Maneuvers planned prior to the current planning request.
 # These maneuvers must not be modified by this process
-cav_msgs/ManeuverPlan prior_plan
+carma_planning_msgs/ManeuverPlan prior_plan
 ---
 
 #response
 
 # The returned maneuver plan, must be a strict superset of prior plan
-cav_msgs/ManeuverPlan new_plan
+carma_planning_msgs/ManeuverPlan new_plan

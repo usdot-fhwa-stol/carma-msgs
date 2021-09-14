@@ -9,7 +9,7 @@
 
 # Request
 # The message to be sent
-cav_msgs/ByteArray message_to_send
+carma_driver_msgs/ByteArray message_to_send
 
 ---
 

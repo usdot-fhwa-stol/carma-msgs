@@ -6,4 +6,4 @@
 
 #response
 
-cav_msgs/DriverStatus status
+carma_driver_msgs/DriverStatus status

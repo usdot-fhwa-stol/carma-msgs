@@ -18,6 +18,13 @@ cmake_minimum_required(VERSION 3.5)
 project(carma_v2x_msgs)
 set(CMAKE_CXX_STANDARD 14)
 
+find_package(ros_environment REQUIRED)
+
+set(ROS_VERSION $ENV{ROS_VERSION})
+set(SUPPORTED_ROS_VERSION 2)
+
+if(${ROS_VERSION} EQUAL ${SUPPORTED_ROS_VERSION})
+
 ## Find ament macros and libraries
 find_package(rosidl_default_generators REQUIRED)
 find_package(ament_cmake REQUIRED)
@@ -54,3 +61,8 @@ ament_export_dependencies(rosidl_default_runtime)
 ament_package()
 
 
+else()
+
+message("Skipping build of " ${PROJECT_NAME} " as only ROS " ${SUPPORTED_ROS_VERSION} " is supported. Detected version is ROS " ${ROS_VERSION})
+
+endif()

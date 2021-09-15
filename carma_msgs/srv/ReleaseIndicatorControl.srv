@@ -16,8 +16,8 @@
 
 
 # Request - List of indicators the component release control of
-cav_msgs/LightBarIndicator[] ind_list
-cav_msgs/LightBarCDAType[] cda_list
+carma_msgs/LightBarIndicator[] ind_list
+carma_msgs/LightBarCDAType[] cda_list
 string requester_name
 ---
 # Response - None

@@ -10,7 +10,7 @@
 # RegulatorySpeedLimit ::= SEQUENCE {
 # type SpeedLimitType,
 # -- The type of regulatory speed which follows
-j2735_msgs/SpeedLimitType type
+j2735_v2x_msgs/SpeedLimitType type
 
 # speed Velocity
 # Velocity ::= INTEGER (0..8191) -- Units of 0.02 m/s

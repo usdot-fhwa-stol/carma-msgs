@@ -10,4 +10,4 @@
 
 # A list of available plugins
 std_msgs/Header header
-cav_msgs/Plugin[] plugins
+carma_planning_msgs/Plugin[] plugins

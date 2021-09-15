@@ -28,13 +28,13 @@ builtin_interfaces/Time end
 bool end_exists
 
 # dow [1] DayOfWeek OPTIONAL, 
-j2735_msgs/DayOfWeek dow
+j2735_v2x_msgs/DayOfWeek dow
 bool dow_exists
 
 # between [2] SEQUENCE (SIZE(1..63)) OF DailySchedule OPTIONAL, 
-cav_msgs/DailySchedule[] between
+carma_v2x_msgs/DailySchedule[] between
 bool between_exists
 
 # repeat [3] RepeatParams OPTIONAL
-cav_msgs/RepeatParams repeat
+carma_v2x_msgs/RepeatParams repeat
 bool repeat_exists

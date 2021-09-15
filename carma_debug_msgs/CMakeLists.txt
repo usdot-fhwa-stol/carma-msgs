@@ -14,11 +14,18 @@
 # the License.
 #
 
-cmake_minimum_required(VERSION 2.8.3)
+cmake_minimum_required(VERSION 3.5)
 project(carma_debug_msgs)
 
 ## Compile as C++14, supported in ROS Noetic and newer
 add_compile_options(-std=c++14)
+
+find_package(ros_environment REQUIRED)
+
+set(ROS_VERSION $ENV{ROS_VERSION})
+set(SUPPORTED_ROS_VERSION 1)
+
+if(${ROS_VERSION} EQUAL ${SUPPORTED_ROS_VERSION})
 
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
@@ -75,3 +82,10 @@ catkin_package(
 include_directories(
   ${catkin_INCLUDE_DIRS}
 )
+
+else()
+
+message("Skipping build of " ${PROJECT_NAME} " as only ROS " ${SUPPORTED_ROS_VERSION} " is supported. Detected version is ROS " ${ROS_VERSION})
+
+endif()
+

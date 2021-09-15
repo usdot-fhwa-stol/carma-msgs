@@ -58,4 +58,4 @@ uint8 PEDESTRIAN = 4
 bool dynamic_obj
 
 #Predictions for the object
-cav_msgs/PredictedState[] predictions
+carma_perception_msgs/PredictedState[] predictions

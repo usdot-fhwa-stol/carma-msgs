@@ -4,7 +4,7 @@
 # recevied a MobilityRequest from that CAV and decide to involve in that plan
 
 # standard header for all mobility messages
-cav_msgs/MobilityHeader  header
+carma_v2x_msgs/MobilityHeader  header
 
 # urgency of the current plan from 0 to 1000
 uint16                   urgency

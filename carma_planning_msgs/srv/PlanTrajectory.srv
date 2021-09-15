@@ -12,13 +12,13 @@
 std_msgs/Header header 
 
 # The starting state of the vehicle
-cav_msgs/VehicleState vehicle_state
+carma_planning_msgs/VehicleState vehicle_state
 
 # The set of maneuvers to be executed
-cav_msgs/ManeuverPlan maneuver_plan
+carma_planning_msgs/ManeuverPlan maneuver_plan
 
 # The initial trajectory plan to be modified
-cav_msgs/TrajectoryPlan initial_trajectory_plan
+carma_planning_msgs/TrajectoryPlan initial_trajectory_plan
 
 # The index specifying the maneuver within the maneuver plan that a trajectory must be planned for
 uint16 maneuver_index_to_plan
@@ -28,7 +28,7 @@ uint16 maneuver_index_to_plan
 #response
 
 # The returned trajectory
-cav_msgs/TrajectoryPlan trajectory_plan
+carma_planning_msgs/TrajectoryPlan trajectory_plan
 
 # A set of array indexes which map to the maneuvers in the provided maneuver_plan
 # These indicate which maneuvers the returned trajectory is addressing

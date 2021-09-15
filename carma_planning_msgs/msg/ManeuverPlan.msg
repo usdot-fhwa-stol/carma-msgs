@@ -16,4 +16,4 @@ builtin_interfaces/Time planning_start_time
 builtin_interfaces/Time planning_completion_time
 
 # The set of maneuvers defining this plan
-cav_msgs/Maneuver[] maneuvers
+carma_planning_msgs/Maneuver[] maneuvers

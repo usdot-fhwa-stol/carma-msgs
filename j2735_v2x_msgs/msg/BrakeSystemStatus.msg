@@ -25,7 +25,7 @@
 #   rightRear   (4)   -- Right Rear Active
 #   } (SIZE (5))
 #   
-j2735_msgs/BrakeAppliedStatus wheel_brakes
+j2735_v2x_msgs/BrakeAppliedStatus wheel_brakes
 
 #TractionControlStatus ::= ENUMERATED {
 #   unavailable (0), -- B'00  Not Equipped with traction control 
@@ -35,7 +35,7 @@ j2735_msgs/BrakeAppliedStatus wheel_brakes
 #   engaged     (3)  -- B'11  traction control is Engaged
 #   }
 #
-j2735_msgs/TractionControlStatus traction
+j2735_v2x_msgs/TractionControlStatus traction
 
 #AntiLockBrakeStatus ::= ENUMERATED {
 #   unavailable (0), -- B'00  Vehicle Not Equipped with ABS Brakes 
@@ -45,7 +45,7 @@ j2735_msgs/TractionControlStatus traction
 #   engaged     (3)  -- B'11  Vehicle's ABS control is Engaged on any wheel
 #   }
 #
-j2735_msgs/AntiLockBrakeStatus abs
+j2735_v2x_msgs/AntiLockBrakeStatus abs
 
 #StabilityControlStatus ::= ENUMERATED {
 #   unavailable (0), -- B'00  Not Equipped with SC
@@ -55,7 +55,7 @@ j2735_msgs/AntiLockBrakeStatus abs
 #   engaged     (3)  -- B'11  stability control is Engaged 
 #   }
 #   
-j2735_msgs/StabilityControlStatus scs
+j2735_v2x_msgs/StabilityControlStatus scs
 
 #BrakeBoostApplied ::= ENUMERATED {
 #   unavailable   (0), -- Vehicle not equipped with brake boost
@@ -64,7 +64,7 @@ j2735_msgs/StabilityControlStatus scs
 #   on            (2)  -- Vehicle's brake boost is on (applied)
 #   }
 #   
-j2735_msgs/BrakeBoostApplied brake_boost
+j2735_v2x_msgs/BrakeBoostApplied brake_boost
 
 #AuxiliaryBrakeStatus ::= ENUMERATED {
 #   unavailable (0), -- B'00  Vehicle Not Equipped with Aux Brakes 
@@ -74,4 +74,4 @@ j2735_msgs/BrakeBoostApplied brake_boost
 #   reserved    (3)  -- B'11 
 #   }   
 
-j2735_msgs/AuxiliaryBrakeStatus aux_brakes
+j2735_v2x_msgs/AuxiliaryBrakeStatus aux_brakes

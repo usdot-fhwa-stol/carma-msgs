@@ -28,13 +28,13 @@ uint64 end
 bool end_exists
 
 # dow [1] DayOfWeek OPTIONAL, 
-j2735_msgs/DayOfWeek dow
+j2735_v2x_msgs/DayOfWeek dow
 bool dow_exists
 
 # between [2] SEQUENCE (SIZE(1..63)) OF DailySchedule OPTIONAL, 
-j2735_msgs/DailySchedule[] between
+j2735_v2x_msgs/DailySchedule[] between
 bool between_exists
 
 # repeat [3] RepeatParams OPTIONAL
-j2735_msgs/RepeatParams repeat
+j2735_v2x_msgs/RepeatParams repeat
 bool repeat_exists

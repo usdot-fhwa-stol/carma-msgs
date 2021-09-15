@@ -28,15 +28,15 @@
 # ...
 # }
 
-j2735_msgs/MovementPhaseState event_state
+j2735_v2x_msgs/MovementPhaseState event_state
 
-cav_msgs/TimeChangeDetails timing
+carma_v2x_msgs/TimeChangeDetails timing
 bool timing_exists
 
 # The AdvisorySpeedList data frame consists of a list of AdvisorySpeed entries.
 #
 # AdvisorySpeedList ::= SEQUENCE (SIZE(1..16)) OF AdvisorySpeed
-cav_msgs/AdvisorySpeed[] advisory_speed_list
+carma_v2x_msgs/AdvisorySpeed[] advisory_speed_list
 bool speeds_exists
 
 #regional #TODO: RegionalExtensions are not yet implemented in asn1c

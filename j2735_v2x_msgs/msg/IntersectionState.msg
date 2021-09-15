@@ -52,12 +52,12 @@
 string name
 bool name_exists
 
-j2735_msgs/IntersectionReferenceID id
+j2735_v2x_msgs/IntersectionReferenceID id
 
 #MsgCount ::= INTEGER (0..127)
 uint8 revision
 
-j2735_msgs/IntersectionStatusObject status
+j2735_v2x_msgs/IntersectionStatusObject status
 
 #MinuteOfTheYear OPTIONAL ::= INTEGER (0..527040)
 # The value of 527040 shall be used for invalid
@@ -77,14 +77,14 @@ bool time_stamp_exists
 
 # enabledLanes EnabledLaneList
 # This is a list therefore can be empty list in ROS.
-j2735_msgs/EnabledLaneList enabled_lanes
+j2735_v2x_msgs/EnabledLaneList enabled_lanes
 bool enabled_lanes_exists
 
 # 	states MovementList
-j2735_msgs/MovementList states
+j2735_v2x_msgs/MovementList states
 
 # 	maneuverAssistList ManeuverAssistList
-j2735_msgs/ManeuverAssistList maneuever_assist_list
+j2735_v2x_msgs/ManeuverAssistList maneuever_assist_list
 bool maneuever_assist_list_exists
 
 # regional #TODO: RegionalExtensions are not yet implemented in asn1c

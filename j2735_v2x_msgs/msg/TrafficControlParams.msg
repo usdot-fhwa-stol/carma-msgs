@@ -20,14 +20,14 @@
 # }
 
 # vclasses SEQUENCE (SIZE(1..255)) OF TrafficControlVehClass,
-j2735_msgs/TrafficControlVehClass[] vclasses
+j2735_v2x_msgs/TrafficControlVehClass[] vclasses
 
 # schedule TrafficControlSchedule
-j2735_msgs/TrafficControlSchedule schedule
+j2735_v2x_msgs/TrafficControlSchedule schedule
 
 # regulatory BOOLEAN
 bool regulatory
 
 # detail TrafficControlDetail
-j2735_msgs/TrafficControlDetail detail
+j2735_v2x_msgs/TrafficControlDetail detail
 

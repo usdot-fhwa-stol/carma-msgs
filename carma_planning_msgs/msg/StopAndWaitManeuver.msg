@@ -4,7 +4,7 @@
 #
 
 # The common parameters of this maneuver
-cav_msgs/ManeuverParameters parameters
+carma_planning_msgs/ManeuverParameters parameters
 
 # Approximate starting state of the maneuver
 float64 start_dist # downtrack distance in m

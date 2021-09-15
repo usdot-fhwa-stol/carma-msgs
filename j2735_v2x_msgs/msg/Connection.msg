@@ -42,9 +42,9 @@
 # -- connections if the clearance data is common
 # }
 
-j2735_msgs/ConnectingLane connecting_lane
+j2735_v2x_msgs/ConnectingLane connecting_lane
 
-j2735_msgs/IntersectionReferenceID remote_intersection
+j2735_v2x_msgs/IntersectionReferenceID remote_intersection
 bool remote_intersection_exists
 
 # SignalGroupID ::= INTEGER (0..255)

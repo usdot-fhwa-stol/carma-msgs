@@ -52,12 +52,12 @@
 string name
 bool name_exists
 
-j2735_msgs/IntersectionReferenceID id
+j2735_v2x_msgs/IntersectionReferenceID id
 
 #MsgCount ::= INTEGER (0..127)
 uint8 revision
 
-j2735_msgs/IntersectionStatusObject status
+j2735_v2x_msgs/IntersectionStatusObject status
 
 #MinuteOfTheYear OPTIONAL ::= INTEGER (0..527040)
 # The value of 527040 shall be used for invalid
@@ -96,12 +96,12 @@ bool enabled_lanes_exists
 # The MovementList data frame consists of a list of MovementState entries.
 #
 # MovementList ::= SEQUENCE (SIZE(1..255)) OF MovementState
-cav_msgs/MovementState[] movement_list
+carma_v2x_msgs/MovementState[] movement_list
 
 # This entry is used directly by one other data structure in this standard, a DF called DF_LaneAttributes <ASN>.
 #  In addition, this item may be used by data structures in other ITS standards.
 # ManeuverAssistList ::= SEQUENCE (SIZE(1..16)) OF ConnectionManeuverAssist
-j2735_msgs/ConnectionManeuverAssist[] connection_maneuver_assist_list
+j2735_v2x_msgs/ConnectionManeuverAssist[] connection_maneuver_assist_list
 bool maneuever_assist_list_exists
 
 # regional #TODO: RegionalExtensions are not yet implemented in asn1c

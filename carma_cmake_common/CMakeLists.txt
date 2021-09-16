@@ -2,16 +2,32 @@ cmake_minimum_required(VERSION 3.5)
 
 project(carma_cmake_common NONE)
 
-find_package(ament_cmake_core REQUIRED)
-find_package(ament_cmake_python REQUIRED)
+find_package(ros_environment REQUIRED)
 
-ament_python_install_package(carma_cmake_common)
+set(ROS_VERSION $ENV{ROS_VERSION})
 
-ament_package(
-  CONFIG_EXTRAS "carma_cmake_common-extras.cmake"
-)
+if(${ROS_VERSION} EQUAL 1)
 
-install(
-  DIRECTORY cmake
-  DESTINATION share/${PROJECT_NAME}
-)
+  find_package(catkin REQUIRED)
+
+  catkin_package(CFG_EXTRAS 
+    carma_check_ros_version.cmake
+    carma_package.cmake
+  )
+
+else()
+
+  find_package(ament_cmake_core REQUIRED)
+  find_package(ament_cmake_python REQUIRED)
+
+  ament_package(CONFIG_EXTRAS 
+    cmake/carma_check_ros_version.cmake
+    cmake/carma_package.cmake
+  )
+
+  install(
+    DIRECTORY cmake
+    DESTINATION share/${PROJECT_NAME}
+  )
+
+endif()

@@ -20,9 +20,15 @@ jobs:
       - checkout:
           path: src/CARMAMsgs
       - run:
-          name: Build Package
+          name: Build Package for ROS1
           command: |
             source ${INIT_ENV}
+            export ROS_PARALLEL_JOBS='-j1 -l1' # Try to reduce memory consumption on build
+            colcon build --install-base install_ros1 --build-base build_ros1
+      - run:
+          name: Build Package for ROS2
+          command: |
+            source /opt/ros/foxy/setup.bash
             export ROS_PARALLEL_JOBS='-j1 -l1' # Try to reduce memory consumption on build
             colcon build
       - run:

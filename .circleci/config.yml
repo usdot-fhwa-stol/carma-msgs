@@ -31,10 +31,3 @@ jobs:
             source /opt/ros/foxy/setup.bash
             export ROS_PARALLEL_JOBS='-j1 -l1' # Try to reduce memory consumption on build
             colcon build
-      - run:
-          name: Run C++ Tests
-          command: |
-            source ${INIT_ENV}
-            source /opt/carma/devel/setup.bash
-            export ROS_PARALLEL_JOBS='-j1 -l1' # Try to reduce memory consumption on build
-            colcon test

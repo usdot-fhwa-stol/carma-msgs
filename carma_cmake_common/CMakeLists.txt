@@ -23,6 +23,8 @@ else()
   ament_package(CONFIG_EXTRAS 
     cmake/carma_check_ros_version.cmake
     cmake/carma_package.cmake
+    cmake/carma_define_ament_library.cmake
+    cmake/carma_define_ament_executable.cmake
   )
 
   install(

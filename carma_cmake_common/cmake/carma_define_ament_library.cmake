@@ -59,9 +59,9 @@ macro(carma_define_ament_library library_name_arg deps_arg cpp_files_arg)
   install(
     TARGETS ${library_name_arg}
     EXPORT ${library_name_arg}
-    LIBRARY DESTINATION lib/${PROJECT_NAME}
-    ARCHIVE DESTINATION lib/${PROJECT_NAME}
-    RUNTIME DESTINATION lib/${PROJECT_NAME}
+    LIBRARY DESTINATION lib # Libraries are installed to lib
+    ARCHIVE DESTINATION lib
+    RUNTIME DESTINATION lib
     INCLUDES DESTINATION include
   )
 

@@ -57,7 +57,7 @@ macro(carma_define_ament_executable executable_name_arg deps_arg cpp_files_arg)
   install(
     TARGETS ${executable_name_arg}
     EXPORT ${executable_name_arg}
-    LIBRARY DESTINATION lib/${PROJECT_NAME}
+    LIBRARY DESTINATION lib/${PROJECT_NAME} # In Ament, Executables are installed to lib/${PROJECT_NAME} not bin 
     ARCHIVE DESTINATION lib/${PROJECT_NAME}
     RUNTIME DESTINATION lib/${PROJECT_NAME}
     INCLUDES DESTINATION include

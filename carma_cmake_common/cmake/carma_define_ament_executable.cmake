@@ -14,7 +14,7 @@
 
 macro(carma_define_ament_executable executable_name_arg deps_arg cpp_files_arg)
   
-  add_library(${executable_name_arg}
+  add_executable(${executable_name_arg}
     ${cpp_files_arg}
   )
 
@@ -43,7 +43,7 @@ macro(carma_define_ament_executable executable_name_arg deps_arg cpp_files_arg)
   endforeach()
 
   # Add deps
-  target_link_libraries(${library_name_arg} ${internal_deps})
+  target_link_libraries(${executable_name_arg} ${internal_deps})
   ament_target_dependencies(${executable_name_arg} ${external_deps})
 
   # No need to export here as is the case with libraries because executables do not get linked against

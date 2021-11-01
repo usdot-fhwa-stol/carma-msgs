@@ -21,7 +21,7 @@
 
 
 # reqid ::= Id64b
-j2735_msgs/Id64b reqid
+j2735_v2x_msgs/Id64b reqid
 
 # reqseq ::= INTEGER (0..255)
 uint8 reqseq
@@ -30,7 +30,7 @@ uint8 reqseq
 int8 scale
 
 # Bounds SEQUENCE (SIZE(1..63)) OF TrafficControlBounds
-j2735_msgs/TrafficControlBounds[] bounds
+j2735_v2x_msgs/TrafficControlBounds[] bounds
 
 
 

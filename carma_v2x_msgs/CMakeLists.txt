@@ -18,11 +18,15 @@ cmake_minimum_required(VERSION 3.5)
 project(carma_v2x_msgs)
 set(CMAKE_CXX_STANDARD 14)
 
+find_package(carma_cmake_common REQUIRED)
+carma_check_ros_version(2)
+carma_package()
+
 ## Find ament macros and libraries
 find_package(rosidl_default_generators REQUIRED)
 find_package(ament_cmake REQUIRED)
 find_package(std_msgs REQUIRED)
-find_package(j2735_msgs REQUIRED)
+find_package(j2735_v2x_msgs REQUIRED)
 find_package(builtin_interfaces REQUIRED)
 
 ## Generate messages 
@@ -46,7 +50,7 @@ rosidl_generate_interfaces(
       ${srvs}
     DEPENDENCIES
       std_msgs
-      j2735_msgs
+      j2735_v2x_msgs
       builtin_interfaces
 )
 

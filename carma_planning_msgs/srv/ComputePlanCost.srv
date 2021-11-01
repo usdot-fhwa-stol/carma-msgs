@@ -8,7 +8,7 @@
 #
 
 # Request
-cav_msgs/ManeuverPlan maneuver_plan
+carma_planning_msgs/ManeuverPlan maneuver_plan
 
 ---
 # Response

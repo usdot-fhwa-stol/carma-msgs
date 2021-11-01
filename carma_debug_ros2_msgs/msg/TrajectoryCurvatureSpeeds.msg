@@ -5,7 +5,7 @@
 # The header of the message can be found in the trajectroy_plan.header field. 
 
 # The trajectory the provided data corresponds too
-cav_msgs/TrajectoryPlan trajectory_plan
+carma_planning_msgs/TrajectoryPlan trajectory_plan
 
 # The computed curvatures of lane for the provided trajectroy at each point.
 # This array should have the same length as the trajectory_plan
@@ -30,4 +30,4 @@ float64 lat_accel_limit
 float64 lon_accel_limit
 
 # Starting state for trajectory planning that resulted in the trajectory
-cav_msgs/VehicleState starting_state
+carma_planning_msgs/VehicleState starting_state

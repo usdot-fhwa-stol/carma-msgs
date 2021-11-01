@@ -10,4 +10,4 @@
 #
 # AdvisorySpeedList ::= SEQUENCE (SIZE(1..16)) OF AdvisorySpeed
 
-j2735_msgs/AdvisorySpeed[] advisory_speed_list
+j2735_v2x_msgs/AdvisorySpeed[] advisory_speed_list

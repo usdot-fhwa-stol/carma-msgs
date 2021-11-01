@@ -18,6 +18,10 @@ cmake_minimum_required(VERSION 3.5)
 project(carma_localization_msgs)
 set(CMAKE_CXX_STANDARD 14)
 
+find_package(carma_cmake_common REQUIRED)
+carma_check_ros_version(2)
+carma_package()
+
 ## Find ament macros and libraries
 find_package(rosidl_default_generators REQUIRED)
 find_package(ament_cmake REQUIRED)
@@ -48,5 +52,7 @@ rosidl_generate_interfaces(
 
 ament_export_dependencies(rosidl_default_runtime)
 ament_package()
+
+
 
 

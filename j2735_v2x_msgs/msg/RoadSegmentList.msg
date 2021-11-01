@@ -11,4 +11,4 @@
 
 # RoadSegmentList ::= SEQUENCE (SIZE(1..32)) OF RoadSegment
 
-j2735_msgs/RoadSegment[] road_segment_list
+j2735_v2x_msgs/RoadSegment[] road_segment_list

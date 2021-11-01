@@ -1,6 +1,10 @@
 cmake_minimum_required(VERSION 3.5)
 project(can_msgs)
 
+find_package(carma_cmake_common REQUIRED)
+carma_check_ros_version(2)
+carma_package()
+
 find_package(rosidl_default_generators REQUIRED)
 find_package(ament_cmake REQUIRED)
 find_package(std_msgs REQUIRED)
@@ -15,3 +19,5 @@ rosidl_generate_interfaces(
 
 ament_export_dependencies(rosidl_default_runtime)
 ament_package()
+
+

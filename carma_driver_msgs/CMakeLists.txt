@@ -18,10 +18,15 @@ cmake_minimum_required(VERSION 3.5)
 project(carma_driver_msgs)
 set(CMAKE_CXX_STANDARD 14)
 
+find_package(carma_cmake_common REQUIRED)
+carma_check_ros_version(2)
+carma_package()
+
 ## Find ament macros and libraries
 find_package(rosidl_default_generators REQUIRED)
 find_package(ament_cmake REQUIRED)
 find_package(std_msgs REQUIRED)
+find_package(carma_msgs REQUIRED)
 
 ## Generate messages 
 file(GLOB msg_files msg/*.msg)
@@ -44,6 +49,7 @@ rosidl_generate_interfaces(
       ${srvs}
     DEPENDENCIES
       std_msgs
+      carma_msgs
 )
 
 ament_export_dependencies(rosidl_default_runtime)

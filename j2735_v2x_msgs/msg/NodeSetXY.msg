@@ -10,4 +10,4 @@
 #
 # NodeSetXY ::= SEQUENCE (SIZE(2..63)) OF NodeXY
 
-j2735_msgs/NodeXY[] node_set_xy
+j2735_v2x_msgs/NodeXY[] node_set_xy

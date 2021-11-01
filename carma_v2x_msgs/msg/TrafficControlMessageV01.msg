@@ -25,7 +25,7 @@
 # }
 
 # reqid ::= Id64b
-j2735_msgs/Id64b reqid
+j2735_v2x_msgs/Id64b reqid
 
 # reqseq ::= INTEGER (0..255)
 uint8 reqseq
@@ -37,20 +37,20 @@ uint16 msgtot
 uint16 msgnum
 
 # id Id128b, -- unique traffic control id
-j2735_msgs/Id128b id
+j2735_v2x_msgs/Id128b id
 
 # updated EpochMins
 builtin_interfaces/Time updated
 
 # package [0] TrafficControlPackage OPTIONAL, -- related traffic control ids
-j2735_msgs/TrafficControlPackage package
+j2735_v2x_msgs/TrafficControlPackage package
 bool package_exists
 
 # params [1] TrafficControlParams OPTIONAL
-cav_msgs/TrafficControlParams params
+carma_v2x_msgs/TrafficControlParams params
 bool params_exists
 
 # geometry [2] TrafficControlGeometry OPTIONAL
-cav_msgs/TrafficControlGeometry geometry
+carma_v2x_msgs/TrafficControlGeometry geometry
 bool geometry_exists
 

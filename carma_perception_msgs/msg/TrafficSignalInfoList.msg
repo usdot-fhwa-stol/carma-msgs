@@ -7,5 +7,5 @@
 # @author Mae Fromm
 # @version 0.1
 
-cav_msgs/TrafficSignalInfo[] traffic_signal_info_list
+carma_perception_msgs/TrafficSignalInfo[] traffic_signal_info_list
 

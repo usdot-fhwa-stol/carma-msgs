@@ -45,6 +45,6 @@ float32 refelv
 float32 heading
 
 # nodes SEQUENCE (SIZE(1..255)) OF PathNode
-cav_msgs/PathNode[] nodes
+carma_v2x_msgs/PathNode[] nodes
 
 

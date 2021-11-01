@@ -32,8 +32,8 @@ bool invalidates_route
 string traffic_control_id
 
 # Regulatory elements to update
-carma_debug_msgs/LaneletIdRegulatoryElementPair[] update_list
+carma_debug_ros2_msgs/LaneletIdRegulatoryElementPair[] update_list
 
 # Regulatory elements to remove
-carma_debug_msgs/LaneletIdRegulatoryElementPair[] remove_list
+carma_debug_ros2_msgs/LaneletIdRegulatoryElementPair[] remove_list
 

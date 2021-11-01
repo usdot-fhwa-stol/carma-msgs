@@ -26,5 +26,5 @@ uint8 choice
 uint8 NODE_SET_XY=0
 uint8 COMPUTED_LANE=1
 
-cav_msgs/NodeSetXY nodes
-cav_msgs/ComputedLane computed
+carma_v2x_msgs/NodeSetXY nodes
+carma_v2x_msgs/ComputedLane computed

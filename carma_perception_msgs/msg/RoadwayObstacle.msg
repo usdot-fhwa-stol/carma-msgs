@@ -9,10 +9,10 @@
 #
 
 # The geometry of the vehicle
-cav_msgs/ExternalObject object
+carma_perception_msgs/ExternalObject object
 
 # Enum describing the type of communication this vehicle is capable of
-cav_msgs/ConnectedVehicleType connected_vehicle_type
+carma_perception_msgs/ConnectedVehicleType connected_vehicle_type
 
 # id of the lanelet this obstacle occupies
 int64 lanelet_id

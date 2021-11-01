@@ -20,7 +20,7 @@
 # ...
 # }
 
-cav_msgs/NodeOffsetPointXY delta
+carma_v2x_msgs/NodeOffsetPointXY delta
 
-cav_msgs/NodeAttributeSetXY attributes
+carma_v2x_msgs/NodeAttributeSetXY attributes
 bool attributes_exists

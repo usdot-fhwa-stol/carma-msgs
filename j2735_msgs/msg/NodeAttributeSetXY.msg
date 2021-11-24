@@ -51,10 +51,10 @@ bool data_exists
 
 # Offset-B10 ::= INTEGER (-512..511)
 # -- a range of +- 5.11 meters
-float32 dWitdh
-bool dWitdh_exists
+float32 d_witdh
+bool d_witdh_exists
 
-float32 dElevation
-bool dElevation_exists
+float32 d_elevation
+bool d_elevation_exists
 
 # regional #TODO: RegionalExtensions are not yet implemented in asn1c

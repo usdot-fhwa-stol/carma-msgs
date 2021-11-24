@@ -71,7 +71,7 @@ j2735_msgs/OffsetYaxis offset_y_axis
 #  -- the values 240 to 254 shall not be sent
 #  -- the value 255 (0xFF) indicates an invalid value
 # NOTE: use invalid value to indicate unavailability as well.
-uint16 rotateXY
+uint16 rotate_XY
 uint16 ROTATEXY_INVALID=255
 bool rotatexy_exists
 

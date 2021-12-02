@@ -6,7 +6,7 @@
 # the CAV should broadcast this message with new trajectory immediately
 
 # standard header for all mobility messages
-carma_v2x_msgs/MobilityHeader  header
+carma_v2x_msgs/MobilityHeader  m_header
 
 # current trajectory
 carma_v2x_msgs/Trajectory      trajectory

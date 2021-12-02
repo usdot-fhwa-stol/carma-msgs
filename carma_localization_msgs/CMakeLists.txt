@@ -53,6 +53,6 @@ rosidl_generate_interfaces(
 ament_export_dependencies(rosidl_default_runtime)
 ament_package()
 
-
-
-
+install(
+  FILES rule.yml
+  DESTINATION share/${PROJECT_NAME})

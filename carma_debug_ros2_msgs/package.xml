@@ -33,7 +33,8 @@
   <member_of_group>rosidl_interface_packages</member_of_group>
 
   <export>
-    <build_type>ament_cmake</build_type>
+	  <build_type>ament_cmake</build_type>
+		      <ros1_bridge mapping_rules="rule.yml"/>
+
   </export>
-  
 </package>

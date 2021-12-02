@@ -11,7 +11,7 @@
 string name
 
 # The string version identifier for the plugin
-string versionId
+string version_id
 
 # The usage type for the plugin
 uint8 type

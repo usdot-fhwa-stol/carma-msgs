@@ -9,7 +9,7 @@
 string  maneuver_id
 
 # Enum indicating the type of negotiation this maneuver is involved in
-uint8 neogition_type
+uint8 negotiation_type
 
 uint8 NO_NEGOTIATION = 0
 uint8 GENERAL_NEGOTIATION = 1

@@ -1,6 +1,5 @@
 FROM usdotfhwastoldev/carma-base:develop as base_image
-
-FROM base_image as build
+SHELL ["/bin/bash", "-c"]
 
 LABEL org.label-schema.schema-version="1.0"
 LABEL org.label-schema.name="carma-msgs"
@@ -13,21 +12,18 @@ LABEL org.label-schema.vcs-ref=${VCS_REF}
 LABEL org.label-schema.build-date=${BUILD_DATE}
 
 # ROS 1 msgs setup
-RUN cd ~/.base-image && mkdir ros1_msgs_ws && cd ros1_msgs_ws && source /opt/ros/noetic/setup.bash \
-&& mkdir src \
-&& cd src \
-&& git clone -b fix/bridge https://github.com/usdot-fhwa-stol/carma-msgs.git \
-&& cd .. \
-&& colcon build 
+RUN mkdir -p ~/.base-image/ros1_msgs_ws/src/carma_msgs
+COPY . /home/carma/.base-image/ros1_msgs_ws/src/carma_msgs/
+
+# ROS 2 msgs setup
+RUN mkdir -p ~/.base-image/ros2_msgs_ws/src/carma_msgs
+COPY . /home/carma/.base-image/ros2_msgs_ws/src/carma_msgs/
+
+# ROS1 message setup
+RUN cd ~/.base-image/ros1_msgs_ws && source /opt/ros/noetic/setup.bash && colcon build 
 
 # ROS2 message setup
-RUN cd ~/.base-image && mkdir ros2_msgs_ws && cd ros2_msgs_ws && source /opt/ros/foxy/setup.bash \
-&& mkdir src \
-&& cd src \
-&& git clone -b fix/bridge https://github.com/usdot-fhwa-stol/carma-msgs.git \
-&& cd carma-msgs && rm -rf can_msgs && cd .. \
-&& cd .. \
-&& colcon build
+RUN cd ~/.base-image/ros2_msgs_ws && source /opt/ros/foxy/setup.bash && colcon build
 
 # Build the bridge
 RUN source /opt/ros/noetic/setup.bash \

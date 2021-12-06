@@ -6,7 +6,7 @@
 # if the request is only sent to one CAV, then no response means negative response
 
 # standard header for all mobility messages
-carma_v2x_msgs/MobilityHeader        header
+carma_v2x_msgs/MobilityHeader        m_header
 
 # strategy string to indicate which strategy type this message is used for
 # Example: "Carma/Platooning"

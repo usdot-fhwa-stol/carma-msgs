@@ -4,7 +4,7 @@
 # CAVs at any desired frequency in order to accomplish a collaborative plan
 
 # standard header for all mobility messages
-cav_msgs/MobilityHeader  header
+cav_msgs/MobilityHeader  m_header
 
 # strategy string to indicate which strategy type this message is used for
 string                   strategy

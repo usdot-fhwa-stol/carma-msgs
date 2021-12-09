@@ -51,8 +51,8 @@ bool data_exists
 
 # Offset-B10 ::= INTEGER (-512..511)
 # -- a range of +- 5.11 meters
-float32 d_witdh
-bool d_witdh_exists
+float32 d_width
+bool d_width_exists
 
 float32 d_elevation
 bool d_elevation_exists

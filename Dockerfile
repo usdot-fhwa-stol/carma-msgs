@@ -1,5 +1,7 @@
-FROM usdotfhwastoldev/carma-base:develop as base_image
+FROM usdotfhwastoldev/carma-base:foxy-develop as base_image
 SHELL ["/bin/bash", "-c"]
+
+ARG DEBIAN_FRONTEND="noninteractive"
 
 LABEL org.label-schema.schema-version="1.0"
 LABEL org.label-schema.name="carma-msgs"
@@ -33,5 +35,5 @@ RUN source /opt/ros/noetic/setup.bash \
 && cd ~/.base-image/workspace/src \
 && git clone --branch foxy https://github.com/ros2/ros1_bridge.git \
 && cd ../ \
-&& sudo apt-get update && apt-get install ros-foxy-can-msgs \
+&& sudo apt-get update \
 && colcon build --packages-select ros1_bridge

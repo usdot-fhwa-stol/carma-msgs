@@ -36,4 +36,5 @@ RUN source /opt/ros/noetic/setup.bash \
 && git clone --branch foxy https://github.com/ros2/ros1_bridge.git \
 && cd ../ \
 && sudo apt-get update \
-&& colcon build --packages-select ros1_bridge
+&& colcon build --packages-select ros1_bridge \
+&& sudo chmod -R ugo+x ~/.base-image/workspace/install

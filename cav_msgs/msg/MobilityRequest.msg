@@ -31,3 +31,8 @@ cav_msgs/Trajectory            trajectory
 
 # time when this message is expired
 uint64                         expiration
+
+# the target index to join the platoon
+# -1 means join from front, otherwise indicate the gap leading vehicle's index
+uint16                         join_index
+

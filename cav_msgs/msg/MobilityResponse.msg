@@ -11,3 +11,7 @@ uint16                   urgency
 
 # the content of this response
 bool                     is_accepted
+
+# type of the proposal being suggested to neighbors
+cav_msgs/PlanType        plan_type
+

@@ -22,11 +22,13 @@ cav_msgs/ManeuverPlan prior_plan
 ###
 
 # Vehicle initial 2d position in the frame specified by header at the time specified by header
+# Position reports the front bumper position of the vehicle
 # Units: m
 float64 veh_x
 float64 veh_y
 
 # Vehicle initial position in the route frame. This must match the veh_x, veh_y values.
+# Downtrack is calculated using the front bumper position of the vehicle
 # Units: m
 float64 veh_downtrack
 

@@ -13,6 +13,13 @@ LABEL org.label-schema.vcs-url="https://github.com/usdot-fhwa-stol/carma-msgs"
 LABEL org.label-schema.vcs-ref=${VCS_REF}
 LABEL org.label-schema.build-date=${BUILD_DATE}
 
+# Remove jsk msg packages that were installed in carma-base and conflcit with this image
+# RUN sudo apt-get remove -y ros-noetic-jsk-recognition-msgs \
+#     ros-noetic-jsk-recognition-msgs \
+#     ros-noetic-jsk-footstep-msgs \
+#     ros-noetic-jsk-gui-msgs \
+#     ros-noetic-jsk-hark-msgs
+
 # Clone autoware repo to access messages
 RUN cd /home/carma/ && git clone https://github.com/usdot-fhwa-stol/autoware.ai.git --depth 1 --branch fix/jsk_common_msgs
 
@@ -36,10 +43,10 @@ RUN cp -R /home/carma/autoware.ai/jsk_recognition /home/carma/.base-image/ros2_m
 RUN rm -r /home/carma/autoware.ai/
 
 # ROS1 message setup
-RUN cd ~/.base-image/ros1_msgs_ws && source /opt/ros/noetic/setup.bash && colcon build 
+RUN cd ~/.base-image/ros1_msgs_ws && source /opt/ros/noetic/setup.bash && colcon build --packages-up-to cav_msgs cav_srvs j2735_msgs can_msgs carma_debug_msgs autoware_lanelet2_msgs
 
 # ROS2 message setup
-RUN cd ~/.base-image/ros2_msgs_ws && source /opt/ros/foxy/setup.bash && colcon build
+RUN cd ~/.base-image/ros2_msgs_ws && source /opt/ros/foxy/setup.bash && colcon build --packages-up-to autoware_lanelet2_msgs can_msgs carma_debug_ros2_msgs carma_driver_msgs carma_localization_msgs carma_msgs carma_perception_msgs carma_planning_msgs carma_v2x_msgs j2735_v2x_msgs
 
 # Build the bridge
 RUN source /opt/ros/noetic/setup.bash \
@@ -47,8 +54,8 @@ RUN source /opt/ros/noetic/setup.bash \
 && source ~/.base-image/ros1_msgs_ws/install/local_setup.bash \
 && source ~/.base-image/ros2_msgs_ws/install/local_setup.bash \
 && cd ~/.base-image/workspace/src \
-&& git clone --branch foxy https://github.com/ros2/ros1_bridge.git \
+&& git clone --depth 1 --branch feature-parametrize-qos https://github.com/LoyVanBeek/ros1_bridge.git \
 && cd ../ \
 && sudo apt-get update \
-&& colcon build --packages-select ros1_bridge \
+&& colcon build --packages-select ros1_bridge --cmake-args "--debug-output" \
 && sudo chmod -R ugo+x ~/.base-image/workspace/install

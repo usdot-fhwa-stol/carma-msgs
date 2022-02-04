@@ -13,13 +13,6 @@ LABEL org.label-schema.vcs-url="https://github.com/usdot-fhwa-stol/carma-msgs"
 LABEL org.label-schema.vcs-ref=${VCS_REF}
 LABEL org.label-schema.build-date=${BUILD_DATE}
 
-# Remove jsk msg packages that were installed in carma-base and conflcit with this image
-# RUN sudo apt-get remove -y ros-noetic-jsk-recognition-msgs \
-#     ros-noetic-jsk-recognition-msgs \
-#     ros-noetic-jsk-footstep-msgs \
-#     ros-noetic-jsk-gui-msgs \
-#     ros-noetic-jsk-hark-msgs
-
 # Clone autoware repo to access messages
 RUN cd /home/carma/ && git clone https://github.com/usdot-fhwa-stol/autoware.ai.git --depth 1 --branch fix/jsk_common_msgs
 

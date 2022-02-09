@@ -1,0 +1,26 @@
+#
+# SetLightBarIndicator.srv
+# 
+# Provided by the LightBarManager node. Plugins and component
+# uses this service to set the lightbar indicator ON or OFF
+# 
+# @author Misheel Bayartsengel
+# @version 0.1
+#
+# Request - Indicator, its state, and the requester name
+
+uint8 OFF=0
+uint8 ON=1
+
+uint8 state
+string requester_name
+carma_msgs/LightBarIndicator indicator
+carma_msgs/LightBarCDAType cda_type
+
+---
+# Response - success status
+uint8 status_code
+uint8 SUCCESS=0       
+uint8 PERMISSION_DENIED = 1 # if the requester is no longer controlling the indicator
+uint8 ERROR=2             # any other reason the request failed, including hardware issue
+

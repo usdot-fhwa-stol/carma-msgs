@@ -1,0 +1,3 @@
+-
+  ros1_package_name: 'cav_msgs'
+  ros2_package_name: 'carma_v2x_msgs'

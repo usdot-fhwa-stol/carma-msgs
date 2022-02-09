@@ -1,0 +1,17 @@
+# PlanManeuvers.srv
+#
+# Service used to request a maneuver plan from a plugin
+#
+#
+
+#request
+
+# Maneuvers planned prior to the current planning request.
+# These maneuvers must not be modified by this process
+carma_planning_msgs/ManeuverPlan prior_plan
+---
+
+#response
+
+# The returned maneuver plan, must be a strict superset of prior plan
+carma_planning_msgs/ManeuverPlan new_plan

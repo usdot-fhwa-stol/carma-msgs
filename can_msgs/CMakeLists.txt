@@ -42,6 +42,7 @@ else() # ROS 2
             msg/CanState.msg
             msg/Frame.msg
         DEPENDENCIES
+            std_msgs
     )
 
     ament_export_dependencies(rosidl_default_runtime)

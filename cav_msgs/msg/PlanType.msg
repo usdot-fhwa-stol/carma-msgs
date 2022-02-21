@@ -20,7 +20,7 @@ uint8       PLATOON_FRONT_JOIN = 6
 # UCLA: ADDED FOR CUT-IN JOIN
 uint8       CUT_IN_FROM_SIDE = 7
 uint8       PLATOON_CUTIN_JOIN = 8
-uint8       STOP_CREAT_GAP = 9
+uint8       STOP_CREATE_GAP = 9
 uint8       CUT_IN_FRONT_DONE = 10
 uint8       CUT_IN_MID_OR_REAR_DONE = 11
 

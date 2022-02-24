@@ -25,14 +25,5 @@ uint8       CUT_IN_FRONT_DONE = 10
 uint8       CUT_IN_MID_OR_REAR_DONE = 11
 
 # UCLA: ADDED FOR DEPARTURE
-uint8 	    PLATOON_DEPARTURE = 12
+uint8       PLATOON_DEPARTURE = 12
 uint8       DELETE_MEMBER = 13
-
-# ideas for future additions:
-# uint8       SEARCHING_FOR_PLATOON = 5
-# uint8       DEPART_PLATOON = 6
-# uint8       SLOWDOWN = 7
-# uint8       SPEEDUP = 8
-# uint8       PASSING = 9 
-# pulling onto shoulder, need multi-lane change
-# join platoon in middle, merging platoons

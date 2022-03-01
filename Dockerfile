@@ -14,7 +14,7 @@ LABEL org.label-schema.vcs-ref=${VCS_REF}
 LABEL org.label-schema.build-date=${BUILD_DATE}
 
 # Clone autoware repo to access messages
-RUN cd /home/carma/ && git clone https://github.com/usdot-fhwa-stol/autoware.ai.git --depth 1 --branch develop
+RUN cd /home/carma/ && git clone https://github.com/usdot-fhwa-stol/autoware.ai.git --depth 1 --branch carma-develop
 
 # ROS 1 msgs setup
 RUN mkdir -p ~/.base-image/ros1_msgs_ws/src/carma_msgs

@@ -47,7 +47,7 @@ RUN source /opt/ros/noetic/setup.bash \
 && source ~/.base-image/ros1_msgs_ws/install/local_setup.bash \
 && source ~/.base-image/ros2_msgs_ws/install/local_setup.bash \
 && cd ~/.base-image/workspace/src \
-&& git clone --depth 1 --branch feature-parametrize-qos https://github.com/LoyVanBeek/ros1_bridge.git \
+&& git clone --depth 1 --branch develop https://github.com/usdot-fhwa-stol/ros1_bridge.git \
 && cd ../ \
 && sudo apt-get update \
 && colcon build --packages-select ros1_bridge --cmake-args "--debug-output" \

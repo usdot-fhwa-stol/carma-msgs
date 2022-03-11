@@ -18,3 +18,7 @@ uint8   SHUTDOWN = 6
 
 # the specific alert message in human readable form
 string  description
+
+# The fully specified name of the node which generated this message
+# NOTE: This field should not be set by ROS1 nodes
+string source_node

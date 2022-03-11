@@ -14,7 +14,7 @@
 # TrafficControlMessage ::= CHOICE
 # {
 # 	reserved NULL, -- skip version zero
-# 	tcmV01 TrafficControlMessageV01, -- traffic control message version 1
+# 	tcm_v01 TrafficControlMessageV01, -- traffic control message version 1
 # 	...
 # }
 

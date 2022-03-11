@@ -14,7 +14,7 @@
 #TrafficControlRequest ::= CHOICE
 #{
 #	reserved NULL, -- skip version zero
-#	tcrV01 TrafficControlRequestV01, -- traffic control request version 1
+#	tcr_v01 TrafficControlRequestV01, -- traffic control request version 1
 #	...
 #}
 

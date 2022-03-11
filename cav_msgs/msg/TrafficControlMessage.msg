@@ -24,5 +24,5 @@ uint8 choice
 uint8 RESERVED=0
 uint8 TCMV01=1
 
-#tcrV01 ::= TrafficControlRequestV01
+#tcm_v01 ::= TrafficControlMessageV01
 cav_msgs/TrafficControlMessageV01 tcm_v01

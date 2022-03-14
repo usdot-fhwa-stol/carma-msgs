@@ -14,7 +14,7 @@
 #TrafficControlRequest ::= CHOICE
 #{
 #	reserved NULL, -- skip version zero
-#	tcrV01 TrafficControlRequestV01, -- traffic control request version 1
+#	tcr_v01 TrafficControlRequestV01, -- traffic control request version 1
 #	...
 #}
 
@@ -23,5 +23,5 @@ uint8 choice
 uint8 RESERVED=0
 uint8 TCRV01=1
 
-#tcrV01 ::= TrafficControlRequestV01
+#tcr_v01 ::= TrafficControlRequestV01
 carma_v2x_msgs/TrafficControlRequestV01 tcr_v01

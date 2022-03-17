@@ -9,7 +9,7 @@
 # Heading in degrees in range (0..359.9875)
 float32 heading
 
-float32 MIN=0
+float32 MIN=0.0
 float32 MAX=359.9875
 
 # If true then heading is unavailable

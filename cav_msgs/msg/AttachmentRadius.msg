@@ -9,5 +9,5 @@
 # AttachmentRadius in meters in range (0..20)
 float32 attachment_radius
 
-float32 ATTACHMENT_RADIUS_MIN= 0
-float32 ATTACHMENT_RADIUS_MAX = 20
+float32 ATTACHMENT_RADIUS_MIN= 0.0
+float32 ATTACHMENT_RADIUS_MAX = 20.0

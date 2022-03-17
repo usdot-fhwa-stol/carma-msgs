@@ -10,7 +10,7 @@
 # Velocity in m/s in range (0..163.82)
 float32 velocity
 
-float32 MIN=0
+float32 MIN=0.0
 float32 MAX=163.82
 
 # If true the velocity is unavailable

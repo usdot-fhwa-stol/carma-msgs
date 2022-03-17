@@ -17,5 +17,5 @@ float32 MAX_RADIUS=327.67
 # Confidence percentage in range (0..200)
 float32 confidence
 
-float32 MIN_CONFIDENCE=0
-float32 MAX_CONFIDENCE=200
+float32 MIN_CONFIDENCE=0.0
+float32 MAX_CONFIDENCE=200.0

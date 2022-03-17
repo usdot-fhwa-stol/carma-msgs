@@ -9,8 +9,8 @@
 # Latitude in degrees in range (-90..90)
 float64 latitude
 
-float32 MIN=-90
-float32 MAX=90
+float32 MIN=-90.0
+float32 MAX=90.0
 
 # True if the latitude value is unavailable
 bool unavailable

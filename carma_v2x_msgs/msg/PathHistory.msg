@@ -18,6 +18,8 @@ uint8 HAS_CURR_GNSS_STATUS = 1
 uint8 HAS_INITIAL_POSITION = 2
 
 
+j2735_v2x_msgs/PathHistoryPointList crumb_data
+
 ####
 # OPTIONAL FIELDS
 # All fields below this section are optional.

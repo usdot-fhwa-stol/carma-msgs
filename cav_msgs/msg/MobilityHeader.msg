@@ -12,6 +12,7 @@ string  sender_id
 # Empty string indicates a broadcast message
 string  recipient_id
 
+# Note: BSM id has been removed from IHP2 platooning.
 # sender's dynamic ID which is its BSM id in hex string
 # Example: "FFFFFFFF"
 string sender_bsm_id

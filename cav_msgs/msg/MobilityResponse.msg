@@ -15,3 +15,9 @@ bool                     is_accepted
 # type of the proposal being suggested to neighbors
 cav_msgs/PlanType        plan_type
 
+# The reason behind the provided response (mainly for rejections)
+cav_msgs/ResponseReason   reason
+
+# repeatability of the sent request
+cav_msgs/RepeatRequest     repeat
+

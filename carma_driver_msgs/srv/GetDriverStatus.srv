@@ -1,0 +1,9 @@
+# GetDriverStatus.srv
+
+#request - empty
+
+---
+
+#response
+
+carma_driver_msgs/DriverStatus status

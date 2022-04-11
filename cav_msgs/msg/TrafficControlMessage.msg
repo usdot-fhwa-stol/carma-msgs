@@ -14,7 +14,7 @@
 # TrafficControlMessage ::= CHOICE
 # {
 # 	reserved NULL, -- skip version zero
-# 	tcmV01 TrafficControlMessageV01, -- traffic control message version 1
+# 	tcm_v01 TrafficControlMessageV01, -- traffic control message version 1
 # 	...
 # }
 
@@ -24,5 +24,5 @@ uint8 choice
 uint8 RESERVED=0
 uint8 TCMV01=1
 
-#tcrV01 ::= TrafficControlRequestV01
-cav_msgs/TrafficControlMessageV01 tcmV01
+#tcm_v01 ::= TrafficControlMessageV01
+cav_msgs/TrafficControlMessageV01 tcm_v01

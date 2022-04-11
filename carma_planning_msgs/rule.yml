@@ -1,0 +1,6 @@
+-
+  ros1_package_name: 'cav_msgs'
+  ros2_package_name: 'carma_planning_msgs'
+-
+  ros1_package_name: 'cav_srvs'
+  ros2_package_name: 'carma_planning_msgs'

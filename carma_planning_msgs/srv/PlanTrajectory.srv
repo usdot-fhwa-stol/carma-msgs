@@ -1,0 +1,44 @@
+# PlanTrajectory.srv
+#
+# Service used to request a trajectory plan from a plugin
+#
+#
+
+#request
+
+# Header
+# Stamp for the header should match time that vehicle state was computed. 
+# This may be later than the maneuver_plan header and possibly in the future if multiple plan trajectory requests were sent for one maneuver plan
+std_msgs/Header header 
+
+# The starting state of the vehicle
+carma_planning_msgs/VehicleState vehicle_state
+
+# The set of maneuvers to be executed
+carma_planning_msgs/ManeuverPlan maneuver_plan
+
+# The initial trajectory plan to be modified
+carma_planning_msgs/TrajectoryPlan initial_trajectory_plan
+
+# The index specifying the maneuver within the maneuver plan that a trajectory must be planned for
+uint16 maneuver_index_to_plan
+
+---
+
+#response
+
+# The returned trajectory
+carma_planning_msgs/TrajectoryPlan trajectory_plan
+
+# A set of array indexes which map to the maneuvers in the provided maneuver_plan
+# These indicate which maneuvers the returned trajectory is addressing
+uint8[] related_maneuvers
+
+# A list of maneuver completion status which map 1-1 with the related_maneuvers array
+# Later maneuvers in this list should never be marked in complete unless the preceding maneuver is marked complete
+uint8[] maneuver_status
+
+# Enum of maneuver statuses
+uint8 MANEUVER_ABORTED=0
+uint8 MANEUVER_IN_PROGRESS=1
+uint8 MANEUVER_COMPLETE=2

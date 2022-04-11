@@ -1,0 +1,22 @@
+#
+# SendMessage.srv
+# 
+# Service provided by the DSRC driver node. Sends a message to the DSRC OBU.
+# Response contains error code denoting success or failure.
+# @author Joe Adkisson
+# @version 0.1
+#
+
+# Request
+# The message to be sent
+carma_driver_msgs/ByteArray message_to_send
+
+---
+
+# Response
+# An enumeration representing a service execution error as defined in the route design document.
+uint8 error_status
+
+# enumeration values for errorStatus:
+uint8 NO_ERROR=0
+uint8 MSG_FAILURE=1

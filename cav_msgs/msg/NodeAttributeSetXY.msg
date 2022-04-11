@@ -58,12 +58,12 @@ bool data_exists
 # dWidth in this message are conveyed as m rather than cm to avoid redundant unnecessary conversion by subscribers
 # FLOAT (-5.12-5.11)
 # -- a range of +- 5.11 meters
-float32 dWitdh
-bool dWitdh_exists
+float32 d_width
+bool d_width_exists
 
 # Deviates from J2735 standard:
 # dElevation in this message are conveyed as m rather than cm to avoid redundant unnecessary conversion by subscribers
-float32 dElevation
-bool dElevation_exists
+float32 d_elevation
+bool d_elevation_exists
 
 # regional #TODO: RegionalExtensions are not yet implemented in asn1c

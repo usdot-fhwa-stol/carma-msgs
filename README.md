@@ -3,7 +3,24 @@ CARMAMsgs contains all the CARMAPlatform-specific ROS message definitions used b
 
 This package is required for building most of the CARMAPlatform nodes
 
-To add this package to your CARMAPlatform project simply clone this repository into your Catkin workspace
+To add this package to your CARMAPlatform project simply clone this repository into your colcon workspace.
+
+There are both ROS1 and ROS2 packages in this repo. Building of these packages will automatically toggle based on your ROS version, however,
+it is important to be careful to not mix the install path for the distributions. Therefore different install and build paths should be used for each ROS version.
+
+For example:
+
+ROS 2
+
+```bash
+colcon build
+```
+
+ROS 1
+
+```bash
+colcon build --install-base install_ros1 --build-base build_ros1
+```
 
 # CARMAPlatform
 The primary CARMAPlatform repository can be found [here](https://github.com/usdot-fhwa-stol/carma-platform) and is part of the [USDOT FHWA STOL](https://github.com/usdot-fhwa-stol/)

@@ -3,7 +3,7 @@ jobs:
   build:
     # Setup docker
     docker:
-      - image: usdotfhwastol/carma-base:carma-system-3.11.0
+      - image: usdotfhwastol/carma-base:carma-system-4.0.0
         user: carma
         environment:
           TERM: xterm # use xterm to get full display output from build
@@ -20,15 +20,13 @@ jobs:
       - checkout:
           path: src/CARMAMsgs
       - run:
-          name: Build Package
+          name: Build Packages for ROS1
           command: |
             source ${INIT_ENV}
             export ROS_PARALLEL_JOBS='-j1 -l1' # Try to reduce memory consumption on build
-            colcon build
+            colcon build --install-base install_ros1 --build-base build_ros1
       - run:
-          name: Run C++ Tests
+          name: Build Packages for ROS2
           command: |
-            source ${INIT_ENV}
-            source /opt/carma/devel/setup.bash
-            export ROS_PARALLEL_JOBS='-j1 -l1' # Try to reduce memory consumption on build
-            colcon test
+            source /opt/ros/foxy/setup.bash
+            colcon build --parallel-workers 2 # Try to reduce memory consumption on build

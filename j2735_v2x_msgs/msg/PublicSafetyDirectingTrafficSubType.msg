@@ -1,5 +1,5 @@
 #
-# PublicSafetyAndRoadWorkerActivity.msg
+# PublicSafetyDirectingTrafficSubType.msg
 #
 # J2735 2016 message format.
 #

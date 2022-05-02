@@ -32,7 +32,9 @@
 #	maxvehwidth INTEGER (0..127), -- tenths of meters
 #	maxvehlength INTEGER (0..1023), -- tenths of meters
 #	maxvehaxles INTEGER (2..15),
-#	minvehocc INTEGER (1..15), 
+#	minvehocc INTEGER (1..15),
+#   maxplatoonsize INTEGER (1..63), 
+#   minplatoonhdwy INTEGER (0..2047), -- tenths of meters
 #	...
 #}
 
@@ -61,6 +63,8 @@ uint8 MAXVEHWIDTH_CHOICE=16
 uint8 MAXVEHLENGTH_CHOICE=17
 uint8 MAXVEHAXLES_CHOICE=18
 uint8 MINVEHOCC_CHOICE=19
+uint8 MAXPLATOONSIZE_CHOICE=20
+uint8 MINPLATOONHDWY_CHOICE=21
 
 # signal ::= OCTET STRING SIZE(0..63)
 uint8[] signal
@@ -169,5 +173,8 @@ uint8 maxvehaxles
 #minvehocc ::= INTEGER (1..15)
 uint8 minvehocc
 
+#maxplatoonsize ::= INTEGER (1..63)
+uint8 maxplatoonsize
 
-
+#minplatoonhdwy ::= INTEGER (0..2047), -- tenths of meters
+float64 minplatoonhdwy

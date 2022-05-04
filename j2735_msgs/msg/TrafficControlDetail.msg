@@ -177,4 +177,4 @@ uint8 minvehocc
 uint8 maxplatoonsize
 
 #minplatoonhdwy ::= INTEGER (0..2047), -- tenths of meters
-float64 minplatoonhdwy
+uint16 minplatoonhdwy

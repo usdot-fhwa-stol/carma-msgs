@@ -24,17 +24,17 @@
 #	lataffinity ENUMERATED {left, right},
 #	latperm SEQUENCE (SIZE(2)) OF ENUMERATED {none, permitted, passing-only, emergency-only},
 #	parking ENUMERATED {no, parallel, angled},
-#	minspeed INTEGER (0..1023), -- tenths of m/s
-#	maxspeed INTEGER (0..1023), -- tenths of m/s
-#	minhdwy INTEGER (0..2047), -- tenths of meters
-#	maxvehmass INTEGER (0..65535), -- kg
-#	maxvehheight INTEGER (0..127), -- tenths of meters
-#	maxvehwidth INTEGER (0..127), -- tenths of meters
-#	maxvehlength INTEGER (0..1023), -- tenths of meters
+#	minspeed DOUBLE (0..1023), -- m/s
+#	maxspeed DOUBLE (0..1023), -- m/s
+#	minhdwy DOUBLE (0..2047), -- meters
+#	maxvehmass DOUBLE (0..65535), -- kg
+#	maxvehheight DOUBLE (0..127), -- meters
+#	maxvehwidth DOUBLE (0..127), -- meters
+#	maxvehlength DOUBLE (0..1023), -- meters
 #	maxvehaxles INTEGER (2..15),
-#	minvehocc INTEGER (1..15),
+#	minvehocc INTEGER (1..15), 
 #   maxplatoonsize INTEGER (1..63), 
-#   minplatoonhdwy INTEGER (0..2047), -- tenths of meters
+#   minplatoonhdwy DOUBLE (0..2047), -- meters
 #	...
 #}
 
@@ -146,25 +146,25 @@ uint8 PARALLEL=1
 
 uint8 ANGLED=2
 
-#minspeed ::= INTEGER (0..1023), -- tenths of m/s
+#minspeed ::= INTEGER (0..1023), -- m/s
 float64 minspeed
 
-#maxspeed ::= INTEGER (0..1023), -- tenths of m/s
+#maxspeed ::= INTEGER (0..1023), -- m/s
 float64 maxspeed
 
-#minhdwy ::= INTEGER (0..2047), -- tenths of meters
+#minhdwy ::= INTEGER (0..2047), -- meters
 float64 minhdwy
 
 #maxvehmass ::= INTEGER (0..65535), -- kg
 float64 maxvehmass
 
-#maxvehheight ::= INTEGER (0..127), -- tenths of meters
+#maxvehheight ::= INTEGER (0..127), -- meters
 float64 maxvehheight
 
-#maxvehwidth ::= INTEGER (0..127), -- tenths of meters
+#maxvehwidth ::= INTEGER (0..127), -- meters
 float64 maxvehwidth
 
-#maxvehlength ::= INTEGER (0..1023), -- tenths of meters
+#maxvehlength ::= INTEGER (0..1023), -- meters
 float64 maxvehlength
 
 #maxvehaxles ::= INTEGER (2..15)
@@ -176,5 +176,5 @@ uint8 minvehocc
 #maxplatoonsize ::= INTEGER (1..63)
 uint8 maxplatoonsize
 
-#minplatoonhdwy ::= INTEGER (0..2047), -- tenths of meters
+#minplatoonhdwy ::= INTEGER (0..2047), -- meters
 float64 minplatoonhdwy

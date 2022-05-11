@@ -31,9 +31,9 @@
 #	maxvehheight DOUBLE (0..127), -- meters
 #	maxvehwidth DOUBLE (0..127), -- meters
 #	maxvehlength DOUBLE (0..1023), -- meters
-#	maxvehaxles INTEGER (2..15),
-#	minvehocc INTEGER (1..15), 
-#   maxplatoonsize INTEGER (1..63), 
+#	maxvehaxles INTEGER (2..15), -- number of axles
+#	minvehocc INTEGER (1..15), -- vehicle passenger count
+#   maxplatoonsize INTEGER (1..63), -- vehicle count
 #   minplatoonhdwy DOUBLE (0..2047), -- meters
 #	...
 #}
@@ -167,13 +167,13 @@ float64 maxvehwidth
 #maxvehlength ::= INTEGER (0..1023), -- meters
 float64 maxvehlength
 
-#maxvehaxles ::= INTEGER (2..15)
+#maxvehaxles ::= INTEGER (2..15), -- number of axles
 uint8 maxvehaxles
 
-#minvehocc ::= INTEGER (1..15)
+#minvehocc ::= INTEGER (1..15), -- vehicle passenger count
 uint8 minvehocc
 
-#maxplatoonsize ::= INTEGER (1..63)
+#maxplatoonsize ::= INTEGER (1..63), -- vehicle count
 uint8 maxplatoonsize
 
 #minplatoonhdwy ::= INTEGER (0..2047), -- meters

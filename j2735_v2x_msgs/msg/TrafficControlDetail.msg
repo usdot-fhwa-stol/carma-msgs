@@ -31,9 +31,9 @@
 #	maxvehheight INTEGER (0..127), -- tenths of meters
 #	maxvehwidth INTEGER (0..127), -- tenths of meters
 #	maxvehlength INTEGER (0..1023), -- tenths of meters
-#	maxvehaxles INTEGER (2..15),
-#	minvehocc INTEGER (1..15), 
-#   maxplatoonsize INTEGER (1..63), 
+#	maxvehaxles INTEGER (2..15), -- number of axles
+#	minvehocc INTEGER (1..15), -- vehicle passenger count
+#   maxplatoonsize INTEGER (1..63), -- vehicle count
 #   minplatoonhdwy INTEGER (0..2047), -- tenths of meters
 #	...
 #}
@@ -167,13 +167,13 @@ uint8 maxvehwidth
 #maxvehlength ::= INTEGER (0..1023), -- tenths of meters
 uint16 maxvehlength
 
-#maxvehaxles ::= INTEGER (2..15)
+#maxvehaxles ::= INTEGER (2..15), -- number of axles
 uint8 maxvehaxles
 
-#minvehocc ::= INTEGER (1..15)
+#minvehocc ::= INTEGER (1..15), -- vehicle passenger count
 uint8 minvehocc
 
-#maxplatoonsize ::= INTEGER (1..63)
+#maxplatoonsize ::= INTEGER (1..63), -- vehicle count
 uint8 maxplatoonsize
 
 #minplatoonhdwy ::= INTEGER (0..2047), -- tenths of meters

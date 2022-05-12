@@ -31,8 +31,10 @@
 #	maxvehheight INTEGER (0..127), -- tenths of meters
 #	maxvehwidth INTEGER (0..127), -- tenths of meters
 #	maxvehlength INTEGER (0..1023), -- tenths of meters
-#	maxvehaxles INTEGER (2..15),
-#	minvehocc INTEGER (1..15), 
+#	maxvehaxles INTEGER (2..15), -- number of axles
+#	minvehocc INTEGER (1..15), -- vehicle passenger count
+#   maxplatoonsize INTEGER (1..63), -- vehicle count
+#   minplatoonhdwy INTEGER (0..2047), -- tenths of meters
 #	...
 #}
 
@@ -61,6 +63,8 @@ uint8 MAXVEHWIDTH_CHOICE =16
 uint8 MAXVEHLENGTH_CHOICE =17
 uint8 MAXVEHAXLES_CHOICE =18
 uint8 MINVEHOCC_CHOICE =19
+uint8 MAXPLATOONSIZE_CHOICE =20
+uint8 MINPLATOONHDWY_CHOICE =21
 
 # signal ::= OCTET STRING SIZE(0..63)
 uint8[] signal
@@ -163,12 +167,14 @@ uint8 maxvehwidth
 #maxvehlength ::= INTEGER (0..1023), -- tenths of meters
 uint16 maxvehlength
 
-#maxvehaxles ::= INTEGER (2..15)
+#maxvehaxles ::= INTEGER (2..15), -- number of axles
 uint8 maxvehaxles
 
-#minvehocc ::= INTEGER (1..15)
+#minvehocc ::= INTEGER (1..15), -- vehicle passenger count
 uint8 minvehocc
 
+#maxplatoonsize ::= INTEGER (1..63), -- vehicle count
+uint8 maxplatoonsize
 
-
-
+#minplatoonhdwy ::= INTEGER (0..2047), -- tenths of meters
+uint16 minplatoonhdwy

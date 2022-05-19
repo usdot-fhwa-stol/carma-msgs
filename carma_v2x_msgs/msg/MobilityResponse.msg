@@ -13,7 +13,7 @@ uint16                          urgency
 bool                            is_accepted
 
 # type of the proposal being suggested to neighbors
-carma_v2x_msgs/MobilityPlanType plan_type
+carma_v2x_msgs/PlanType plan_type
 
 # 
 carma_v2x_msgs/MobilityReason   reason         # OPTIONAL

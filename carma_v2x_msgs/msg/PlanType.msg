@@ -31,3 +31,6 @@ uint8       DELETE_MEMBER = 13
 # uint8       PASSING = 9 
 # pulling onto shoulder, need multi-lane change
 # join platoon in middle, merging platoons
+# MobilityPlanType.msg
+#
+#

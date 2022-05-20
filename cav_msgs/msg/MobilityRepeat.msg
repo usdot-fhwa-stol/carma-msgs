@@ -8,5 +8,5 @@ uint8 repeat
 # enumeration values for mobility repeat:
 
 uint8       UNKNOWN=0 
-uint8       REQUESTAGAIN=1 
-uint8       NEVERREQUESTAGAIN=2 
+uint8       REQUEST_AGAIN=1 
+uint8       NEVER_REQUEST_AGAIN=2 

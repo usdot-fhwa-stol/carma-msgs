@@ -13,7 +13,7 @@ uint16                    urgency
 bool                      is_accepted
 
 # type of the proposal being suggested to neighbors
-cav_msgs/PlanType planType
+cav_msgs/PlanType plan_type
 
 # 
 cav_msgs/MobilityReason   reason         # OPTIONAL

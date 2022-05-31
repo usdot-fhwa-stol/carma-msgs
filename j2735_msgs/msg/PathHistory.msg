@@ -23,6 +23,7 @@ uint8 presence_vector
 uint8 HAS_CURR_GNSS_STATUS = 1
 uint8 HAS_INITIAL_POSITION = 2
 
+j2735_msgs/PathHistoryPointList crumb_data
 
 ####
 # OPTIONAL FIELDS

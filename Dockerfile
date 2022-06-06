@@ -13,16 +13,14 @@ LABEL org.label-schema.vcs-url="https://github.com/usdot-fhwa-stol/carma-msgs"
 LABEL org.label-schema.vcs-ref=${VCS_REF}
 LABEL org.label-schema.build-date=${BUILD_DATE}
 
-# Clone autoware repo to access messages
-RUN cd /home/carma/ && git clone https://github.com/usdot-fhwa-stol/autoware.ai.git --depth 1 --branch carma-develop
 
 # ROS 1 msgs setup
-RUN mkdir -p ~/.base-image/ros1_msgs_ws/src/carma_msgs
+RUN mkdir -p ~/.base-image/ros1_msgs_ws/src/carma_msgs && mkdir -p /home/carma/src
 COPY . /home/carma/.base-image/ros1_msgs_ws/src/carma_msgs/
+RUN /home/carma/.base-image/ros1_msgs_ws/src/carma_msgs/docker/checkout.bash
 RUN cp -R /home/carma/autoware.ai/messages /home/carma/.base-image/ros1_msgs_ws/src/autoware.ai/
 RUN cp -R /home/carma/autoware.ai/jsk_common_msgs /home/carma/.base-image/ros1_msgs_ws/src/autoware.ai/
 RUN cp -R /home/carma/autoware.ai/jsk_recognition /home/carma/.base-image/ros1_msgs_ws/src/autoware.ai/
-
 
 # ROS 2 msgs setup
 RUN mkdir -p ~/.base-image/ros2_msgs_ws/src/carma_msgs
@@ -47,7 +45,6 @@ RUN source /opt/ros/noetic/setup.bash \
 && source ~/.base-image/ros1_msgs_ws/install/local_setup.bash \
 && source ~/.base-image/ros2_msgs_ws/install/local_setup.bash \
 && cd ~/.base-image/workspace/src \
-&& git clone --depth 1 --branch develop  https://github.com/usdot-fhwa-stol/ros1_bridge.git \
 && cd ../ \
 && sudo apt-get update \
 && colcon build --packages-select ros1_bridge --cmake-args "--debug-output" \

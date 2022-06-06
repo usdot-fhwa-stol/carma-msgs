@@ -56,7 +56,7 @@ float32  predecessor_speed
 float32  predecessor_position
 
 # The status of gap creation.
-bool isCreateGap
+bool is_create_gap
 
 # Ratio to increase desired gap
-float32 createGapAdjuster
+float32 create_gap_adjuster

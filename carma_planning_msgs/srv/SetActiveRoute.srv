@@ -8,6 +8,7 @@
 # @version 0.1
 #
 
+# Request
 # Enumeration values for the method being used to provide the route destination points
 uint8 choice
 

@@ -17,7 +17,7 @@ uint8 ROUTE_ID=0
 uint8 DESTINATION_POINTS_ARRAY=1
 
 # The id of the route to select
-string routeID
+string route_id
 
 # The array of destination points to be used for route generation 
 cav_msgs/Position3D[] destination_points
@@ -25,7 +25,7 @@ cav_msgs/Position3D[] destination_points
 ---
 # Response
 # An enumeration representing a service execution error as defined in the route design document.
-uint8 errorStatus
+uint8 error_status
 
 # enumeration values for errorStatus:
 uint8 NO_ERROR=0

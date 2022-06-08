@@ -13,7 +13,7 @@
 Header header
 
 # The route id for which this message applies
-string routeID
+string route_id
 
 # Enum denoting the state of the route following
 uint8 state

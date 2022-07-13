@@ -1,3 +1,8 @@
+| CicleCI Build Status | Sonar Code Quality | DockerHub Release | DockerHub Release Candidate | DockerHub Develop |
+|------|-----|-----|-----|-----|
+[![CircleCI](https://img.shields.io/circleci/build/gh/usdot-fhwa-stol/carma-msgs/develop?label=CircleCI)](https://app.circleci.com/pipelines/github/usdot-fhwa-stol/carma-msgs?branch=develop) | [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=usdot-fhwa-stol_CARMAMsgs&metric=alert_status)](https://sonarcloud.io/dashboard?id=usdot-fhwa-stol_CARMAMsgs) | [![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/usdotfhwastol/carma-msgs?label=carma-msgs)](https://hub.docker.com/repository/docker/usdotfhwastol/carma-msgs) | [![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/usdotfhwastolcandidate/carma-msgs?label=carma-msgs)](https://hub.docker.com/repository/docker/usdotfhwastolcandidate/carma-msgs) | [![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/usdotfhwastoldev/carma-msgs?label=carma-msgs)](https://hub.docker.com/repository/docker/usdotfhwastoldev/carma-msgs)
+
+
 # CARMAMsgs
 CARMAMsgs contains all the CARMAPlatform-specific ROS message definitions used by the CARMAPlatform
 

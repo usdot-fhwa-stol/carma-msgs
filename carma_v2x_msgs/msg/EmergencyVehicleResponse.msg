@@ -6,10 +6,10 @@
 # standard header for all mobility messages
 carma_v2x_msgs/MobilityHeader m_header
 
-# False if the vehicle can not get out of the way
+# False if the host vehicle can not get out of the way
 bool can_change_lanes
 
-# OPTIONAL text reason to no be able to get out of the way
+# OPTIONAL text reason for why the host vehicle is unable to get out of the way
 # The maximum length is 128
 # example: "CMV is unable to change lanes for <insert-supported-reason-here>"
 string reason

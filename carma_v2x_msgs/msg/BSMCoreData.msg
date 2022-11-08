@@ -7,8 +7,6 @@
 # @version 0.1
 #
 # Contains critical core elements deemed to be needed with every BSM issued.  
-# 
-# NOTE: Initial version only considers Part I. Part II will be defined for later use. 
 
 #MsgCount ::= INTEGER (0..127)
 uint8 msg_count

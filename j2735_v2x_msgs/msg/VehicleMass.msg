@@ -3,8 +3,6 @@
 #
 # J2735 2016 message format.
 #
-# @version 0.1
-#
 
 # VehicleMass ::= INTEGER (0..255)
 #     -- Values 000 to 080 in steps of 50kg

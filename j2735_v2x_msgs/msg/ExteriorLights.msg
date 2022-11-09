@@ -3,8 +3,6 @@
 #
 # J2735 2016 message format.
 #
-# @version 0.1
-#
 
 # ExteriorLights ::= BIT STRING { 
 #    -- All lights off is indicated by no bits set

@@ -3,8 +3,6 @@
 #
 # J2735 2016 message format.
 #
-# @version 0.1
-#
 
 # VerticalAccelerationThreshold ::= BIT STRING {
 #    notEquipped (0), -- Not equipped or off

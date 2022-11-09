@@ -3,8 +3,6 @@
 #
 # J2735 2016 message format.
 #
-# @version 0.1
-#
 
 # BasicVehicleRole ::= ENUMERATED {
 #     -- Values used in the EU and in the US

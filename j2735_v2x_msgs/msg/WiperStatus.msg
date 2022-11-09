@@ -3,8 +3,6 @@
 #
 # J2735 2016 message format.
 #
-# @version 0.1
-# 
 
 # WiperStatus ::= ENUMERATED {
 #      unavailable         (0), -- Not Equipped with wiper status

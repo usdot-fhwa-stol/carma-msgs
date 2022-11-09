@@ -3,8 +3,6 @@
 #
 # J2735 2016 message format.
 #
-# @version 0.1
-#
 
 # SpecialVehicleExtensions ::= SEQUENCE {
 #    -- The content below requires SSP permissions to transmit

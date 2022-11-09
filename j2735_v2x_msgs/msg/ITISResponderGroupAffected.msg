@@ -3,8 +3,6 @@
 #
 # J2735 2016 message format.
 #
-# @version 0.1
-#
 
 # ResponderGroupAffected ::= ENUMERATED { 
 #    emergency-vehicle-units           (9729),  -- Default, to be used when one of

@@ -3,8 +3,6 @@
 #
 # J2735 2016 message format.
 #
-# @version 0.1
-#
 
 # PrivilegedEventFlags ::= BIT STRING {
 #    -- These values require a suitable SSP to be sent

@@ -3,8 +3,6 @@
 #
 # J2735 2016 message format.
 #
-# @version 0.1
-#
 
 # ITIScodes ::= INTEGER (0.. 65535)
 # -- The defined list of ITIS codes is too long to list here

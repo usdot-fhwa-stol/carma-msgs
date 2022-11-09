@@ -3,8 +3,6 @@
 #
 # J2735 2016 message format.
 #
-# @version 0.1
-#
 
 # FuelType ::= INTEGER (0..15)
 #    unknownFuel   FuelType::=  0 -- Gasoline Powered

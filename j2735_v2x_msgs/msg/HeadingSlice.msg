@@ -3,8 +3,6 @@
 #
 # J2735 2016 message format.
 #
-# @version 0.1
-#
 
 # HeadingSlice ::= BIT STRING {
 #    -- Each bit 22.5 degree starting from 

@@ -3,8 +3,6 @@
 #
 # J2735 2016 message format.
 #
-# @version 0.1
-#
 
 # EssPrecipRate ::= INTEGER (0..65535)
 # The rainfall, or water equivalent of snow, rate in tenths of grams per square meter per second. For rain, this is

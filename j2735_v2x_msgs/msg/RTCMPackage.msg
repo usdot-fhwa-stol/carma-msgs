@@ -1,9 +1,7 @@
 #
 # RTCMPackage.msg
 #
-# J2735 2016 message format.
-#
-# @version 0.1
+# Modified J2735 2016 message format, adjusted to use base SI units (m,s, etc) in most case.
 #
 
 # RTCMPackage ::= SEQUENCE {  
@@ -14,6 +12,15 @@
 #    msgs        RTCMmessageList,
 #    ...  
 #    }
+
+# A BIT STRING defining the presence of optional fields.
+# Compare with bitwise-and
+# if (presence_vector & HAS_RTCM_HEADER) etc.
+# Create with bitwise-or
+# presence_vector = presence_vector | HAS_RTCM_HEADER
+uint16 presence_vector
+
+uint16 HAS_RTCM_HEADER = 1
 
 j2735_v2x_msgs/RTCMHeader rtcm_header
 

@@ -14,15 +14,21 @@ std_msgs/Header header
 carma_v2x_msgs/BSMCoreData core_data
 
 
+# A BIT STRING defining the presence of optional fields.
+# Compare with bitwise-and
+# if (presence_vector & HAS_PART_II_EXTENSION) etc.
+# Create with bitwise-or
+# presence_vector = presence_vector | HAS_PART_II_EXTENSION
+uint8 presence_vector
+
+uint8 HAS_PART_II = 1
+uint8 HAS_REGIONAL = 2
+
 #    -- Part II Content
 #    partII        SEQUENCE (SIZE(1..8)) OF 
 #                  PartIIcontent {{ BSMpartIIExtension }} OPTIONAL,
 carma_v2x_msgs/BSMPartIIExtension[] part_ii
-bool part_ii_exists
 
 #    regional      SEQUENCE (SIZE(1..4)) OF 
 #                 RegionalExtension {{REGION.Reg-BasicSafetyMessage}} OPTIONAL,
 carma_v2x_msgs/BSMRegionalExtension[] regional
-bool regional_exists
-
-

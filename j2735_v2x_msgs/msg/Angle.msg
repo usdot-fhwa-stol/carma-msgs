@@ -3,15 +3,12 @@
 #
 # J2735 2016 message format.
 #
-# @version 0.1
-#
 
-# Angle ::= INTEGER (0..239)
-#    -- Unsigned units of 1.5 degree, in 1 octet
-#    -- the true north is 0, positive is clockwise
-#    -- the values 240 to 254 shall not be sent
-#    -- the value 255 (0xFF) indicates an invalid value
-uint8 angle
+Angle ::= INTEGER (0..28800) 
+   -- LSB of 0.0125 degrees
+   -- A range of 0 to 359.9875 degrees
+uint16 angle
 
-uint8 TRUE_NORTH=0
-uint8 INVALID=255
+uint16 ANGLE_UNAVAILABLE = 28800
+uint16 ANGLE_MAX = 28799
+uint16 ANGLE_MIN = 0

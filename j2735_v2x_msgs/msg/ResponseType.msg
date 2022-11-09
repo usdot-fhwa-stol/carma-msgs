@@ -19,7 +19,7 @@
 
 uint8  response_type
 
-# enumeration values for siren_in_use:
+# enumeration values for response_type:
 uint8 NOT_IN_USE_OR_NOT_EQUIPPED=0
 uint8 EMERGENCY=1
 uint8 NON_EMERGENCY=2

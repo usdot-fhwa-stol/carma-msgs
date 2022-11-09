@@ -14,6 +14,6 @@
 #  event PrivilegedEventFlags,
 #  ...
 #  }
-uint8 SSPIndex = 0
+uint8 ssp_index = 0
 
 j2735_v2x_msgs/PrivilegedEventFlags event

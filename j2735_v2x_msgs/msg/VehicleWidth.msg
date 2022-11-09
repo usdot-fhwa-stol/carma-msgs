@@ -3,11 +3,10 @@
 #
 # J2735 2016 message format.
 #
-# @version 0.1
-#
 
 # VehicleWidth ::= INTEGER (0..1023) 
 #    -- LSB units are 1 cm with a range of >10 meters
+#    -- The value zero shall be sent when data is unavailable. 
 uint16 vehicle_width
 
 uint16 VEHICLE_WIDTH_UNAVAILABLE = 0

@@ -3,8 +3,6 @@
 #
 # J2735 2016 message format.
 #
-# @version 0.1
-#
 
 # Offset-B09 ::= INTEGER (-256..255)
 #   -- a range of +- 2.55 meters

@@ -3,8 +3,6 @@
 #
 # J2735 2016 message format.
 #
-# @version 0.1
-#
 
 # EssPrecipYesNo ::= ENUMERATED {precip (1), noPrecip (2), error (3)} 
 uint8 precip_yes_no 

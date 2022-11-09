@@ -3,12 +3,11 @@
 #
 # J2735 2016 message format.
 #
-# @version 0.1
-#
 
 # TrailerData ::= SEQUENCE {
-#    -- CERT SSP Privilege Details
-#    sspRights   SSPindex, -- index to CERT rights
+#    notUsed SSPindex,
+#    -- always set to 0 and carries no meaning;
+#    -- legacy field maintained for backward compatibility
 uint8 ssp_index = 0
 
 #    -- Offset connection point details from the 

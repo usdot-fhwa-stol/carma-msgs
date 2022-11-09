@@ -3,13 +3,6 @@
 #
 # J2735 2016 message format.
 #
-# @version 0.1
-#
-
-# BasicVehicleClass ::= INTEGER (0..255)
-uint8 basic_vehicle_class
-
-# Enumeration values for basic_vehicle_class listed below
 
 # unknownVehicleClass             BasicVehicleClass ::=  0  
 #                                 -- Not Equipped, Not known or unavailable
@@ -21,21 +14,11 @@ uint8 basic_vehicle_class
 # passenger-Vehicle-TypeUnknown   BasicVehicleClass ::=  10 -- default type
 # passenger-Vehicle-TypeOther     BasicVehicleClass ::=  11 
 # -- various fuel types are handled in another element
-
-uint8 UNKNOWN_VEHICLE_CLASS=0
-uint8 SPECIAL_VEHICLE_CLASS=1
-uint8 PASSENGER_VEHICLE_TYPE_UNKNOWN=10
-uint8 PASSENGER_VEHICLE_TYPE_OTHER=11
-
 # --
 # -- Light Trucks, Pickup, Van, Panel
 # -- 
 # lightTruck-Vehicle-TypeUnknown  BasicVehicleClass ::=  20 -- default type
 # lightTruck-Vehicle-TypeOther    BasicVehicleClass ::=  21 
-
-uint8 LIGHT_TRUCK_VEHICLE_TYPE_UNKNOWN=20
-uint8 LIGHT_TRUCK_VEHICLE_TYPE_OTHER=21
-
 # --
 # -- Trucks, Various axle types, includes HPMS items 
 # -- 
@@ -50,19 +33,6 @@ uint8 LIGHT_TRUCK_VEHICLE_TYPE_OTHER=21
 # truck-axleCnt5MultiTrailer BasicVehicleClass ::=  33 -- Five or less axle, multi-trailer    
 # truck-axleCnt6MultiTrailer BasicVehicleClass ::=  34 -- Six axle, multi-trailer    
 # truck-axleCnt7MultiTrailer BasicVehicleClass ::=  35 -- Seven or more axle, multi-trailer    
-
-uint8 TRUCK_VEHICLE_TYPE_UNKNOWN=25
-uint8 TRUCK_VEHICLE_TYPE_OTHER=26
-uint8 TRUCK_AXLE_COUNT_2=27
-uint8 TRUCK_AXLE_COUNT_3=28
-uint8 TRUCK_AXLE_COUNT_4=29
-uint8 TRUCK_AXLE_COUNT_4_TRAILER=30
-uint8 TRUCK_AXLE_COUNT_5_TRAILER=31
-uint8 TRUCK_AXLE_COUNT_6_TRAILER=32
-uint8 TRUCK_AXLE_COUNT_5_MULTI_TRAILER-33
-uint8 TRUCK_AXLE_COUNT_6_MULTI_TRAILER=34
-uint8 TRUCK_AXLE_COUNT_7_MULTI_TRAILER=35
-
 # --
 # -- Motorcycle Types
 # --
@@ -75,17 +45,6 @@ uint8 TRUCK_AXLE_COUNT_7_MULTI_TRAILER=35
 # motorcycle-Touring              BasicVehicleClass ::=  46
 # motorcycle-Trike                BasicVehicleClass ::=  47 
 # motorcycle-wPassengers          BasicVehicleClass ::=  48 -- type not stated
-
-uint8 MOTORCYCLE_TYPE_UNKNOWN=40
-uint8 MOTORCYCLE_TYPE_OTHER=41
-uint8 MOTORCYCLE_CRUISER_STANDARD=42
-uint8 MOTORCYCLE_SPORT_UNCLAD=43
-uint8 MOTORCYCLE_SPORT_TOURING=44
-uint8 MOTORCYCLE_SUPORT_SPORT=45
-uint8 MOTORCYCLE_TOURING=46
-uint8 MOTORCYCLE_TRIKE=47
-uint8 MOTORCYCLE_WITH_PASSENGERS=48
-
 # --
 # -- Transit Types
 # --
@@ -98,17 +57,6 @@ uint8 MOTORCYCLE_WITH_PASSENGERS=48
 # transit-FixedGuideway           BasicVehicleClass ::=  56
 # transit-Paratransit             BasicVehicleClass ::=  57
 # transit-Paratransit-Ambulance   BasicVehicleClass ::=  58
-
-uint8 TRANSIT_TYPE_UNKNOWN=50
-uint8 TRANSIT_TYPE_OTHER=51
-uint8 TRANSIT_BRT=52
-uint8 TRANSIT_EXPRESS_BUS=53
-uint8 TRANSIT_LOCAL_BUS=54
-uint8 TRANSIT_SCHOOL_BUS=55
-uint8 TRANSIT_FIXED_GUIDEWAY=56
-uint8 TRANSIT_PARATRANSIT=57
-uint8 TRANSIT_PARATRANSIT_AMBULANCE=58
-
 # --
 # -- Emergency Vehicle Types
 # --
@@ -122,6 +70,70 @@ uint8 TRANSIT_PARATRANSIT_AMBULANCE=58
 # emergency-Police-Heavy-Vehicle   BasicVehicleClass ::=  67
 # emergency-Other-Responder        BasicVehicleClass ::=  68
 # emergency-Other-Ambulance        BasicVehicleClass ::=  69
+# --
+# -- Other DSRC Equipped Travelers
+# --
+# otherTraveler-TypeUnknown          BasicVehicleClass ::=  80 -- default type
+# otherTraveler-TypeOther            BasicVehicleClass ::=  81
+# otherTraveler-Pedestrian           BasicVehicleClass ::=  82
+# otherTraveler-Visually-Disabled    BasicVehicleClass ::=  83
+# otherTraveler-Physically-Disabled  BasicVehicleClass ::=  84
+# otherTraveler-Bicycle              BasicVehicleClass ::=  85
+# otherTraveler-Vulnerable-Roadworker BasicVehicleClass ::=  86
+# --
+# -- Other DSRC Equipped Device Types
+# --
+# infrastructure-TypeUnknown      BasicVehicleClass ::=  90 -- default type
+# infrastructure-Fixed            BasicVehicleClass ::=  91
+# infrastructure-Movable          BasicVehicleClass ::=  92
+# equipped-CargoTrailer           BasicVehicleClass ::=  93
+
+
+# BasicVehicleClass ::= INTEGER (0..255)
+uint8 basic_vehicle_class
+
+# Enumeration values for basic_vehicle_class listed below
+
+uint8 UNKNOWN_VEHICLE_CLASS=0
+uint8 SPECIAL_VEHICLE_CLASS=1
+
+uint8 PASSENGER_VEHICLE_TYPE_UNKNOWN=10
+uint8 PASSENGER_VEHICLE_TYPE_OTHER=11
+
+uint8 LIGHT_TRUCK_VEHICLE_TYPE_UNKNOWN=20
+uint8 LIGHT_TRUCK_VEHICLE_TYPE_OTHER=21
+
+uint8 TRUCK_VEHICLE_TYPE_UNKNOWN=25
+uint8 TRUCK_VEHICLE_TYPE_OTHER=26
+uint8 TRUCK_AXLE_COUNT_2=27
+uint8 TRUCK_AXLE_COUNT_3=28
+uint8 TRUCK_AXLE_COUNT_4=29
+uint8 TRUCK_AXLE_COUNT_4_TRAILER=30
+uint8 TRUCK_AXLE_COUNT_5_TRAILER=31
+uint8 TRUCK_AXLE_COUNT_6_TRAILER=32
+uint8 TRUCK_AXLE_COUNT_5_MULTI_TRAILER-33
+uint8 TRUCK_AXLE_COUNT_6_MULTI_TRAILER=34
+uint8 TRUCK_AXLE_COUNT_7_MULTI_TRAILER=35
+
+uint8 MOTORCYCLE_TYPE_UNKNOWN=40
+uint8 MOTORCYCLE_TYPE_OTHER=41
+uint8 MOTORCYCLE_CRUISER_STANDARD=42
+uint8 MOTORCYCLE_SPORT_UNCLAD=43
+uint8 MOTORCYCLE_SPORT_TOURING=44
+uint8 MOTORCYCLE_SUPORT_SPORT=45
+uint8 MOTORCYCLE_TOURING=46
+uint8 MOTORCYCLE_TRIKE=47
+uint8 MOTORCYCLE_WITH_PASSENGERS=48
+
+uint8 TRANSIT_TYPE_UNKNOWN=50
+uint8 TRANSIT_TYPE_OTHER=51
+uint8 TRANSIT_BRT=52
+uint8 TRANSIT_EXPRESS_BUS=53
+uint8 TRANSIT_LOCAL_BUS=54
+uint8 TRANSIT_SCHOOL_BUS=55
+uint8 TRANSIT_FIXED_GUIDEWAY=56
+uint8 TRANSIT_PARATRANSIT=57
+uint8 TRANSIT_PARATRANSIT_AMBULANCE=58
 
 uint8 EMERGENCY_TYPE_UNKNOWN=60
 uint8 EMERGENCY_TYPE_OTHER=61
@@ -134,17 +146,6 @@ uint8 EMERGENCY_POLICE_HEAVY_VEHICLE=67
 uint8 EMERGENCY_OTHER_RESPONDER=68
 uint8 EMERGENCY_OTHER_AMBULANCE=69
 
-# --
-# -- Other DSRC Equipped Travelers
-# --
-# otherTraveler-TypeUnknown          BasicVehicleClass ::=  80 -- default type
-# otherTraveler-TypeOther            BasicVehicleClass ::=  81
-# otherTraveler-Pedestrian           BasicVehicleClass ::=  82
-# otherTraveler-Visually-Disabled    BasicVehicleClass ::=  83
-# otherTraveler-Physically-Disabled  BasicVehicleClass ::=  84
-# otherTraveler-Bicycle              BasicVehicleClass ::=  85
-# otherTraveler-Vulnerable-Roadworker BasicVehicleClass ::=  86
-
 uint8 OTHER_TRAVELER_TYPE_UNKNOWN=80
 uint8 OTHER_TRAVELER_TYPE_OTHER=81
 uint8 OTHER_TRAVELER_PEDESTRIAN=82
@@ -152,14 +153,6 @@ uint8 OTHER_TRAVELER_VISUALLY_DISABLED=83
 uint8 OTHER_TRAVELER_PHYSICALLY_DISABLED=84
 uint8 OTHER_TRAVELER_BICYCLE=85
 uint8 OTHER_TRAVELER_VULNERABLE_ROADWORKER=86
-
-# --
-# -- Other DSRC Equipped Device Types
-# --
-# infrastructure-TypeUnknown      BasicVehicleClass ::=  90 -- default type
-# infrastructure-Fixed            BasicVehicleClass ::=  91
-# infrastructure-Movable          BasicVehicleClass ::=  92
-# equipped-CargoTrailer           BasicVehicleClass ::=  93
 
 uint8 INFRASTRUCTURE_TYPE_UNKNOWN=90
 uint8 INFRASTRUCTURE_FIXED=91

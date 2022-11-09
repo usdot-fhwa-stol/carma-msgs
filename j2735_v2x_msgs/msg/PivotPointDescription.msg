@@ -3,8 +3,6 @@
 #
 # J2735 2016 message format.
 #
-# @version 0.1
-#
 
 #    pivotOffset  Offset-B11,   
 #                 -- This gives a +- 10m range from the edge of the outline

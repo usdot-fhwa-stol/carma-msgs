@@ -25,7 +25,15 @@
 #    ...       
 #    }
 
+# A BIT STRING defining the presence of optional fields.
+# Compare with bitwise-and
+# if (presence_vector & HAS_LOCATION_DETAILS) etc.
+# Create with bitwise-or
+# presence_vector = presence_vector | HAS_LOCATION_DETAILS
+uint16 presence_vector
+
+uint16 HAS_LOCATION_DETAILS = 1
+
 j2735_v2x_msgs/ITIScodes status_details
 
 j2735_v2x_msgs/ITISGenericLocations location_details
-bool location_details_exists

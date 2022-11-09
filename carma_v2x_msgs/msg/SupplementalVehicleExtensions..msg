@@ -1,9 +1,7 @@
 #
 # SupplementalVehicleExtensions.msg
 #
-# J2735 2016 message format.
-#
-# @version 0.1
+# Modified J2735 2016 message format, adjusted to use base SI units (m,s, etc) in most case.
 #
 
 # SupplementalVehicleExtensions ::= SEQUENCE {
@@ -38,30 +36,39 @@
 # 
 #    }
 
+# A BIT STRING defining the presence of optional fields.
+# Compare with bitwise-and
+# if (presence_vector & HAS_CLASSIFICATION) etc.
+# Create with bitwise-or
+# presence_vector = presence_vector | HAS_CLASSIFICATION
+uint16 presence_vector
+
+uint16 HAS_CLASSIFICATION = 1
+uint16 HAS_CLASS_DETAILS = 2
+uint16 HAS_VEHICLE_DATA = 4
+uint16 HAS_WEATHER_REPORT = 8
+uint16 HAS_WEATHER_PROBE = 16
+uint16 HAS_OBSTACLE = 32
+uint16 HAS_STATUS = 64
+uint16 HAS_SPEED_PROFILE = 128
+uint16 HAS_THE_RTCM = 256
+
 j2735_v2x_msgs/BasicVehicleClass classification
-bool classification_exists
 
 j2735_v2x_msgs/VehicleClassification class_details
-bool class_details_exists
 
-j2735_v2x_msgs/VehicleData vehicle_data
-bool vehicle_data_exists
+carma_v2x_msgs/VehicleData vehicle_data
 
-j2735_v2x_msgs/WeatherReport weather_report
-bool weather_report_exists
+carma_v2x_msgs/WeatherReport weather_report
 
-j2735_v2x_msgs/WeatherProbe weather_probe
-bool weather_probe_exists
+carma_v2x_msgs/WeatherProbe weather_probe
 
-j2735_v2x_msgs/ObstacleDetection obstacle
-bool obstacle_exists
+carma_v2x_msgs/ObstacleDetection obstacle
 
 j2735_v2x_msgs/DisabledVehicle status 
-bool status_available
 
-j2735_v2x_msgs/GrossSpeed[] speed_profile
-bool speed_profile_exists
+carma_v2x_msgs/GrossSpeed[] speed_profile
 
-j2735_v2x_msgs/RTCMPackage the_rtcm
+carma_v2x_msgs/RTCMPackage the_rtcm
 
 # RegionalExtensions not yet used for SupplementalVehicleExtensions.msg

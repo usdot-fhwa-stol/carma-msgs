@@ -3,8 +3,6 @@
 #
 # J2735 2016 message format.
 #
-# @version 0.1
-#
 
 # TrailerMass ::= INTEGER (0..255) 
 #    -- object mass with LSB steps of 500 kg (~1100 lbs)

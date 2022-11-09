@@ -3,8 +3,6 @@
 #
 # J2735 2016 message format.
 #
-# @version 0.1
-#
 
 # VehicleData ::= SEQUENCE {    
 #    -- Values for width and length are sent in BSM part I 
@@ -15,14 +13,23 @@
 #    ...
 #    }
 
+# A BIT STRING defining the presence of optional fields.
+# Compare with bitwise-and
+# if (presence_vector & HAS_PATH_HISTORY) etc.
+# Create with bitwise-or
+# presence_vector = presence_vector | HAS_PATH_HISTORY
+uint16 presence_vector
+
+uint16 HAS_HEIGHT = 1
+uint16 HAS_BUMPERS = 2
+uint16 HAS_MASS = 4
+uint16 HAS_TRAILER_WEIGHT = 8
+
+
 j2735_v2x_msgs/VehicleHeight height
-bool height_exists
 
 j2735_v2x_msgs/BumperHeights bumpers
-bool bumpers_exists
 
 j2735_v2x_msgs/VehicleMass mass
-bool mass_exists
 
 j2735_v2x_msgs/TrailerWeight trailer_weight
-bool trailer_weight_exists

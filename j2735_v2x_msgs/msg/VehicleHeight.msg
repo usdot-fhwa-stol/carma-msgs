@@ -3,8 +3,6 @@
 #
 # J2735 2016 message format.
 #
-# @version 0.1
-#
 
 # VehicleHeight ::= INTEGER (0..127) 
 #     -- the height of the vehicle

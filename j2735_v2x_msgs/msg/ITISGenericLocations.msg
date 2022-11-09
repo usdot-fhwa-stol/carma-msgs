@@ -25,19 +25,6 @@ uint16 generic_locations
 #    shoulder                    (8027),   
 #    on-minor-roads              (7943),  
 #    in-the-opposing-lanes       (7944),  
-
-uint16 ON_BRIDGES=7937
-uint16 IN_TUNNELS=7938
-uint16 ENTERING_OR_LEAVING_TUNNELS=7939
-uint16 ON_RAMPS=7940
-uint16 IN_ROAD_CONSTRUCTION_AREA=7941
-uint16 AROUND_A_CURVE=7942
-uint16 ON_CURVE=8026
-uint16 ON_TRACKS=8009
-uint16 IN_STREET=8025
-uint16 SHOULDER=8027
-uint16 ON_MINOR_ROADS=7943
-
 #    adjacent-to-roadway         (7945),  
 #    across-tracks               (8024),   
 #    on-bend                     (7946),  
@@ -51,19 +38,6 @@ uint16 ON_MINOR_ROADS=7943
 #    dip                         (8010),   
 #    traffic-circle              (8011),  -- Used for W2-6 graphic as well. Alt term:
 #                                         -- roundabout
-
-uint16 ADJACENT_TO_ROADWAY=7945
-uint16 ACROSS_TRACKS=8024
-uint16 ON_BEND=7946
-uint16 INTERSECTION=8032
-uint16 ENTIRE_INTERSECTION=7947
-uint16 IN_THE_MEDIAN=7948
-uint16 MOVED_TO_SIDE_OF_ROAD=7949
-uint16 MOVED_TO_SHOULDER=7950
-uint16 ON_THE_ROADWAY=7951
-uint16 DIP=8010
-uint16 TRAFFIC_CIRCLE=8011
-
 #    crossover                   (8028),  
 #    cross-road                  (8029),  -- Also used for W2-1 Note that in some uses
 #                                         -- this is one word
@@ -77,22 +51,7 @@ uint16 TRAFFIC_CIRCLE=8011
 #    from                        (8020),   
 #    approaching                 (8021),   
 #    entering-at                 (8022),  -- Alt form: Entrance
-#    exiting-at                  (8023),  
-
-uint16 CROSSOVER=8028
-uint16 CROSS_ROAD=8029
-uint16 SIDE_ROAD=8030
-uint16 TO=8014
-uint16 BY=8015
-uint16 THROUGH=8016
-uint16 AREA_OF=8017
-uint16 UNDER=8018
-uint16 OVER=8019
-uint16 FROM=8020
-uint16 APPROACHING=8021
-uint16 ENTERING_AT=8022
-uint16 EXITING_AT=8023
-
+#    exiting-at                  (8023), 
 #    -- Terrain & Geography
 #    in-shaded-areas             (7952),  
 #    in-low-lying-areas          (7953),  
@@ -109,23 +68,6 @@ uint16 EXITING_AT=8023
 #    near-the-shore              (7964),  
 #    nearby-basin                (8008),  
 #    over-the-crest-of-a-hill    (7965),  
-
-uint16 IN_SHADED_AREAS=7952
-uint16 IN_LOW_LYING_AREAS=7953
-uint16 IN_THE_DOWNTOWN_AREA=7954
-uint16 IN_THE_INNER_CITY_AREA=7955
-uint16 IN_PARTS=7956
-uint16 IN_SOME_PLACES=7957
-uint16 IN_THE_DITCH=7958
-uint16 IN_THE_VALLEY=7959
-uint16 ON_HILL_TOP=7960
-uint16 NEAR_THE_FOOTHILS=7961
-uint16 AT_HIGH_ALTITUDES=7962
-uint16 NEAR_THE_LAKE=7963
-uint16 NEAR_THE_SHORE=7964
-uint16 NEARBY_BASIN=8008
-uint16 OVER_THE_CREST_OF_A_HILL=7965
-
 #    other-than-on-the-roadway   (7966),  
 #    near-the-beach              (7967),  
 #    near-beach-access-point     (7968),  
@@ -142,25 +84,7 @@ uint16 OVER_THE_CREST_OF_A_HILL=7965
 #    station                     (7976),  
 #    platform                    (7977),  -- Alternative Rendering:  track
 #    dock                        (7978),  
-#    depot                       (7979),  
-
-uint16 OTHER_THAN_ON_THE_ROADWAY=7966
-uint16 NEAR_THE_BEACH=7967
-uint16 NEAR_BEACH_ACCESS_POINT=7968
-uint16 MOUNTAIN_PASS=8006
-uint16 LOWER_LEVEL=7969
-uint16 UPPER_LEVEL=7970
-uint16 AIRPORT=7971
-uint16 CONCOURSE=7972
-uint16 GATE=7973
-uint16 BAGGAGE_CLAIM=7974
-uint16 CUSTOMS_POINT=7975
-uint16 RESERVATION_CENTER=8007
-uint16 STATION=7976
-uint16 PLATFORM=7977
-uint16 DOCK=7978
-uint16 DEPOT=7979
-
+#    depot                       (7979), 
 #    ev-charging-point           (7980),  
 #    information-welcome-point   (7981),  -- Use for Tourist Information as well (D9-10)
 #    at-rest-area                (7982),  
@@ -180,6 +104,91 @@ uint16 DEPOT=7979
 #    in-the-opposite-direction   (7992),  
 #    cross-traffic               (7993),  
 #    northbound-traffic          (7994),  
+#    eastbound-traffic           (7995),  
+#    southbound-traffic          (7996),  
+#    westbound-traffic           (7997),  
+#    -- Compass Points
+#    north                       (7998),  
+#    south                       (7999),  
+#    east                        (8000),  
+#    west                        (8001),  
+#    northeast                   (8002),  
+#    northwest                   (8003),  
+#    southeast                   (8004),  
+#    southwest                   (8005),  
+#    ... -- # LOCAL_CONTENT_ITIS 
+#    }
+
+uint16 ON_BRIDGES=7937
+uint16 IN_TUNNELS=7938
+uint16 ENTERING_OR_LEAVING_TUNNELS=7939
+uint16 ON_RAMPS=7940
+uint16 IN_ROAD_CONSTRUCTION_AREA=7941
+uint16 AROUND_A_CURVE=7942
+uint16 ON_CURVE=8026
+uint16 ON_TRACKS=8009
+uint16 IN_STREET=8025
+uint16 SHOULDER=8027
+uint16 ON_MINOR_ROADS=7943
+
+uint16 ADJACENT_TO_ROADWAY=7945
+uint16 ACROSS_TRACKS=8024
+uint16 ON_BEND=7946
+uint16 INTERSECTION=8032
+uint16 ENTIRE_INTERSECTION=7947
+uint16 IN_THE_MEDIAN=7948
+uint16 MOVED_TO_SIDE_OF_ROAD=7949
+uint16 MOVED_TO_SHOULDER=7950
+uint16 ON_THE_ROADWAY=7951
+uint16 DIP=8010
+uint16 TRAFFIC_CIRCLE=8011 
+
+uint16 CROSSOVER=8028
+uint16 CROSS_ROAD=8029
+uint16 SIDE_ROAD=8030
+uint16 TO=8014
+uint16 BY=8015
+uint16 THROUGH=8016
+uint16 AREA_OF=8017
+uint16 UNDER=8018
+uint16 OVER=8019
+uint16 FROM=8020
+uint16 APPROACHING=8021
+uint16 ENTERING_AT=8022
+uint16 EXITING_AT=8023
+
+uint16 IN_SHADED_AREAS=7952
+uint16 IN_LOW_LYING_AREAS=7953
+uint16 IN_THE_DOWNTOWN_AREA=7954
+uint16 IN_THE_INNER_CITY_AREA=7955
+uint16 IN_PARTS=7956
+uint16 IN_SOME_PLACES=7957
+uint16 IN_THE_DITCH=7958
+uint16 IN_THE_VALLEY=7959
+uint16 ON_HILL_TOP=7960
+uint16 NEAR_THE_FOOTHILS=7961
+uint16 AT_HIGH_ALTITUDES=7962
+uint16 NEAR_THE_LAKE=7963
+uint16 NEAR_THE_SHORE=7964
+uint16 NEARBY_BASIN=8008
+uint16 OVER_THE_CREST_OF_A_HILL=7965 
+
+uint16 OTHER_THAN_ON_THE_ROADWAY=7966
+uint16 NEAR_THE_BEACH=7967
+uint16 NEAR_BEACH_ACCESS_POINT=7968
+uint16 MOUNTAIN_PASS=8006
+uint16 LOWER_LEVEL=7969
+uint16 UPPER_LEVEL=7970
+uint16 AIRPORT=7971
+uint16 CONCOURSE=7972
+uint16 GATE=7973
+uint16 BAGGAGE_CLAIM=7974
+uint16 CUSTOMS_POINT=7975
+uint16 RESERVATION_CENTER=8007
+uint16 STATION=7976
+uint16 PLATFORM=7977
+uint16 DOCK=7978
+uint16 DEPOT=7979
 
 uint16 EV_CHARGING_POINT=7980
 uint16 INFORMATION_WELCOME_POINT=7981
@@ -199,21 +208,6 @@ uint16 IN_THE_CENTER=7991
 uint16 IN_THE_OPPOSITE_DIRECTION=7992
 uint16 CROSS_TRAFFIC=7993
 uint16 NORTHBOUND_TRAFFIC=7994
-
-#    eastbound-traffic           (7995),  
-#    southbound-traffic          (7996),  
-#    westbound-traffic           (7997),  
-#    -- Compass Points
-#    north                       (7998),  
-#    south                       (7999),  
-#    east                        (8000),  
-#    west                        (8001),  
-#    northeast                   (8002),  
-#    northwest                   (8003),  
-#    southeast                   (8004),  
-#    southwest                   (8005),  
-#    ... -- # LOCAL_CONTENT_ITIS 
-#    }
 
 uint16 EASTBOUND_TRAFFIC=7995
 uint16 SOUTHBOUND_TRAFFIC=7996

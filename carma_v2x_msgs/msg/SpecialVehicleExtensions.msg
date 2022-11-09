@@ -1,9 +1,7 @@
 #
 # SpecialVehicleExtensions.msg
 #
-# J2735 2016 message format.
-#
-# @version 0.1
+# Modified J2735 2016 message format, adjusted to use base SI units (m,s, etc) in most case.
 #
 
 # SpecialVehicleExtensions ::= SEQUENCE {
@@ -24,11 +22,19 @@
 #    ...
 #    }
 
+# A BIT STRING defining the presence of optional fields.
+# Compare with bitwise-and
+# if (presence_vector & HAS_VEHICLE_ALERTS) etc.
+# Create with bitwise-or
+# presence_vector = presence_vector | HAS_VEHICLE_ALERTS
+uint16 presence_vector
+
+uint16 HAS_VEHICLE_ALERTS = 1
+uint16 HAS_DESCRIPTION = 2
+uint16 HAS_TRAILERS = 4
+
 j2735_v2x_msgs/EmergencyDetails vehicle_alerts
-bool vehicle_alerts_available
 
 j2735_v2x_msgs/EventDescription description
-bool description_available
 
-j2735_v2x_msgs/TrailerData trailers
-bool trailers_available
+carma_v2x_msgs/TrailerData trailers

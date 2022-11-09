@@ -3,8 +3,6 @@
 #
 # J2735 2016 message format.
 #
-# @version 0.1
-#
 
 # VehicleLength ::= INTEGER (0.. 4095) 
 #     -- LSB units of 1 cm with a range of >40 meters

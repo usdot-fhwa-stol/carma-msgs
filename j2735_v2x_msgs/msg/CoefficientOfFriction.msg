@@ -3,8 +3,6 @@
 #
 # J2735 2016 message format.
 #
-# @version 0.1
-#
 
 # CoefficientOfFriction ::= INTEGER (0..50) 
 #    -- where 0 = 0.00 micro (frictionless), also used when data is unavailable 
@@ -12,4 +10,3 @@
 uint8 coefficient
 
 uint8 COEFFICIENT_MAX=50
-

@@ -13,6 +13,7 @@ std_msgs/Header header
 # -- Part I, Sent at all times with each message
 carma_v2x_msgs/BSMCoreData core_data
 
+#    -- Part II Content
 
 # A BIT STRING defining the presence of optional fields.
 # Compare with bitwise-and
@@ -24,7 +25,6 @@ uint8 presence_vector
 uint8 HAS_PART_II = 1
 uint8 HAS_REGIONAL = 2
 
-#    -- Part II Content
 #    partII        SEQUENCE (SIZE(1..8)) OF 
 #                  PartIIcontent {{ BSMpartIIExtension }} OPTIONAL,
 carma_v2x_msgs/BSMPartIIExtension[] part_ii

@@ -71,4 +71,4 @@ carma_v2x_msgs/GrossSpeed[] speed_profile
 
 carma_v2x_msgs/RTCMPackage the_rtcm
 
-# RegionalExtensions not yet used for SupplementalVehicleExtensions.msg
+# regional #TODO: RegionalExtensions are not yet supported for this message type

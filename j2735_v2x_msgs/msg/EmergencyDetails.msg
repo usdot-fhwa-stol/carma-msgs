@@ -26,7 +26,7 @@ uint16 presence_vector
 uint16 HAS_EVENTS = 1
 uint16 HAS_RESPONSE_TYPE = 2
 
-uint8 ssp_index = 0
+uint8 ssp_index
 
 # SirenInUse ::= ENUMERATED {
 #   unavailable (0), -- Not Equipped or unavailable

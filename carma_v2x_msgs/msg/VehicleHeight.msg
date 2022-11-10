@@ -5,9 +5,9 @@
 #
 
 # VehicleHeight in meters in range of (0..6.35] meters
-uint8 vehicle_height
+float32 vehicle_height
 
-uint8 VEHICLE_HEIGHT_MAX = 6.35
+float32 VEHICLE_HEIGHT_MAX = 6.35
 
 # If true the vehicle height is unavailable
 bool unavailable

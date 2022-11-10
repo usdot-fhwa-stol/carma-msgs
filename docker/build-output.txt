@@ -1,0 +1,137 @@
+
+##### carma-msgs Docker Image Build Script #####
+
+Building docker image for carma-msgs version: bsm-part-ii
+Final image name: usdotfhwastol/carma-msgs:bsm-part-ii
+Sending build context to Docker daemon  2.867MB
+Step 1/18 : FROM usdotfhwastoldev/carma-base:develop as base_image
+ ---> 0491e2b82db4
+Step 2/18 : SHELL ["/bin/bash", "-c"]
+ ---> Running in 7e9f4629d65a
+Removing intermediate container 7e9f4629d65a
+ ---> b95225c3968e
+Step 3/18 : ARG DEBIAN_FRONTEND="noninteractive"
+ ---> Running in 68432260ef9e
+Removing intermediate container 68432260ef9e
+ ---> 6c0d4f99d9ff
+Step 4/18 : LABEL org.label-schema.schema-version="1.0"
+ ---> Running in 7891a02e0898
+Removing intermediate container 7891a02e0898
+ ---> 6ed32abd938b
+Step 5/18 : LABEL org.label-schema.name="carma-msgs"
+ ---> Running in f97cfa7f440f
+Removing intermediate container f97cfa7f440f
+ ---> 47b4aeca9912
+Step 6/18 : LABEL org.label-schema.description="carma msgs bridge for the CARMA Platform"
+ ---> Running in 626f23695ea8
+Removing intermediate container 626f23695ea8
+ ---> 23076a84fa88
+Step 7/18 : LABEL org.label-schema.vendor="Leidos"
+ ---> Running in 552c4039a4f3
+Removing intermediate container 552c4039a4f3
+ ---> 6b431e2c36ba
+Step 8/18 : LABEL org.label-schema.version=${VERSION}
+ ---> Running in 49434901e8db
+Removing intermediate container 49434901e8db
+ ---> 93cdfacbd497
+Step 9/18 : LABEL org.label-schema.url="https://highways.dot.gov/research/research-programs/CARMA"
+ ---> Running in db77414e850b
+Removing intermediate container db77414e850b
+ ---> 3501d02a35cc
+Step 10/18 : LABEL org.label-schema.vcs-url="https://github.com/usdot-fhwa-stol/carma-msgs"
+ ---> Running in f476ba49d4e7
+Removing intermediate container f476ba49d4e7
+ ---> 963342491128
+Step 11/18 : LABEL org.label-schema.vcs-ref=${VCS_REF}
+ ---> Running in 46fe593d323d
+Removing intermediate container 46fe593d323d
+ ---> 3603f9f2e117
+Step 12/18 : LABEL org.label-schema.build-date=${BUILD_DATE}
+ ---> Running in e64acc44ca1f
+Removing intermediate container e64acc44ca1f
+ ---> 2a7ca3cc1407
+Step 13/18 : RUN  mkdir -p ~/.base-image/ros1_msgs_ws/src/carma_msgs
+ ---> Running in 72242093e9d4
+Removing intermediate container 72242093e9d4
+ ---> 590067d1fb54
+Step 14/18 : RUN  mkdir -p /home/carma/src
+ ---> Running in 57c6b7620bd4
+Removing intermediate container 57c6b7620bd4
+ ---> 43de4d89471a
+Step 15/18 : COPY . /home/carma/.base-image/ros1_msgs_ws/src/carma_msgs/
+ ---> 6a7d4c72dcf0
+Step 16/18 : RUN  mkdir -p ~/.base-image/ros2_msgs_ws/src/carma_msgs
+ ---> Running in 0791789c52e7
+Removing intermediate container 0791789c52e7
+ ---> 4cd301a6c5df
+Step 17/18 : COPY . /home/carma/.base-image/ros2_msgs_ws/src/carma_msgs/
+ ---> fa7df8210ab2
+Step 18/18 : RUN /home/carma/.base-image/ros1_msgs_ws/src/carma_msgs/docker/install.sh
+ ---> Running in 09de00bba403
+[91m+ dir=/home/carma
++ [[ 0 -gt 0 ]]
++ cd /home/carma/src
++ [[ '' = \d\e\v\e\l\o\p ]]
++ cd /home/carma/
++ git clone https://github.com/usdot-fhwa-stol/autoware.ai.git --depth 1 --branch carma-develop
+Cloning into 'autoware.ai'...
+[0m[91mUpdating files:  44% (3226/7271)[0m[91mUpdating files:  45% (3272/7271)[0m[91mUpdating files:  46% (3345/7271)[0m[91mUpdating files:  47% (3418/7271)[0m[91mUpdating files:  48% (3491/7271)[0m[91mUpdating files:  49% (3563/7271)[0m[91mUpdating files:  50% (3636/7271)[0m[91mUpdating files:  51% (3709/7271)[0m[91mUpdating files:  52% (3781/7271)[0m[91mUpdating files:  53% (3854/7271)[0m[91mUpdating files:  54% (3927/7271)[0m[91mUpdating files:  55% (4000/7271)[0m[91mUpdating files:  56% (4072/7271)[0m[91mUpdating files:  57% (4145/7271)[0m[91mUpdating files:  58% (4218/7271)[0m[91mUpdating files:  59% (4290/7271)[0m[91mUpdating files:  60% (4363/7271)[0m[91mUpdating files:  61% (4436/7271)[0m[91mUpdating files:  62% (4509/7271)[0m[91mUpdating files:  63% (4581/7271)[0m[91mUpdating files:  64% (4654/7271)[0m[91mUpdating files:  65% (4727/7271)[0m[91mUpdating files:  66% (4799/7271)[0m[91mUpdating files:  67% (4872/7271)[0m[91mUpdating files:  68% (4945/7271)[0m[91mUpdating files:  69% (5017/7271)[0m[91mUpdating files:  70% (5090/7271)[0m[91mUpdating files:  71% (5163/7271)[0m[91mUpdating files:  72% (5236/7271)[0m[91mUpdating files:  73% (5308/7271)[0m[91mUpdating files:  74% (5381/7271)[0m[91mUpdating files:  75% (5454/7271)[0m[91mUpdating files:  76% (5526/7271)[0m[91mUpdating files:  77% (5599/7271)[0m[91mUpdating files:  78% (5672/7271)[0m[91mUpdating files:  79% (5745/7271)[0m[91mUpdating files:  80% (5817/7271)[0m[91mUpdating files:  81% (5890/7271)[0m[91mUpdating files:  82% (5963/7271)[0m[91mUpdating files:  83% (6035/7271)[0m[91mUpdating files:  84% (6108/7271)[0m[91mUpdating files:  85% (6181/7271)[0m[91mUpdating files:  86% (6254/7271)[0m[91mUpdating files:  86% (6268/7271)[0m[91mUpdating files:  87% (6326/7271)[0m[91mUpdating files:  88% (6399/7271)[0m[91mUpdating files:  89% (6472/7271)[0m[91mUpdating files:  90% (6544/7271)[0m[91mUpdating files:  91% (6617/7271)[0m[91mUpdating files:  92% (6690/7271)[0m[91mUpdating files:  93% (6763/7271)[0m[91mUpdating files:  94% (6835/7271)[0m[91mUpdating files:  95% (6908/7271)[0m[91mUpdating files:  96% (6981/7271)[0m[91mUpdating files:  97% (7053/7271)[0m[91mUpdating files:  98% (7126/7271)[0m[91mUpdating files:  99% (7199/7271)[0m[91mUpdating files: 100% (7271/7271)Updating files: 100% (7271/7271), done.
+[0m[91m+ cd /home/carma/.base-image/workspace/src
++ git clone --depth 1 --branch develop https://github.com/usdot-fhwa-stol/ros1_bridge.git
+[0m[91mCloning into 'ros1_bridge'...
+[0mStarting >>> carma_cmake_common
+Starting >>> jsk_recognition_msgs
+Starting >>> autoware_lanelet2_msgs
+Finished <<< carma_cmake_common [1.27s]
+Starting >>> j2735_msgs
+Starting >>> can_msgs
+Finished <<< autoware_lanelet2_msgs [7.20s]
+Finished <<< can_msgs [7.93s]
+[Processing: j2735_msgs, jsk_recognition_msgs]
+Finished <<< jsk_recognition_msgs [54.9s]
+Starting >>> autoware_msgs
+[Processing: autoware_msgs, j2735_msgs]
+[Processing: autoware_msgs, j2735_msgs]
+Finished <<< autoware_msgs [1min 2s]
+Finished <<< j2735_msgs [2min 22s]
+Starting >>> cav_msgs
+[Processing: cav_msgs]
+[Processing: cav_msgs]
+Finished <<< cav_msgs [1min 4s]
+Starting >>> carma_debug_msgs
+Starting >>> cav_srvs
+Finished <<< carma_debug_msgs [7.53s]
+Finished <<< cav_srvs [17.9s]
+
+Summary: 9 packages finished [3min 45s]
+ROS_DISTRO was set to 'noetic' before. Please make sure that the environment does not mix paths from different distributions.
+Starting >>> carma_cmake_common
+Starting >>> jsk_recognition_msgs
+Starting >>> autoware_lanelet2_msgs
+Finished <<< carma_cmake_common [0.81s]
+Starting >>> j2735_v2x_msgs
+Starting >>> carma_msgs
+Finished <<< autoware_lanelet2_msgs [21.0s]
+Starting >>> can_msgs
+Finished <<< can_msgs [15.9s]
+Starting >>> carma_localization_msgs
+Finished <<< carma_localization_msgs [12.2s]
+Starting >>> carma_perception_msgs
+Finished <<< carma_msgs [50.1s]
+Starting >>> carma_driver_msgs
+[Processing: carma_driver_msgs, carma_perception_msgs, j2735_v2x_msgs, jsk_recognition_msgs]
+Finished <<< carma_perception_msgs [53.0s]
+Finished <<< carma_driver_msgs [1min 13s]
+[91m--- stderr: j2735_v2x_msgs
+In file included from /home/carma/.base-image/ros2_msgs_ws/build/j2735_v2x_msgs/rosidl_generator_c/j2735_v2x_msgs/msg/detail/bsm__functions.h:19,
+                 from /home/carma/.base-image/ros2_msgs_ws/build/j2735_v2x_msgs/rosidl_generator_c/j2735_v2x_msgs/msg/detail/bsm__functions.c:4:
+/home/carma/.base-image/ros2_msgs_ws/build/j2735_v2x_msgs/rosidl_generator_c/j2735_v2x_msgs/msg/detail/bsm__struct.h:38:10: fatal error: j2735_v2x_mgs/msg/detail/bsm_part_ii_extension__struct.h: No such file or directory
+   38 | #include "j2735_v2x_mgs/msg/detail/bsm_part_ii_extension__struct.h"
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make[2]: *** [CMakeFiles/j2735_v2x_msgs__rosidl_generator_c.dir/build.make:4034: CMakeFiles/j2735_v2x_msgs__rosidl_generator_c.dir/rosidl_generator_c/j2735_v2x_msgs/msg/detail/bsm__functions.c.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:330: CMakeFiles/j2735_v2x_msgs__rosidl_generator_c.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2
+---
+[0m[91mFailed   <<< j2735_v2x_msgs [2min 11s, exited with code 2]
+[0m

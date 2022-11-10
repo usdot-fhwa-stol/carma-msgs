@@ -50,3 +50,5 @@ bool response_type_exists
 
 j2735_v2x_msgs/FuelType fuel_type
 bool fuel_type_exists
+
+# regional #TODO: RegionalExtensions are not yet supported for this message type

@@ -7,5 +7,5 @@
 # TrailerHistoryPointList ::= SEQUENCE (SIZE(1..23)) OF TrailerHistoryPoint
 carma_v2x_msgs/TrailerHistoryPoint[] trailer_history_points
 
-uint8 SIZE_MIN = 1
-uint8 SIZE_MAX = 23
+uint8 MIN_SIZE = 1
+uint8 MAX_SIZE = 23

@@ -8,7 +8,7 @@
 #    notUsed SSPindex,
 #    -- always set to 0 and carries no meaning;
 #    -- legacy field maintained for backward compatibility
-uint8 ssp_index = 0
+uint8 ssp_index
 
 #    -- Offset connection point details from the 
 #    -- hauling vehicle to the first trailer unit

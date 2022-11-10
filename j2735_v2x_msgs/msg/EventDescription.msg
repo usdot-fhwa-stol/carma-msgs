@@ -44,6 +44,8 @@ uint16 HAS_EXTENT = 4
 j2735_v2x_msgs/ITIScodes type_event
 
 j2735_v2x_msgs/ITIScodes[] description
+uint8 DESCRIPTION_SIZE_MIN = 1
+uint8 DESCRIPTION_SIZE_MAX = 8
 
 ####
 # OPTIONAL FIELDS
@@ -56,3 +58,5 @@ j2735_v2x_msgs/Priority priority
 j2735_v2x_msgs/HeadingSlice heading
 
 j2735_v2x_msgs/Extent extent
+
+# regional #TODO: RegionalExtensions are not yet supported for this message type

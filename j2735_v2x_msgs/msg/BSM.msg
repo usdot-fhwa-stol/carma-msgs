@@ -25,8 +25,14 @@ uint8 HAS_REGIONAL = 2
 #    -- Part II Content
 #    partII        SEQUENCE (SIZE(1..8)) OF 
 #                  PartIIcontent {{ BSMpartIIExtension }} OPTIONAL,
-j2735_v2x_mgs/BSMPartIIExtension[] part_ii
+j2735_v2x_msgs/BSMPartIIExtension[] part_ii
+
+uint8 PART_II_MIN_SIZE = 1
+uint8 PART_II_MAX_SIZE = 8
 
 #    regional      SEQUENCE (SIZE(1..4)) OF 
 #                 RegionalExtension {{REGION.Reg-BasicSafetyMessage}} OPTIONAL,
 j2735_v2x_msgs/BSMRegionalExtension[] regional
+
+uint8 REGIONAL_MIN_SIZE = 1
+uint8 REGIONAL_MAX_SIZE = 4

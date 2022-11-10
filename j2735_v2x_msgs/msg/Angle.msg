@@ -4,9 +4,9 @@
 # J2735 2016 message format.
 #
 
-Angle ::= INTEGER (0..28800) 
-   -- LSB of 0.0125 degrees
-   -- A range of 0 to 359.9875 degrees
+# Angle ::= INTEGER (0..28800) 
+#    -- LSB of 0.0125 degrees
+#    -- A range of 0 to 359.9875 degrees
 uint16 angle
 
 uint16 ANGLE_UNAVAILABLE = 28800

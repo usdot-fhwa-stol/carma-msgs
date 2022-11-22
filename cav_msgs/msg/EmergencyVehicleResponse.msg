@@ -13,3 +13,4 @@ bool can_change_lanes
 # The maximum length is 128
 # example: "CMV is unable to change lanes for <insert-supported-reason-here>"
 string reason
+bool reason_exists

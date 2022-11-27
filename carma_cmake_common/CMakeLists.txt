@@ -29,7 +29,7 @@ else()
 
   install(
     DIRECTORY cmake
-    DESTINATION share/${PROJECT_NAME}
+    DESTINATION ${CMAKE_ROOT}/${PROJECT_NAME}
   )
 
 endif()

@@ -1,0 +1,10 @@
+Source: carma-j2735-msgs
+Maintainer: Cody Garver <garverd@leidos.com>
+Build-Depends: cmake (>= 3.5), debhelper (>= 11), carma-cmake-common
+Standards-Version: 4.5.0
+Homepage: https://github.com/usdot-fhwa-stol
+
+Package: carma-j2735-msgs
+Depends: ros-noetic-ros-environment
+Architecture: any
+Description: CARMA msgs

@@ -1,0 +1,10 @@
+Source: carma-cmake-common
+Maintainer: Cody Garver <garverd@leidos.com>
+Build-Depends: cmake (>= 3.5), debhelper (>= 11)
+Standards-Version: 4.5.0
+Homepage: https://github.com/usdot-fhwa-stol
+
+Package: carma-cmake-common
+Depends: cmake
+Architecture: any
+Description: CARMA common CMake modules

@@ -1,0 +1,10 @@
+Source: carma-debug-msgs
+Maintainer: Cody Garver <garverd@leidos.com>
+Build-Depends: cmake (>= 3.5), debhelper (>= 11), carma-cmake-common, carma-cav-msgs
+Standards-Version: 4.5.0
+Homepage: https://github.com/usdot-fhwa-stol
+
+Package: carma-debug-msgs
+Depends: ros-noetic-ros-environment
+Architecture: any
+Description: CARMA msgs

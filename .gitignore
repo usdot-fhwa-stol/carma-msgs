@@ -1,0 +1,16 @@
+*/debian/*/
+*.substvars
+.debhelper
+*.txt
+.substvars
+*.log
+debhelper-build-stamp
+files
+*.ddeb
+*.dsc
+*.tar.gz
+*.build
+*.buildinfo
+*.changes
+*.deb
+obj-*-linux-gnu

@@ -26,10 +26,10 @@ uint16 HAS_MASS = 4
 uint16 HAS_TRAILER_WEIGHT = 8
 
 
-j2735_v2x_msgs/VehicleHeight height
+carma_v2x_msgs/VehicleHeight height
 
-j2735_v2x_msgs/BumperHeights bumpers
+carma_v2x_msgs/BumperHeights bumpers
 
-j2735_v2x_msgs/VehicleMass mass
+carma_v2x_msgs/VehicleMass mass
 
 carma_v2x_msgs/TrailerWeight trailer_weight

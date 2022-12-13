@@ -33,5 +33,7 @@ uint16 presence_vector
 uint16 HAS_LOCATION_DETAILS = 1
 
 j2735_msgs/ITIScodes status_details
+uint16 STATUS_DETAILS_MIN = 532
+uint16 STATUS_DETAILS_MAX = 541
 
 j2735_msgs/ITISGenericLocations location_details

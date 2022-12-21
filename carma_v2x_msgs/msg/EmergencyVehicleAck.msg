@@ -6,5 +6,5 @@
 # standard header for all mobility messages
 carma_v2x_msgs/MobilityHeader m_header
 
-# True when the emergency vehicle has received the EVR message. Currently this should never be false
+# True when the emergency vehicle has received the EmergencyVehicleResponse message. Currently this should never be false
 bool acknowledgement

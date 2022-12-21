@@ -31,5 +31,5 @@ source ~/.base-image/ros2_msgs_ws/install/local_setup.bash
 cd ~/.base-image/workspace/src 
 cd ../ 
 sudo apt-get update 
-colcon build --packages-select ros1_bridge --cmake-args "--debug-output"
+colcon build --event-handlers console_direct+ --packages-select ros1_bridge --cmake-args "--debug-output"
 sudo chmod -R ugo+x ~/.base-image/workspace/install

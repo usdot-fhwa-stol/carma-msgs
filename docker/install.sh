@@ -13,10 +13,6 @@ cp -R /home/carma/autoware.ai/jsk_recognition /home/carma/.base-image/ros2_msgs_
 # Cleanup autoware repo once messages have been moved
 rm -r /home/carma/autoware.ai/
 
-if [ "$GITHUB_ACTIONS" == "true" ]; then
-  export ROS_PARALLEL_JOBS='-j4 -l4' # Try to reduce memory consumption on build
-fi
-
 # ROS1 message setup
 cd ~/.base-image/ros1_msgs_ws && source /opt/ros/noetic/setup.bash && colcon build --packages-up-to autoware_msgs cav_msgs cav_srvs j2735_msgs can_msgs carma_debug_msgs autoware_lanelet2_msgs
 

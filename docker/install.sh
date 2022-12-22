@@ -29,5 +29,5 @@ cd ../
 #echo 'deb [trusted=yes] https://apt.kitware.com/ubuntu/ focal main' | sudo tee /etc/apt/sources.list.d/kitware.list >/dev/null
 sudo apt-get update
 #sudo apt-get -y install cmake
-colcon build --event-handlers console_direct+ --packages-select ros1_bridge --cmake-clean-cache
+colcon build --event-handlers console_direct+ --packages-select ros1_bridge
 sudo chmod -R ugo+x ~/.base-image/workspace/install

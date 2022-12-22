@@ -30,8 +30,8 @@ source ~/.base-image/ros1_msgs_ws/install/local_setup.bash
 source ~/.base-image/ros2_msgs_ws/install/local_setup.bash 
 cd ~/.base-image/workspace/src 
 cd ../ 
-echo 'deb [trusted=yes] https://apt.kitware.com/ubuntu/ focal main' | sudo tee /etc/apt/sources.list.d/kitware.list >/dev/null
+#echo 'deb [trusted=yes] https://apt.kitware.com/ubuntu/ focal main' | sudo tee /etc/apt/sources.list.d/kitware.list >/dev/null
 sudo apt-get update
-sudo apt-get -y install cmake
-colcon build --event-handlers console_direct+ --packages-select ros1_bridge --cmake-args "--debug-output"
+#sudo apt-get -y install cmake
+colcon build --event-handlers console_direct+ --packages-select ros1_bridge --cmake-force-configure
 sudo chmod -R ugo+x ~/.base-image/workspace/install

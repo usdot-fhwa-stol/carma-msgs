@@ -36,6 +36,9 @@ jobs:
           cd $GITHUB_WORKSPACE/cav_msgs
           debuild -us -uc -j -b
           sudo dpkg -i ../carma-cav-msgs*.deb
+          cd $GITHUB_WORKSPACE/j2735_msgs
+          debuild -us -uc -j -b
+          sudo dpkg -i ../carma-j2735-msgs*.deb
 
           for PACKAGE in $PACKAGES; do
             git clean -dfx

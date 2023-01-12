@@ -15,7 +15,7 @@ jobs:
   apt-repo:
     runs-on: ubuntu-latest
     container:
-      image: usdotfhwastoldev/carma-base:develop
+      image: usdotfhwastoldev/autoware.ai:develop
       options: --user root
     steps:
       - name: Checkout

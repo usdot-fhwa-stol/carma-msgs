@@ -41,7 +41,8 @@ jobs:
           sudo dpkg -i ../carma-cav-msgs*.deb
           cd $GITHUB_WORKSPACE/carma_planning_msgs
           debuild -us -uc -j -b
-          sudo dpkg -i ../carma-planning-msgs*.deb
+          sudo dpkg -i ../carma-planning-msgs*.deb || true
+          sudo apt -f install
 
           for PACKAGE in $PACKAGES; do
             git clean -dfx

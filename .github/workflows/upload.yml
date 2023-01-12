@@ -42,14 +42,14 @@ jobs:
           cd $GITHUB_WORKSPACE/carma_planning_msgs
           debuild -us -uc -j -b
           sudo dpkg -i ../carma-planning-msgs*.deb || true
-          sudo apt -f install
+          sudo apt -f -y install
 
           for PACKAGE in $PACKAGES; do
             git clean -dfx
             cd $GITHUB_WORKSPACE/$PACKAGE
             mk-build-deps
             sudo dpkg -i *.deb || true
-            sudo apt -f install
+            sudo apt -f -y install
             debuild -us -uc -j -b
             deb-s3 upload --codename develop --bucket ${{ secrets.AWS_BUCKET_NAME }} ../*.deb
           done

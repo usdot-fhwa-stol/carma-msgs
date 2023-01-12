@@ -39,6 +39,9 @@ jobs:
           cd $GITHUB_WORKSPACE/cav_msgs
           debuild -us -uc -j -b
           sudo dpkg -i ../carma-cav-msgs*.deb
+          cd $GITHUB_WORKSPACE/carma_planning_msgs
+          debuild -us -uc -j -b
+          sudo dpkg -i ../carma-planning-msgs*.deb
 
           for PACKAGE in $PACKAGES; do
             git clean -dfx

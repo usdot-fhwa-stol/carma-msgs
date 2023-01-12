@@ -29,11 +29,16 @@ jobs:
         run: |
           git config --global --add safe.directory '*'
 
+          # Temporarily required until bootstrapping from the apt repo is fixed
+          cd $GITHUB_WORKSPACE/carma_cmake_common
+          debuild -us -uc -j -b
+          sudo dpkg -i ../carma-cmake-common*.deb
+
           for PACKAGE in $PACKAGES; do
             git clean -dfx
             cd $GITHUB_WORKSPACE/$PACKAGE
             mk-build-deps
-            sudo dpkg -i *.deb
+            sudo dpkg -i *.deb || true
             sudo apt -f install
             debuild -us -uc -j -b
             deb-s3 upload --codename develop --bucket ${{ secrets.AWS_BUCKET_NAME }} ../*.deb

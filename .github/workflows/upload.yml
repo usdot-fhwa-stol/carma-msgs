@@ -51,6 +51,10 @@ jobs:
           debuild -us -uc -j -b
           sudo dpkg -i ../carma-v2x-msgs*.deb || true
           sudo apt -f -y install
+          cd $GITHUB_WORKSPACE/v2x_j2735_msgs
+          debuild -us -uc -j -b
+          sudo dpkg -i ../carma-v2x-j2735-msgs*.deb || true
+          sudo apt -f -y install
 
           for PACKAGE in $PACKAGES; do
             git clean -dfx

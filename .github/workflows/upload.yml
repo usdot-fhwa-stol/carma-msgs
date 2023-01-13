@@ -47,7 +47,7 @@ jobs:
           debuild -us -uc -j -b
           sudo dpkg -i ../carma-msgs*.deb || true
           sudo apt -f -y install
-          cd $GITHUB_WORKSPACE/v2x_j2735_msgs
+          cd $GITHUB_WORKSPACE/j2735_v2x_msgs
           debuild -us -uc -j -b
           sudo dpkg -i ../carma-v2x-j2735-msgs*.deb || true
           sudo apt -f -y install

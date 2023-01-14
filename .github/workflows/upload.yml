@@ -39,7 +39,7 @@ jobs:
             dpkg -i *.deb || true
             apt-get update
             apt-get -f -y install
-            dch --local .$(date +%Y%m%d).git$(git rev-list --count).$(git rev-parse --short HEAD). "CI build"
+            dch --local .$(date +%Y%m%d).git$(git rev-list --count HEAD).$(git rev-parse --short HEAD). "CI build"
             debuild -us -uc -j -b
             deb-s3 upload --codename develop --bucket ${{ secrets.AWS_BUCKET_NAME }} ../*.deb
           done

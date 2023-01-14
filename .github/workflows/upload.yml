@@ -19,6 +19,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
       - name: Add stol apt repo
         run: |
           echo "deb [trusted=yes] https://s3.amazonaws.com/${{ secrets.AWS_BUCKET_NAME }} develop main" > /etc/apt/sources.list.d/carma.list

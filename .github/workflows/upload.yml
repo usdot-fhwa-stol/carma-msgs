@@ -21,14 +21,15 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - name: Add stol apt repo
-        run: |
-          echo "deb [trusted=yes] https://s3.amazonaws.com/${{ secrets.AWS_BUCKET_NAME }} develop main" > /etc/apt/sources.list.d/carma.list
-      - name: Install dependencies
-        run: |
-          apt update
-          apt -y install debhelper devscripts equivs
-          gem install deb-s3
+      - name: Add STOL apt repository
+        uses: usdot-fhwa-stol/actions/add-stol-apt-repository@main
+        with:
+          codename: "develop"
+      - name: Install deb-s3 and tools
+        uses: usdot-fhwa-stol/actions/setup-deb-s3@main
+        with:
+          bloom: "true"
+          mk-build-deps: "true"
       - name: Build and upload .deb files
         run: |
           # Avoid fatal git warning

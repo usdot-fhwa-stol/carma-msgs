@@ -1,4 +1,4 @@
-FROM usdotfhwastolcandidate/carma-base:isetta as base_image
+FROM usdotfhwastol/carma-base:carma-system-4.3.0 as base_image
 SHELL ["/bin/bash", "-c"]
 
 ARG DEBIAN_FRONTEND="noninteractive"

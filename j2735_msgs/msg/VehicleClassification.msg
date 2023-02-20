@@ -28,27 +28,40 @@
 #    ...
 #    }
 
+# A BIT STRING defining the presence of optional fields.
+# Compare with bitwise-and
+# if (presence_vector & HAS_KEY_TYPE) etc.
+# Create with bitwise-or
+# presence_vector = presence_vector | HAS_KEY_TYPE
+uint16 presence_vector
+
+uint16 HAS_KEY_TYPE = 1
+uint16 HAS_ROLE = 2
+uint16 HAS_ISO = 4
+uint16 HAS_HPMS_TYPE = 8
+uint16 HAS_VEHICLE_TYPE = 16
+uint16 HAS_RESPONSE_EQUIP = 32
+uint16 HAS_RESPONDER_TYPE = 64
+uint16 HAS_FUEL_TYPE = 128
+
 j2735_msgs/BasicVehicleClass key_type
-bool key_type_exists
 
 j2735_msgs/BasicVehicleRole role
-bool role_exists
 
 # Iso3833VehicleType ::= INTEGER (0..100) 
 # Refer to ISO3833 for valid values
 uint8 iso3833
-bool iso3883_exists
+uint8 ISO3833_MIN=0
+uint8 ISO3833_MAX=100
+
+j2735_msgs/VehicleType hpms_type
 
 j2735_msgs/ITISVehicleGroupAffected vehicle_type 
-bool vehicle_type_exists 
 
 j2735_msgs/ITISIncidentResponseEquipment response_equip
-bool response_equip_exists
 
 j2735_msgs/ITISResponderGroupAffected responder_type
-bool response_type_exists
 
 j2735_msgs/FuelType fuel_type
-bool fuel_type_exists
 
 # regional #TODO: RegionalExtensions are not yet supported for this message type

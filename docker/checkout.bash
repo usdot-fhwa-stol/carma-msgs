@@ -47,7 +47,7 @@ if [[ "$BRANCH" = "develop" ]]; then
       git clone --depth 1 --branch develop  https://github.com/usdot-fhwa-stol/ros1_bridge.git
 else
       cd /home/carma/
-      git clone --depth 1 --branch carma-system-4.3.0 https://github.com/usdot-fhwa-stol/autoware.ai.git
+      git clone https://github.com/usdot-fhwa-stol/autoware.ai.git --depth 1 --branch carma-develop
       cd ~/.base-image/workspace/src
-      git clone --depth 1 --branch carma-system-4.3.0 https://github.com/usdot-fhwa-stol/ros1_bridge.git
+      git clone --depth 1 --branch develop https://github.com/usdot-fhwa-stol/ros1_bridge.git
 fi

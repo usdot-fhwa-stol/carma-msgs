@@ -26,7 +26,7 @@ jobs:
         with:
           codename: "develop"
       - name: Install deb-s3 and tools
-        uses: usdot-fhwa-stol/actions/setup-deb-s3@0809dd11f9e5fcdd83701968f972453ffe093f4f
+        uses: usdot-fhwa-stol/actions/setup-deb-s3@8259b15b9c7fd3747509909cb5d66f351916a444
         with:
           bloom: "true"
           mk-build-deps: "true"

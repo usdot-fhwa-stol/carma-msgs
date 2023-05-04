@@ -41,6 +41,8 @@ j2735_v2x_msgs/DDateTime date_time
 ####
 
 j2735_v2x_msgs/ITIScodes description
+uint16 DESCRIPTION_MIN = 523
+uint16 DESCRIPTION_MAX = 541
 
 j2735_v2x_msgs/ITISGenericLocations location_details
 

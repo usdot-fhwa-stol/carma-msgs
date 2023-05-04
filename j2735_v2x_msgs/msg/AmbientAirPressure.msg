@@ -11,3 +11,4 @@ uint8 pressure
 
 uint8 PRESSURE_MIN = 0
 uint8 PRESSURE_MAX = 255
+uint8 PRESSURE_UNAVAILABLE = 0

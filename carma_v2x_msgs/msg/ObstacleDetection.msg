@@ -28,9 +28,9 @@ uint16 HAS_DESCRIPTION = 1
 uint16 HAS_LOCATION_DETAILS = 2
 uint16 HAS_VERT_EVENT = 4
 
-j2735_v2x_msgs/ObstacleDistance ob_dist
+carma_v2x_msgs/ObstacleDistance ob_dist
 
-j2735_v2x_msgs/ObstacleDirection ob_direct
+carma_v2x_msgs/ObstacleDirection ob_direct
 
 j2735_v2x_msgs/DDateTime date_time
 

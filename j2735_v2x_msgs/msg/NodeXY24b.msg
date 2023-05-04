@@ -3,9 +3,6 @@
 #
 # J2735 2016 message format.
 #
-# @author Mae Fromm
-# @version 0.1
-#
 # A 24-bit node type with offset values from the last point in X and Y.
 #
 # Node-XY-24b ::= SEQUENCE {
@@ -20,5 +17,9 @@
 # reference, non-vehicle centric coordinate frames of reference, offset is positive to the East (X) and to the North (Y)
 # directions. The most negative value shall be used to indicate an unknown value.
 
-float32 x
-float32 y
+int16 x
+int16 y
+
+int16 UNKNOWN=-2048
+int16 MIN=-2047
+int16 MAX=2047

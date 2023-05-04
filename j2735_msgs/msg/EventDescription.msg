@@ -40,12 +40,9 @@ uint16 presence_vector
 uint16 HAS_PRIORITY = 1
 uint16 HAS_HEADING = 2
 uint16 HAS_EXTENT = 4
+uint16 HAS_DESCRIPTION = 8
 
 j2735_msgs/ITIScodes type_event
-
-j2735_msgs/ITIScodes[] description
-uint8 DESCRIPTION_SIZE_MIN = 1
-uint8 DESCRIPTION_SIZE_MAX = 8
 
 ####
 # OPTIONAL FIELDS
@@ -58,5 +55,9 @@ j2735_msgs/Priority priority
 j2735_msgs/HeadingSlice heading
 
 j2735_msgs/Extent extent
+
+j2735_msgs/ITIScodes[] description
+uint8 DESCRIPTION_SIZE_MIN = 1
+uint8 DESCRIPTION_SIZE_MAX = 8
 
 # regional #TODO: RegionalExtensions are not yet supported for this message type

@@ -42,7 +42,7 @@ cd ${dir}/src
 
 if [[ "$BRANCH" = "develop" ]]; then
       cd /home/carma/
-      git clone https://github.com/usdot-fhwa-stol/autoware.ai.git --depth 1 --branch release/k900
+      git clone https://github.com/usdot-fhwa-stol/autoware.ai.git --depth 1 --branch carma-develop
       cd ${dir}/src
       git clone --depth 1 --branch carma-system-4.4.0 https://github.com/usdot-fhwa-stol/ros1_bridge.git
 else

@@ -1,4 +1,4 @@
-FROM usdotfhwastolcandidate/carma-base:k900-xil as base_image
+FROM usdotfhwastol/carma-base:carma-system-4.4.3 as base_image
 SHELL ["/bin/bash", "-c"]
 
 ARG DEBIAN_FRONTEND="noninteractive"

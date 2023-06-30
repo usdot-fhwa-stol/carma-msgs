@@ -42,7 +42,7 @@ j2735_v2x_msgs/TimeConfidence time_confidence
 
 carma_v2x_msgs/PositionOffsetXYZ pos
 
-j3224_v2x_msgs/PositionConfidenceSet pos_confidence
+j2735_v2x_msgs/PositionConfidenceSet pos_confidence
 
 carma_v2x_msgs/Speed speed 
 

@@ -1,5 +1,5 @@
 #
-# DetectedObstacleData.msg
+# ObjectType.msg
 #
 # J3224 2020 message format.
 #

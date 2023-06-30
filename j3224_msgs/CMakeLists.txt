@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2018-2021 LEIDOS.
+# Copyright (C) 2023 LEIDOS.
 #
 # Licensed under the Apache License, Version 2.0 (the "License"); you may not
 # use this file except in compliance with the License. You may obtain a copy of
@@ -15,7 +15,7 @@
 #
 
 cmake_minimum_required(VERSION 3.5)
-project(cav_msgs)
+project(j3224_msgs)
 
 ## Compile as C++14, supported in ROS Noetic and newer
 add_compile_options(-std=c++14)
@@ -30,9 +30,7 @@ carma_package()
 find_package(catkin REQUIRED COMPONENTS
   message_generation
   std_msgs
-  geometry_msgs
   j2735_msgs
-  j3224_msgs
 )
 
 ## System dependencies are found with CMake's conventions
@@ -99,9 +97,7 @@ add_message_files(
 generate_messages(
   DEPENDENCIES
   std_msgs
-  geometry_msgs
   j2735_msgs
-  j3224_msgs
 )
 
 ################################################
@@ -135,8 +131,8 @@ generate_messages(
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
  # INCLUDE_DIRS include
-#  LIBRARIES cav_msgs
- CATKIN_DEPENDS message_runtime std_msgs geometry_msgs j2735_msgs j3224_msgs
+#  LIBRARIES j3224_msgs
+ CATKIN_DEPENDS message_runtime std_msgs j2735_msgs
 #  DEPENDS system_lib
 )
 
@@ -153,7 +149,7 @@ include_directories(
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
-#   src/${PROJECT_NAME}/cav_msgs.cpp
+#   src/${PROJECT_NAME}/j3224_msgs.cpp
 # )
 
 ## Add cmake target dependencies of the library
@@ -164,7 +160,7 @@ include_directories(
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-# add_executable(${PROJECT_NAME}_node src/cav_msgs_node.cpp)
+# add_executable(${PROJECT_NAME}_node src/j3224_msgs_node.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -221,7 +217,7 @@ install(DIRECTORY include/${PROJECT_NAME}/
 #############
 
 ## Add gtest based cpp test target and link libraries
-# catkin_add_gtest(${PROJECT_NAME}-test test/test_cav_msgs.cpp)
+# catkin_add_gtest(${PROJECT_NAME}-test test/test_j3224_msgs.cpp)
 # if(TARGET ${PROJECT_NAME}-test)
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()

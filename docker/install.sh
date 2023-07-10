@@ -29,5 +29,5 @@ source ~/.base-image/ros2_msgs_ws/install/local_setup.bash
 cd ~/.base-image/workspace/src 
 cd ../ 
 sudo apt-get update 
-colcon build --parallel-workers 4 --event-handlers console_direct+ --packages-select ros1_bridge --cmake-force-configure
+colcon build --event-handlers console_direct+ --packages-select ros1_bridge --cmake-force-configure
 sudo chmod -R ugo+x ~/.base-image/workspace/install

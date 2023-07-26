@@ -40,11 +40,11 @@ carma_v2x_msgs/DetectedObjectList objects
 
 # A BIT STRING defining the presence of optional fields.
 # Compare with bitwise-and
-# if (presence_vector & HAS_REF_POS_XY_CONF) etc.
+# if (presence_vector & HAS_REF_POS_EL_CONF) etc.
 # Create with bitwise-or
-# presence_vector = presence_vector | HAS_REF_POS_XY_CONF
+# presence_vector = presence_vector | HAS_REF_POS_EL_CONF
 uint8 presence_vector
 
-uint8 HAS_REF_POS_XY_CONF = 1
+uint8 HAS_REF_POS_EL_CONF = 1
 
 j2735_v2x_msgs/ElevationConfidence ref_pos_el_conf

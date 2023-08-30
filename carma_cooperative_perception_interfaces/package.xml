@@ -28,7 +28,7 @@ limitations under the License.
   <buildtool_depend>ament_cmake</buildtool_depend>
   <buildtool_depend>rosidl_default_generators</buildtool_depend>
 
-  <build_depend>ament_auto_cmake</build_depend>
+  <build_depend>ament_cmake_auto</build_depend>
   <build_depend>carma_cmake_common</build_depend>
   <build_depend>geometry_msgs</build_depend>
   <build_depend>std_msgs</build_depend>

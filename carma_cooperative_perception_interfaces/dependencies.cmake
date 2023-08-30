@@ -19,9 +19,6 @@ find_package(ament_cmake_auto REQUIRED)
 # dependency.
 ament_auto_find_build_dependencies()
 
-# From carma_cmake_common (ament_auto finds the package)
-carma_check_ros_version(2)
-
 if(carma_multiple_object_tracking_interfaces_BUILD_TESTS)
   find_package(ament_lint_auto REQUIRED)
 

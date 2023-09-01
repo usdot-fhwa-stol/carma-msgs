@@ -9,6 +9,7 @@ string id
 
 uint8 motion_model
 
+# pose, twist, and accel fields conform to ROS REP-103
 geometry_msgs/PoseWithCovariance pose
 geometry_msgs/TwistWithCovariance twist
 geometry_msgs/AccelWithCovariance accel

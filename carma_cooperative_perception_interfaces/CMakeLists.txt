@@ -20,6 +20,16 @@ project(carma_cooperative_perception_interfaces)
 # is not the specified version. This call must come before any other ROS
 # dependencies becasue ROS 1 does not have some of the required packages.
 find_package(carma_cmake_common REQUIRED)
+
+if(DEFINED ENV{ROS_VERSION} AND $ENV{ROS_VERSION} EQUAL 1)
+  # ROS 1 uses a different, incompatible CMake workflow than ROS 2. Until CARMA
+  # fully transitions to ROS 2, we need to support ROS 1 environments too.
+  message(STATUS "Configuring `carma_cooperative_perception_interfaces` for ROS 1")
+  include(${PROJECT_SOURCE_DIR}/cmake/configure_for_ros1.cmake)
+
+  return()
+endif()
+
 carma_check_ros_version(2)
 
 # Added outside of `dependencies.cmake` because ament sets some variables (e.g., BUILD_TESTING)
@@ -35,7 +45,7 @@ include(dependencies.cmake)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_C_STANDARD 11)
 
-file(GLOB carma_cooperative_perception_interfaces_MSG_FILES RELATIVE ${PROJECT_SOURCE_DIR} msg/*)
+file(GLOB carma_cooperative_perception_interfaces_MSG_FILES RELATIVE ${PROJECT_SOURCE_DIR} msg/*.msg)
 
 rosidl_generate_interfaces(carma_cooperative_perception_interfaces
   ${carma_cooperative_perception_interfaces_MSG_FILES}

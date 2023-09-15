@@ -12,4 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from .core import msg_from_yaml, msg_from_yaml_file  # noqa: F401 (import-unused error)
+from .file_io import (
+    msg_from_yaml,  # noqa: F401 (module imported but unused)
+    msg_from_yaml_file,  # noqa: F401 (module imported but unused)
+)

@@ -43,6 +43,26 @@ jobs:
         source "$ROS_2_ENV"
         sed -i '/colcon test/ s/$/ --parallel-workers 4 --packages-above $PACKAGES/' /home/carma/.ci-image/engineering_tools/code_coverage/make_with_coverage.bash
         make_with_coverage.bash -t -e /opt/carma/ -o ./coverage_reports/gcov
+    - name: Find jacoco.xml
+      shell: bash
+      run: |
+        find "$GITHUB_WORKSPACE" -name "coverage.xml"    
+        find "$GITHUB_WORKSPACE" -name "pytest.xml"  
+    - name: Archive code coverage results
+      uses: actions/upload-artifact@v3
+      with:
+        name: coverage
+        path: |
+          /opt/carma/build/carma_message_utilities/pytest.xml
+          /opt/carma/coverage_reports/gcov/coverage.xml
+        if-no-files-found: error        
+    - name: Download code coverage results
+      uses: actions/download-artifact@v3
+      with:
+        name: coverage
+        path: 
+          /opt/carma/build/carma_message_utilities/pytest.xml
+          /opt/carma/coverage_reports/gcov/coverage.xml
     - name: Run SonarScanner
       uses: usdot-fhwa-stol/actions/sonar-scanner@main
       with:

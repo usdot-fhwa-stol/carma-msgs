@@ -59,3 +59,9 @@ if(carma_cooperative_perception_interfaces_BUILD_TESTS)
 endif()
 
 ament_auto_package()
+
+include(GNUInstallDirs)
+
+install(FILES rule.yml
+  DESTINATION ${CMAKE_INSTALL_DATADIR}/carma_cooperative_perception_interfaces
+)

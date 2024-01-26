@@ -53,6 +53,7 @@ uint8 SMALL_VEHICLE = 1
 uint8 LARGE_VEHICLE = 2
 uint8 MOTORCYCLE = 3
 uint8 PEDESTRIAN = 4
+uint8 EMERGENCY_VEHICLE = 5
 
 # Binary value to show if the object is static or dynamic (1: dynamic, 0: static)
 bool dynamic_obj

@@ -35,21 +35,21 @@ auto to_floating_point(const j2735_v2x_msgs::msg::AccelerationConfidence & confi
   -> std::optional<FloatingPoint>
 {
   switch (confidence.acceleration_confidence) {
-    case confidence.UNAVAILABLE:
+    case j2735_v2x_msgs::msg::AccelerationConfidence::UNAVAILABLE:
       return std::nullopt;
-    case confidence.ACCL_100_00:
+    case j2735_v2x_msgs::msg::AccelerationConfidence::ACCL_100_00:
       return FloatingPoint{100.0};
-    case confidence.ACCL_010_00:
+    case j2735_v2x_msgs::msg::AccelerationConfidence::ACCL_010_00:
       return FloatingPoint{10.0};
-    case confidence.ACCL_005_00:
+    case j2735_v2x_msgs::msg::AccelerationConfidence::ACCL_005_00:
       return FloatingPoint{5.0};
-    case confidence.ACCL_001_00:
+    case j2735_v2x_msgs::msg::AccelerationConfidence::ACCL_001_00:
       return FloatingPoint{1.0};
-    case confidence.ACCL_000_10:
+    case j2735_v2x_msgs::msg::AccelerationConfidence::ACCL_000_10:
       return FloatingPoint{0.1};
-    case confidence.ACCL_000_05:
+    case j2735_v2x_msgs::msg::AccelerationConfidence::ACCL_000_05:
       return FloatingPoint{0.05};
-    case confidence.ACCL_000_01:
+    case j2735_v2x_msgs::msg::AccelerationConfidence::ACCL_000_01:
       return FloatingPoint{0.01};
   }
 
@@ -61,37 +61,37 @@ auto to_floating_point(const j2735_v2x_msgs::msg::ElevationConfidence & confiden
   -> std::optional<FloatingPoint>
 {
   switch (confidence.confidence) {
-    case confidence.UNAVAILABLE:
+    case j2735_v2x_msgs::msg::ElevationConfidence::UNAVAILABLE:
       return std::nullopt;
-    case confidence.ELEV_500_00:
+    case j2735_v2x_msgs::msg::ElevationConfidence::ELEV_500_00:
       return FloatingPoint{500.0};
-    case confidence.ELEV_200_00:
+    case j2735_v2x_msgs::msg::ElevationConfidence::ELEV_200_00:
       return FloatingPoint{200.0};
-    case confidence.ELEV_100_00:
+    case j2735_v2x_msgs::msg::ElevationConfidence::ELEV_100_00:
       return FloatingPoint{100.0};
-    case confidence.ELEV_050_00:
+    case j2735_v2x_msgs::msg::ElevationConfidence::ELEV_050_00:
       return FloatingPoint{50.0};
-    case confidence.ELEV_020_00:
+    case j2735_v2x_msgs::msg::ElevationConfidence::ELEV_020_00:
       return FloatingPoint{20.0};
-    case confidence.ELEV_010_00:
+    case j2735_v2x_msgs::msg::ElevationConfidence::ELEV_010_00:
       return FloatingPoint{10.0};
-    case confidence.ELEV_005_00:
+    case j2735_v2x_msgs::msg::ElevationConfidence::ELEV_005_00:
       return FloatingPoint{5.0};
-    case confidence.ELEV_002_00:
+    case j2735_v2x_msgs::msg::ElevationConfidence::ELEV_002_00:
       return FloatingPoint{2.0};
-    case confidence.ELEV_001_00:
+    case j2735_v2x_msgs::msg::ElevationConfidence::ELEV_001_00:
       return FloatingPoint{1.0};
-    case confidence.ELEV_000_50:
+    case j2735_v2x_msgs::msg::ElevationConfidence::ELEV_000_50:
       return FloatingPoint{0.50};
-    case confidence.ELEV_000_20:
+    case j2735_v2x_msgs::msg::ElevationConfidence::ELEV_000_20:
       return FloatingPoint{0.20};
-    case confidence.ELEV_000_10:
+    case j2735_v2x_msgs::msg::ElevationConfidence::ELEV_000_10:
       return FloatingPoint{0.10};
-    case confidence.ELEV_000_05:
+    case j2735_v2x_msgs::msg::ElevationConfidence::ELEV_000_05:
       return FloatingPoint{0.05};
-    case confidence.ELEV_000_02:
+    case j2735_v2x_msgs::msg::ElevationConfidence::ELEV_000_02:
       return FloatingPoint{0.02};
-    case confidence.ELEV_000_01:
+    case j2735_v2x_msgs::msg::ElevationConfidence::ELEV_000_01:
       return FloatingPoint{0.01};
   }
 
@@ -103,21 +103,21 @@ auto to_floating_point(const j2735_v2x_msgs::msg::HeadingConfidence & confidence
   -> std::optional<FloatingPoint>
 {
   switch (confidence.confidence) {
-    case confidence.UNAVAILABLE:
+    case j2735_v2x_msgs::msg::HeadingConfidence::UNAVAILABLE:
       return std::nullopt;
-    case confidence.PREC_10_DEG:
+    case j2735_v2x_msgs::msg::HeadingConfidence::PREC_10_DEG:
       return FloatingPoint{10.0};
-    case confidence.PREC_05_DEG:
+    case j2735_v2x_msgs::msg::HeadingConfidence::PREC_05_DEG:
       return FloatingPoint{5.0};
-    case confidence.PREC_01_DEG:
+    case j2735_v2x_msgs::msg::HeadingConfidence::PREC_01_DEG:
       return FloatingPoint{1.0};
-    case confidence.PREC_001_DEG:
+    case j2735_v2x_msgs::msg::HeadingConfidence::PREC_001_DEG:
       return FloatingPoint{0.1};
-    case confidence.PREC_0005_DEG:
+    case j2735_v2x_msgs::msg::HeadingConfidence::PREC_0005_DEG:
       return FloatingPoint{0.05};
-    case confidence.PREC_0001_DEG:
+    case j2735_v2x_msgs::msg::HeadingConfidence::PREC_0001_DEG:
       return FloatingPoint{0.01};
-    case confidence.PREC_000125_DEG:
+    case j2735_v2x_msgs::msg::HeadingConfidence::PREC_000125_DEG:
       return FloatingPoint{0.0125};
   }
 
@@ -129,37 +129,37 @@ auto to_floating_point(const j2735_v2x_msgs::msg::PositionConfidence & confidenc
   -> std::optional<FloatingPoint>
 {
   switch (confidence.confidence) {
-    case confidence.UNAVAILABLE:
+    case j2735_v2x_msgs::msg::PositionConfidence::UNAVAILABLE:
       return std::nullopt;
-    case confidence.A500M:
+    case j2735_v2x_msgs::msg::PositionConfidence::A500M:
       return FloatingPoint{500.0};
-    case confidence.A200M:
+    case j2735_v2x_msgs::msg::PositionConfidence::A200M:
       return FloatingPoint{200.0};
-    case confidence.A100M:
+    case j2735_v2x_msgs::msg::PositionConfidence::A100M:
       return FloatingPoint{100.0};
-    case confidence.A50M:
+    case j2735_v2x_msgs::msg::PositionConfidence::A50M:
       return FloatingPoint{50.0};
-    case confidence.A20M:
+    case j2735_v2x_msgs::msg::PositionConfidence::A20M:
       return FloatingPoint{20.0};
-    case confidence.A10M:
+    case j2735_v2x_msgs::msg::PositionConfidence::A10M:
       return FloatingPoint{10.0};
-    case confidence.A5M:
+    case j2735_v2x_msgs::msg::PositionConfidence::A5M:
       return FloatingPoint{5.0};
-    case confidence.A2M:
+    case j2735_v2x_msgs::msg::PositionConfidence::A2M:
       return FloatingPoint{2.0};
-    case confidence.A1M:
+    case j2735_v2x_msgs::msg::PositionConfidence::A1M:
       return FloatingPoint{1.0};
-    case confidence.A50CM:
+    case j2735_v2x_msgs::msg::PositionConfidence::A50CM:
       return FloatingPoint{0.50};
-    case confidence.A20CM:
+    case j2735_v2x_msgs::msg::PositionConfidence::A20CM:
       return FloatingPoint{0.20};
-    case confidence.A10CM:
+    case j2735_v2x_msgs::msg::PositionConfidence::A10CM:
       return FloatingPoint{0.10};
-    case confidence.A5CM:
+    case j2735_v2x_msgs::msg::PositionConfidence::A5CM:
       return FloatingPoint{0.05};
-    case confidence.A2CM:
+    case j2735_v2x_msgs::msg::PositionConfidence::A2CM:
       return FloatingPoint{0.02};
-    case confidence.A1CM:
+    case j2735_v2x_msgs::msg::PositionConfidence::A1CM:
       return FloatingPoint{0.01};
   }
 
@@ -171,21 +171,21 @@ auto to_floating_point(const j2735_v2x_msgs::msg::SpeedConfidence & confidence)
   -> std::optional<FloatingPoint>
 {
   switch (confidence.speed_confidence) {
-    case confidence.UNAVAILABLE:
+    case j2735_v2x_msgs::msg::SpeedConfidence::UNAVAILABLE:
       return std::nullopt;
-    case confidence.PREC100MS:
+    case j2735_v2x_msgs::msg::SpeedConfidence::PREC100MS:
       return FloatingPoint{100.0};
-    case confidence.PREC10MS:
+    case j2735_v2x_msgs::msg::SpeedConfidence::PREC10MS:
       return FloatingPoint{10.0};
-    case confidence.PREC5MS:
+    case j2735_v2x_msgs::msg::SpeedConfidence::PREC5MS:
       return FloatingPoint{5.0};
-    case confidence.PREC1MS:
+    case j2735_v2x_msgs::msg::SpeedConfidence::PREC1MS:
       return FloatingPoint{1.0};
-    case confidence.PREC0_1MS:
+    case j2735_v2x_msgs::msg::SpeedConfidence::PREC0_1MS:
       return FloatingPoint{0.1};
-    case confidence.PREC0_05MS:
+    case j2735_v2x_msgs::msg::SpeedConfidence::PREC0_05MS:
       return FloatingPoint{0.05};
-    case confidence.PREC0_01MS:
+    case j2735_v2x_msgs::msg::SpeedConfidence::PREC0_01MS:
       return FloatingPoint{0.01};
   }
 
@@ -202,19 +202,19 @@ auto to_floating_point(const j2735_v2x_msgs::msg::YawRateConfidence & confidence
     // for status updates.
     case 0:
       return std::nullopt;
-    case confidence.DEG_SEC_100_00:
+    case j2735_v2x_msgs::msg::YawRateConfidence::DEG_SEC_100_00:
       return FloatingPoint{100.0};
-    case confidence.DEG_SEC_010_00:
+    case j2735_v2x_msgs::msg::YawRateConfidence::DEG_SEC_010_00:
       return FloatingPoint{10.0};
-    case confidence.DEG_SEC_005_00:
+    case j2735_v2x_msgs::msg::YawRateConfidence::DEG_SEC_005_00:
       return FloatingPoint{5.0};
-    case confidence.DEG_SEC_001_00:
+    case j2735_v2x_msgs::msg::YawRateConfidence::DEG_SEC_001_00:
       return FloatingPoint{1.0};
-    case confidence.DEG_SEC_000_10:
+    case j2735_v2x_msgs::msg::YawRateConfidence::DEG_SEC_000_10:
       return FloatingPoint{0.1};
-    case confidence.DEG_SEC_000_05:
+    case j2735_v2x_msgs::msg::YawRateConfidence::DEG_SEC_000_05:
       return FloatingPoint{0.05};
-    case confidence.DEG_SEC_000_01:
+    case j2735_v2x_msgs::msg::YawRateConfidence::DEG_SEC_000_01:
       return FloatingPoint{0.01};
   }
 

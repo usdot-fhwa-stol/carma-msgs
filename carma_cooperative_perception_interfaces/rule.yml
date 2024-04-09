@@ -1,0 +1,2 @@
+- ros1_package_name: "carma_cooperative_perception_interfaces"
+  ros2_package_name: "carma_cooperative_perception_interfaces"

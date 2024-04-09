@@ -1,4 +1,4 @@
-FROM usdotfhwastol/carma-base:carma-system-4.4.3 as base_image
+FROM usdotfhwastol/carma-base:carma-system-4.5.0 as base_image
 SHELL ["/bin/bash", "-c"]
 
 ARG DEBIAN_FRONTEND="noninteractive"
@@ -19,4 +19,3 @@ COPY . /home/carma/.base-image/ros1_msgs_ws/src/carma_msgs/
 RUN  mkdir -p ~/.base-image/ros2_msgs_ws/src/carma_msgs
 COPY . /home/carma/.base-image/ros2_msgs_ws/src/carma_msgs/
 RUN /home/carma/.base-image/ros1_msgs_ws/src/carma_msgs/docker/install.sh
-

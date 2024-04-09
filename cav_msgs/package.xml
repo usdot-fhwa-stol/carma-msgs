@@ -60,7 +60,7 @@
   <depend>message_generation</depend>
   <depend>std_msgs</depend>
   <depend>j2735_msgs</depend>
-  
+  <depend>j3224_msgs</depend>
   
   <exec_depend>message_runtime</exec_depend>
 

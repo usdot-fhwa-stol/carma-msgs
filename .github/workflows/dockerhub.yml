@@ -6,7 +6,6 @@ on:
       - "develop"
       - "master"
       - "release/*"
-
 jobs:
   dockerhub:
     uses: usdot-fhwa-stol/actions/.github/workflows/dockerhub.yml@main

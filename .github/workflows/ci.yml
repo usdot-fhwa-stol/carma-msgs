@@ -3,14 +3,23 @@ on:
   push:
   pull_request:
 jobs:
+  determine_docker_org_and_tag:
+    runs-on: ubuntu-latest
+    outputs:
+      docker_organization: ${{ steps.step1.outputs.docker_organization }}
+      docker_image_tag: ${{ steps.step1.outputs.docker_image_tag }}
+    steps:
+      - id: step1
+        uses: usdot-fhwa-stol/actions/docker-org-and-tag@main
   build:
+    needs: determine_docker_org_and_tag
     defaults:
       run:
         shell: bash
         working-directory: "/opt/carma/"
     runs-on: ubuntu-latest
     container:
-      image: usdotfhwastol/carma-base:carma-system-4.5.0
+      image: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}/carma-base:${{ needs.determine_docker_org_and_tag.outputs.docker_image_tag }}
       env:
         INIT_ENV: "/home/carma/.base-image/init-env.sh"
         ROS_2_ENV: "/opt/ros/foxy/setup.bash"

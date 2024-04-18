@@ -23,8 +23,9 @@ dir=~
 while [[ $# -gt 0 ]]; do
       arg="$1"
       case $arg in
-            -d|--develop)
-                  BRANCH=develop
+            -b|--branch)
+                  BRANCH=$2
+                  shift
                   shift
             ;;
             -r|--root)
@@ -40,14 +41,14 @@ cd ${dir}/src
 
 # clone carma repos
 
-if [[ "$BRANCH" = "develop" ]]; then
-      cd /home/carma/
-      git clone https://github.com/usdot-fhwa-stol/autoware.ai.git --depth 1 --branch carma-system-4.5.0
-      cd ${dir}/src 
-      git clone --depth 1 --branch carma-system-4.5.0 https://github.com/usdot-fhwa-stol/ros1_bridge.git
+if [[ -n "$BRANCH" ]]; then
+      cd /home/carma/   
+      git clone https://github.com/usdot-fhwa-stol/autoware.ai.git --depth 1 --branch "$BRANCH"
+      cd /home/carma/.base-image/workspace/src
+      git clone https://github.com/usdot-fhwa-stol/ros1_bridge.git  --depth 1 --branch "$BRANCH"
 else
       cd /home/carma/
-      git clone https://github.com/usdot-fhwa-stol/autoware.ai.git --depth 1 --branch carma-system-4.5.0
-      cd /home/carma/.base-image/workspace/src
-      git clone --depth 1 --branch carma-system-4.5.0 https://github.com/usdot-fhwa-stol/ros1_bridge.git
+      git clone https://github.com/usdot-fhwa-stol/autoware.ai.git --depth 1 --branch develop
+      cd ${dir}/src 
+      git clone  https://github.com/usdot-fhwa-stol/ros1_bridge.git --depth 1 --branch develop
 fi

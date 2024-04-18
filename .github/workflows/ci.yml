@@ -2,8 +2,8 @@ name: CI
 on:
   push:
     branches:
-      - "develop"
-      - "master"
+      - develop
+      - master
       - "release/*"
   pull_request:
     types: [opened, synchronize, reopened]

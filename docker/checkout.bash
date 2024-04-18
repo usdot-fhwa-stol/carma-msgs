@@ -41,14 +41,21 @@ cd ${dir}/src
 
 # clone carma repos
 
-if [[ -n "$BRANCH" ]]; then
+if [[ -z "$BRANCH" ]] || [[ "$BRANCH" == "develop" ]]; then
+     
+      cd /home/carma/
+      git clone https://github.com/usdot-fhwa-stol/autoware.ai.git --depth 1 --branch carma-"$BRANCH"
+      cd ${dir}/src 
+      git clone  https://github.com/usdot-fhwa-stol/ros1_bridge.git --depth 1 --branch develop
+elif [[ "$BRANCH" == "master" ]]
+      cd /home/carma/   
+      git clone https://github.com/usdot-fhwa-stol/autoware.ai.git --depth 1 --branch carma-"$BRANCH"
+      cd /home/carma/.base-image/workspace/src
+      git clone https://github.com/usdot-fhwa-stol/ros1_bridge.git  --depth 1 --branch carma-"$BRANCH"
+else
       cd /home/carma/   
       git clone https://github.com/usdot-fhwa-stol/autoware.ai.git --depth 1 --branch "$BRANCH"
       cd /home/carma/.base-image/workspace/src
       git clone https://github.com/usdot-fhwa-stol/ros1_bridge.git  --depth 1 --branch "$BRANCH"
-else
-      cd /home/carma/
-      git clone https://github.com/usdot-fhwa-stol/autoware.ai.git --depth 1 --branch develop
-      cd ${dir}/src 
-      git clone  https://github.com/usdot-fhwa-stol/ros1_bridge.git --depth 1 --branch develop
+      
 fi

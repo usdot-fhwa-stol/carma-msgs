@@ -38,11 +38,19 @@ jobs:
         path: src/${{ github.event.repository.name }}
     - name: Move source code
       run: mv $GITHUB_WORKSPACE/src /opt/carma/
+    - name: Determine base branch
+      id: determine-base-branch
+      run: |
+        if [[ "$GITHUB_EVENT_NAME" == "pull_request" ]]; then
+          echo git_branch="$GITHUB_BASE_REF" >> $GITHUB_OUTPUT
+        else
+          echo git_branch="$GITHUB_REF_NAME" >> $GITHUB_OUTPUT
+        fi
     - name: Checkout dependencies
       run: |
         source "$INIT_ENV"
         source "$ROS_2_ENV"
-        ./src/${{ github.event.repository.name }}/docker/checkout.bash -r /opt/carma/
+        ./src/${{ github.event.repository.name }}/docker/checkout.bash -r /opt/carma/ -b ${{ steps.determine-base-branch.outputs.git_branch }}
     - name: Build
       run: |
         source "$INIT_ENV"

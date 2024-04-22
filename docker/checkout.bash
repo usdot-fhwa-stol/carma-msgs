@@ -20,11 +20,13 @@
 set -exo pipefail
 
 dir=~
+BRANCH=develop
 while [[ $# -gt 0 ]]; do
       arg="$1"
       case $arg in
-            -d|--develop)
-                  BRANCH=develop
+            -b|--branch)
+                  BRANCH=$2
+                  shift
                   shift
             ;;
             -r|--root)
@@ -40,14 +42,19 @@ cd ${dir}/src
 
 # clone carma repos
 
-if [[ "$BRANCH" = "develop" ]]; then
+if [[ "$BRANCH" == "develop" ]]; then
       cd /home/carma/
-      git clone https://github.com/usdot-fhwa-stol/autoware.ai.git --depth 1 --branch carma-develop
-      cd ${dir}/src
-      git clone --depth 1 --branch develop https://github.com/usdot-fhwa-stol/ros1_bridge.git
-else
-      cd /home/carma/
-      git clone https://github.com/usdot-fhwa-stol/autoware.ai.git --depth 1 --branch carma-develop
+      git clone https://github.com/usdot-fhwa-stol/autoware.ai.git --depth 1 --branch carma-"$BRANCH"
+      cd ${dir}/src 
+      git clone  https://github.com/usdot-fhwa-stol/ros1_bridge.git --depth 1 --branch "$BRANCH"
+elif [[ "$BRANCH" == "master" ]]; then
+      cd /home/carma/   
+      git clone https://github.com/usdot-fhwa-stol/autoware.ai.git --depth 1 --branch carma-"$BRANCH"
       cd /home/carma/.base-image/workspace/src
-      git clone --depth 1 --branch develop https://github.com/usdot-fhwa-stol/ros1_bridge.git
+      git clone https://github.com/usdot-fhwa-stol/ros1_bridge.git  --depth 1 --branch carma-"$BRANCH"
+else
+      cd /home/carma/   
+      git clone https://github.com/usdot-fhwa-stol/autoware.ai.git --depth 1 --branch "$BRANCH"
+      cd /home/carma/.base-image/workspace/src
+      git clone https://github.com/usdot-fhwa-stol/ros1_bridge.git  --depth 1 --branch "$BRANCH"    
 fi

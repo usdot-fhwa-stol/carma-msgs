@@ -1,4 +1,7 @@
-FROM usdotfhwastoldev/carma-base:develop as base_image
+ARG DOCKER_ORG=usdotfhwastoldev
+ARG DOCKER_TAG=develop
+ARG GIT_BRANCH=develop
+FROM ${DOCKER_ORG}/carma-base:${DOCKER_TAG} as base_image
 SHELL ["/bin/bash", "-c"]
 
 ARG DEBIAN_FRONTEND="noninteractive"
@@ -18,5 +21,5 @@ RUN  mkdir -p /home/carma/src
 COPY . /home/carma/.base-image/ros1_msgs_ws/src/carma_msgs/
 RUN  mkdir -p ~/.base-image/ros2_msgs_ws/src/carma_msgs
 COPY . /home/carma/.base-image/ros2_msgs_ws/src/carma_msgs/
-RUN /home/carma/.base-image/ros1_msgs_ws/src/carma_msgs/docker/install.sh
 
+RUN /home/carma/.base-image/ros1_msgs_ws/src/carma_msgs/docker/install.sh

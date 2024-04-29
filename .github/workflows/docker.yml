@@ -6,4 +6,4 @@ on:
 
 jobs:
   docker:
-    uses: usdot-fhwa-stol/actions/.github/workflows/docker.yml@free-more-space
+    uses: usdot-fhwa-stol/actions/.github/workflows/docker.yml@runs-on

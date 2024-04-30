@@ -41,7 +41,9 @@ cd ${dir}/src
 
 
 # clone carma repos
-
+# Currently autoware.ai is being cloned into a hardcoded directory
+# that the install script is also hardcoded to look for. This should be uncoupled:
+# https://github.com/usdot-fhwa-stol/carma-platform/issues/2374
 if [[ "$BRANCH" == "develop" ]]; then
       cd /home/carma/
       git clone https://github.com/usdot-fhwa-stol/autoware.ai.git --depth 1 --branch carma-"$BRANCH"

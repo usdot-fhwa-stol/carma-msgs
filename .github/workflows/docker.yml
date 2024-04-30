@@ -6,4 +6,6 @@ on:
       
 jobs:
   docker:
-    uses: usdot-fhwa-stol/actions/.github/workflows/docker.yml@main
+    uses: usdot-fhwa-stol/actions/.github/workflows/docker.yml@feature-add-runner-input
+    with:
+      runner: ubuntu-latest-16-cores

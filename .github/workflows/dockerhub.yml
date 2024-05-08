@@ -5,9 +5,12 @@ on:
     branches:
       - test/metadata
   workflow_dispatch:
+
 jobs:
   dockerhub:
-    uses: usdot-fhwa-stol/actions/.github/workflows/dockerhub.yml@feature-add-docker-build-metadata
+    uses: usdot-fhwa-stol/actions/.github/workflows/dockerhub.yml@feature-add-docker-arguments
+    with:
+      image_name: 'test-image-name-arg'  
     secrets:
       DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
       DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}

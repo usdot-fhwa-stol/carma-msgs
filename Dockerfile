@@ -4,9 +4,9 @@ FROM ${DOCKER_ORG}/carma-base:${DOCKER_TAG} as base_image
 SHELL ["/bin/bash", "-c"]
 
 ARG DEBIAN_FRONTEND="noninteractive"
-ARG VERSION
-ARG VCS_REF
-ARG BUILD_DATE
+ARG VERSION="NULL"
+ARG VCS_REF="NULL"
+ARG BUILD_DATE="NULL"
 ARG GIT_BRANCH=develop 
 
 LABEL org.label-schema.schema-version="1.0" \

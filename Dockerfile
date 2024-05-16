@@ -8,8 +8,6 @@ ARG VERSION
 ARG VCS_REF
 ARG BUILD_DATE
 ARG GIT_BRANCH=develop 
-# Convert ARGs to ENVs to make them available past the build stage into the container runtime.
-ENV GIT_BRANCH=$GIT_BRANCH
 
 LABEL org.label-schema.schema-version="1.0" \
       org.label-schema.name="carma-msgs" \
@@ -29,4 +27,4 @@ COPY . /home/carma/.base-image/ros2_msgs_ws/src/carma_msgs/
 
 RUN /home/carma/.base-image/ros1_msgs_ws/src/carma_msgs/docker/checkout.bash -b ${GIT_BRANCH} -r /home/carma/.base-image/workspace
 
-RUN /home/carma/.base-image/ros1_msgs_ws/src/carma_msgs/docker/install.sh $GIT_BRANCH
+RUN /home/carma/.base-image/ros1_msgs_ws/src/carma_msgs/docker/install.sh

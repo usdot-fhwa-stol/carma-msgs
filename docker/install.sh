@@ -1,11 +1,6 @@
 #!/bin/bash
 set -e
 
-# Receiving the GIT_BRANCH argument and echoing it for debugging
-echo "Arguments received:"
-echo "GIT_BRANCH: $1"
-GIT_BRANCH=$1 # Assigning the first argument to GIT_BRANCH and can be used in script below.
-
 # ROS 1 msgs setup
 cp -R /home/carma/autoware.ai/messages /home/carma/.base-image/ros1_msgs_ws/src/autoware.ai/
 cp -R /home/carma/autoware.ai/jsk_common_msgs /home/carma/.base-image/ros1_msgs_ws/src/autoware.ai/

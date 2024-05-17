@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#  Copyright (C) 2018-2021 LEIDOS.
+#  Copyright (C) 2018-2024 LEIDOS.
 #
 #  Licensed under the Apache License, Version 2.0 (the "License"); you may not
 #  use this file except in compliance with the License. You may obtain a copy of
@@ -34,6 +34,10 @@ while [[ $# -gt 0 ]]; do
                   shift
                   shift
             ;;
+            -d)  # This is used to ignore -d arg from build-image.sh to avoid conflict with -b arg used in dockerfile.
+                  shift
+            ;;
+            *)
       esac
 done
 

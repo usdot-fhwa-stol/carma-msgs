@@ -1,9 +1,6 @@
 #!/bin/bash
 set -e
 
-# Checkout dependent repositories
-/home/carma/.base-image/ros1_msgs_ws/src/carma_msgs/docker/checkout.bash -r /home/carma/.base-image/workspace
-
 # ROS 1 msgs setup
 cp -R /home/carma/autoware.ai/messages /home/carma/.base-image/ros1_msgs_ws/src/autoware.ai/
 cp -R /home/carma/autoware.ai/jsk_common_msgs /home/carma/.base-image/ros1_msgs_ws/src/autoware.ai/

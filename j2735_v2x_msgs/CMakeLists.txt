@@ -41,18 +41,18 @@ if(${ROS_VERSION} EQUAL 1) # ROS 1
 
   add_message_files(DIRECTORY msg
     FILES
-      ${msgs}
+    ${msgs}
   )
 
   generate_messages(
     DEPENDENCIES
-      std_msgs
+    std_msgs
   )
 
   catkin_package(
     CATKIN_DEPENDS
-      message_runtime
-      std_msgs
+    message_runtime
+    std_msgs
   )
 
   include_directories(

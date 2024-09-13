@@ -33,13 +33,13 @@ uint32 HAS_ATTACHMENT_RADIUS = 32768
 uint32 HAS_ANIMAL_TYPE = 65536
 uint32 HAS_REGIONAL_EXTENSION = 131072
 
-j2735_msgs/PersonalDeviceUserType basic_type
+j2735_v2x_msgs/PersonalDeviceUserType basic_type
 
-j2735_msgs/DSecond sec_mark
+j2735_v2x_msgs/DSecond sec_mark
 
-j2735_msgs/MsgCount msg_cnt
+j2735_v2x_msgs/MsgCount msg_cnt
 
-j2735_msgs/TemporaryID id
+j2735_v2x_msgs/TemporaryID id
 
 cav_msgs/Position3D position
 
@@ -60,36 +60,36 @@ cav_msgs/PathHistory path_history
 
 cav_msgs/PathPrediction path_prediction
 
-j2735_msgs/PropelledInformation propulsion
+j2735_v2x_msgs/PropelledInformation propulsion
 
-j2735_msgs/PersonalDeviceUsageState use_state
+j2735_v2x_msgs/PersonalDeviceUsageState use_state
 
-j2735_msgs/PersonalCrossingRequest cross_request
+j2735_v2x_msgs/PersonalCrossingRequest cross_request
 
-j2735_msgs/PersonalCrossingInProgress cross_state
+j2735_v2x_msgs/PersonalCrossingInProgress cross_state
 
-j2735_msgs/NumberOfParticipantsInCluster cluster_size
+j2735_v2x_msgs/NumberOfParticipantsInCluster cluster_size
 
-j2735_msgs/PersonalClusterRadius cluster_radius
+j2735_v2x_msgs/PersonalClusterRadius cluster_radius
 
-j2735_msgs/PublicSafetyEventResponderWorkerType event_responder_type
+j2735_v2x_msgs/PublicSafetyEventResponderWorkerType event_responder_type
 
-j2735_msgs/PublicSafetyAndRoadWorkerActivity activity_type
+j2735_v2x_msgs/PublicSafetyAndRoadWorkerActivity activity_type
 
-j2735_msgs/PublicSafetyDirectingTrafficSubType activity_sub_type
+j2735_v2x_msgs/PublicSafetyDirectingTrafficSubType activity_sub_type
 
-j2735_msgs/PersonalAssistive assist_type
+j2735_v2x_msgs/PersonalAssistive assist_type
 
-j2735_msgs/UserSizeAndBehaviour sizing
+j2735_v2x_msgs/UserSizeAndBehaviour sizing
 
-j2735_msgs/Attachment attachment
+j2735_v2x_msgs/Attachment attachment
 
 cav_msgs/AttachmentRadius attachment_radius
 
-j2735_msgs/AnimalType animal_type
+j2735_v2x_msgs/AnimalType animal_type
 
 # TODO Approach to defining regional extensions in ROS has not yet been idenfied. If it is, this field will be updated.
 # regional SEQUENCE (SIZE(1..4)) OF 
-#            j2735_msgs/RegionalExtension {{REGION.Reg-PersonalSafetyMessage}} OPTIONAL,
+#            j2735_v2x_msgs/RegionalExtension {{REGION.Reg-PersonalSafetyMessage}} OPTIONAL,
 #   ...
 #   }

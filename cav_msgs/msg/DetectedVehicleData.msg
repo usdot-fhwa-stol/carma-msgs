@@ -39,22 +39,22 @@ uint16 HAS_VEHICLE_SIZE_CONFIDENCE = 128
 uint16 HAS_VEHICLE_CLASS = 256
 uint16 HAS_CLASS_CONF = 512
 
-j2735_msgs/ExteriorLights lights
+j2735_v2x_msgs/ExteriorLights lights
 
 cav_msgs/Attitude veh_attitude
 
-j3224_msgs/AttitudeConfidence veh_attitude_confidence
+j3224_v2x_msgs/AttitudeConfidence veh_attitude_confidence
 
 cav_msgs/AngularVelocity veh_ang_vel
 
-j3224_msgs/AngularVelocityConfidence veh_ang_vel_confidence
+j3224_v2x_msgs/AngularVelocityConfidence veh_ang_vel_confidence
 
 cav_msgs/VehicleSize size
 
 cav_msgs/VehicleHeight height
 
-j3224_msgs/VehicleSizeConfidence vehicle_size_confidence
+j3224_v2x_msgs/VehicleSizeConfidence vehicle_size_confidence
 
-j2735_msgs/BasicVehicleClass vehicle_class
+j2735_v2x_msgs/BasicVehicleClass vehicle_class
 
-j3224_msgs/ClassificationConfidence class_conf
+j3224_v2x_msgs/ClassificationConfidence class_conf

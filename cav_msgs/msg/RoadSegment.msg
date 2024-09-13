@@ -45,7 +45,7 @@
 string name
 bool name_exists
 
-j2735_msgs/RoadSegmentReferenceID id
+j2735_v2x_msgs/RoadSegmentReferenceID id
 
 #MsgCount ::= INTEGER (0..127)
 uint8 revision

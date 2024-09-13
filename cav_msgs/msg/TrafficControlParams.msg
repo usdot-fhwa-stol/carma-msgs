@@ -20,7 +20,7 @@
 # }
 
 # vclasses SEQUENCE (SIZE(1..255)) OF TrafficControlVehClass,
-j2735_msgs/TrafficControlVehClass[] vclasses
+j2735_v2x_msgs/TrafficControlVehClass[] vclasses
 
 # schedule TrafficControlSchedule
 cav_msgs/TrafficControlSchedule schedule

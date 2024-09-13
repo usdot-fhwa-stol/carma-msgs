@@ -48,7 +48,7 @@ uint32 HAS_REAR_WHEEL_OFFSET = 32
 uint32 HAS_ELEVATION_OFFSET = 64
 uint32 HAS_CRUMB_DATA = 128
 
-j2735_msgs/IsDolly is_dolly
+j2735_v2x_msgs/IsDolly is_dolly
 
 cav_msgs/VehicleWidth width
 

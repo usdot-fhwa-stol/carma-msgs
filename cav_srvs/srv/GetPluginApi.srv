@@ -1,0 +1,17 @@
+# GetPluginApi.srv
+#
+# This is a service provided by plugin manager to output plugins' API
+# upon client request.
+#
+
+# Request
+
+# A string of arguments that describes the capability it wants
+string capability
+
+---
+
+# Response
+
+# The fully qualified ROS graph name of the plugin's service
+string[] plan_service

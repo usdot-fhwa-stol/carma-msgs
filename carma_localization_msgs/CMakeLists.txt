@@ -19,40 +19,76 @@ project(carma_localization_msgs)
 set(CMAKE_CXX_STANDARD 14)
 
 find_package(carma_cmake_common REQUIRED)
-carma_check_ros_version(2)
 carma_package()
 
-## Find ament macros and libraries
-find_package(rosidl_default_generators REQUIRED)
-find_package(ament_cmake REQUIRED)
-find_package(std_msgs REQUIRED)
+find_package(ros_environment REQUIRED)
 
-## Generate messages 
-file(GLOB msg_files msg/*.msg)
-set(msgs )
-foreach(filePath ${msg_files})
-  get_filename_component(name ${filePath} NAME)
-  set(msgs ${msgs} msg/${name})
-endforeach(filePath)
+set(ROS_VERSION $ENV{ROS_VERSION})
 
-file(GLOB srv_files srv/*.srv)
-set(srvs )
-foreach(filePath ${srv_files})
-  get_filename_component(name ${filePath} NAME)
-  set(srvs ${srvs} srv/${name})
-endforeach(filePath)
+if(${ROS_VERSION} EQUAL 1) # ROS 1
+  find_package(catkin REQUIRED
+    COMPONENTS
+    message_generation
+    std_msgs
+  )
 
-rosidl_generate_interfaces(
-    ${PROJECT_NAME}
-      ${msgs}
-      ${srvs}
+  file(GLOB msg_files msg/*.msg)
+  set(msgs )
+  foreach(filePath ${msg_files})
+    get_filename_component(name ${filePath} NAME)
+    set(msgs ${msgs} ${name})
+  endforeach(filePath)
+
+  add_message_files(DIRECTORY msg
+    FILES
+    ${msgs}
+  )
+
+  generate_messages(
     DEPENDENCIES
-      std_msgs
-)
+    std_msgs
+  )
 
-ament_export_dependencies(rosidl_default_runtime)
-ament_package()
+  catkin_package(
+    CATKIN_DEPENDS
+    message_runtime
+    std_msgs
+  )
 
-install(
-  FILES rule.yml
-  DESTINATION share/${PROJECT_NAME})
+  include_directories(
+  # include
+    ${catkin_INCLUDE_DIRS}
+  )
+
+  install(DIRECTORY include/${PROJECT_NAME}/
+    DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
+    FILES_MATCHING PATTERN "*.h"
+    PATTERN ".svn" EXCLUDE
+  )
+
+else() # ROS 2
+
+  ## Find ament macros and libraries
+  find_package(rosidl_default_generators REQUIRED)
+  find_package(ament_cmake REQUIRED)
+  find_package(std_msgs REQUIRED)
+
+  ## Generate messages 
+  file(GLOB msg_files msg/*.msg)
+  set(msgs )
+  foreach(filePath ${msg_files})
+    get_filename_component(name ${filePath} NAME)
+    set(msgs ${msgs} msg/${name})
+  endforeach(filePath)
+
+  rosidl_generate_interfaces(
+      ${PROJECT_NAME}
+        ${msgs}
+      DEPENDENCIES
+        std_msgs
+  )
+
+  ament_export_dependencies(rosidl_default_runtime)
+  ament_package()
+
+endif()

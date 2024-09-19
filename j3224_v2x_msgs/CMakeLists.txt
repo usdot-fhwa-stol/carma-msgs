@@ -26,7 +26,6 @@ find_package(ros_environment REQUIRED)
 set(ROS_VERSION $ENV{ROS_VERSION})
 
 file(GLOB msg_files msg/*.msg)
-set(msgs )
 
 if(${ROS_VERSION} EQUAL 1) # ROS 1
 

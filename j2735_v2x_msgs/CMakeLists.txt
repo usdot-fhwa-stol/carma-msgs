@@ -25,6 +25,9 @@ find_package(ros_environment REQUIRED)
 
 set(ROS_VERSION $ENV{ROS_VERSION})
 
+file(GLOB msg_files msg/*.msg)
+set(msgs )
+
 if(${ROS_VERSION} EQUAL 1) # ROS 1
   find_package(catkin REQUIRED
     COMPONENTS
@@ -32,8 +35,6 @@ if(${ROS_VERSION} EQUAL 1) # ROS 1
     std_msgs
   )
 
-  file(GLOB msg_files msg/*.msg)
-  set(msgs )
   foreach(filePath ${msg_files})
     get_filename_component(name ${filePath} NAME)
     set(msgs ${msgs} ${name})
@@ -60,11 +61,7 @@ if(${ROS_VERSION} EQUAL 1) # ROS 1
     ${catkin_INCLUDE_DIRS}
   )
 
-  install(DIRECTORY include/${PROJECT_NAME}/
-    DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
-    FILES_MATCHING PATTERN "*.h"
-    PATTERN ".svn" EXCLUDE
-  )
+  set(INCLUDE_DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION})
 
 else() # ROS 2
 
@@ -73,8 +70,6 @@ else() # ROS 2
   find_package(ament_cmake_auto REQUIRED)
   find_package(std_msgs REQUIRED)
 
-  file(GLOB msg_files msg/*.msg)
-  set(msgs )
   foreach(filePath ${msg_files})
     get_filename_component(name ${filePath} NAME)
     set(msgs ${msgs} msg/${name})
@@ -90,6 +85,8 @@ else() # ROS 2
   install(DIRECTORY include/${PROJECT_NAME}/
     DESTINATION include/${PROJECT_NAME}
   )
+
+  set(INCLUDE_DESTINATION include/${PROJECT_NAME})
 
   ament_export_dependencies(rosidl_default_runtime)
   ament_export_include_directories(include)
@@ -113,3 +110,9 @@ else() # ROS 2
   endif()
 
 endif()
+
+install(DIRECTORY include/${PROJECT_NAME}/
+  DESTINATION ${INCLUDE_DESTINATION}
+  FILES_MATCHING PATTERN "*.h"
+  PATTERN ".svn" EXCLUDE
+)

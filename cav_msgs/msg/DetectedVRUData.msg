@@ -26,10 +26,10 @@ uint8 HAS_PROPULSION = 2
 uint8 HAS_ATTACHMENT = 4
 uint8 HAS_RADIUS = 8
 
-j2735_msgs/PersonalDeviceUserType basic_type 
+j2735_v2x_msgs/PersonalDeviceUserType basic_type 
 
-j2735_msgs/PropelledInformation propulsion 
+j2735_v2x_msgs/PropelledInformation propulsion 
 
-j2735_msgs/Attachment attachment
+j2735_v2x_msgs/Attachment attachment
 
 cav_msgs/AttachmentRadius radius

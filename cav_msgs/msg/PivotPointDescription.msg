@@ -19,4 +19,4 @@ cav_msgs/Angle pivot_angle
 
 #    pivots       PivotingAllowed,
 #                 -- true if this unit can rotate about the pivot connection point
-j2735_msgs/PivotingAllowed pivots
+j2735_v2x_msgs/PivotingAllowed pivots

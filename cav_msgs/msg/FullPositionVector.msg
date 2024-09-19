@@ -23,7 +23,7 @@ uint16 HAS_TIME_CONFIDENCE=32
 uint16 HAS_POS_CONFIDENCE=64
 uint16 HAS_SPEED_CONFIDENCE=128
 
-j2735_msgs/DDateTime utc_time
+j2735_v2x_msgs/DDateTime utc_time
 
 cav_msgs/Longitude lon
 
@@ -37,8 +37,8 @@ cav_msgs/TransmissionAndSpeed speed
 
 cav_msgs/PositionalAccuracy pos_accuracy
 
-j2735_msgs/TimeConfidence time_confidence
+j2735_v2x_msgs/TimeConfidence time_confidence
 
-j2735_msgs/PositionConfidenceSet pos_confidence
+j2735_v2x_msgs/PositionConfidenceSet pos_confidence
 
-j2735_msgs/SpeedandHeadingandThrottleConfidence speed_confidence
+j2735_v2x_msgs/SpeedandHeadingandThrottleConfidence speed_confidence

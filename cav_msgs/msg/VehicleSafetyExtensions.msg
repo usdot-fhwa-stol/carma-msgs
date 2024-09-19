@@ -24,11 +24,11 @@ uint16 HAS_PATH_HISTORY = 2
 uint16 HAS_PATH_PREDICTION = 4
 uint16 HAS_LIGHTS = 8
 
-j2735_msgs/VehicleEventFlags events
+j2735_v2x_msgs/VehicleEventFlags events
 
 cav_msgs/PathHistory path_history
 
 cav_msgs/PathPrediction path_prediction
 
-j2735_msgs/ExteriorLights lights
+j2735_v2x_msgs/ExteriorLights lights
 

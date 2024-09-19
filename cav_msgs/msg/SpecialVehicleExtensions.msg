@@ -33,8 +33,8 @@ uint16 HAS_VEHICLE_ALERTS = 1
 uint16 HAS_DESCRIPTION = 2
 uint16 HAS_TRAILERS = 4
 
-j2735_msgs/EmergencyDetails vehicle_alerts
+j2735_v2x_msgs/EmergencyDetails vehicle_alerts
 
-j2735_msgs/EventDescription description
+j2735_v2x_msgs/EventDescription description
 
 cav_msgs/TrailerData trailers

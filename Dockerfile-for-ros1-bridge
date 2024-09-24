@@ -167,6 +167,7 @@ RUN if [[ "$ADD_grid_map" = "1" ]]; then                                        
 #   Note2: Use the same package name for both ROS1 and ROS2.
 #   See https://github.com/ros2/ros1_bridge/blob/master/doc/index.rst
 ######################################
+# TODO: add autoware_msgs!
 RUN   mkdir -p /carma-msgs-ros1/src/  && \
       cd /carma-msgs-ros1/src/  && \
       git clone https://github.com/usdot-fhwa-stol/carma-msgs.git --depth=1 --branch feature/jammy       && \
@@ -302,5 +303,7 @@ CMD cat /ros-humble-ros1-bridge.tgz; sync
 #   command: bash -c 'export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp &&
 #           wait-for-it localhost:11311 -- rosparam load /opt/carma/vehicle/config/bridge.yml &&
 #           source /opt/ros/humble/setup.bash &&
+#           source /carma-msgs-ros1/install/local_setup.bash &&
+#           source /carma-msgs-ros2/install/local_setup.bash &&
 #           source /ros-humble-ros1-bridge/install/local_setup.bash &&
-#           ros2 run ros1_bridge dynamic_bridge --multi-threads
+#           ros2 run ros1_bridge dynamic_bridge --multi-threads'

@@ -216,12 +216,12 @@ RUN                                                                             
       source /opt/ros/humble/setup.bash;                                        \
     fi;                                                                         \
     #                                                                           \
-    if [[ "$ADD_custom_msgs" = "1" ]]; then                                     \
+    #if [[ "$ADD_custom_msgs" = "1" ]]; then                                     \
       # Apply ROS1 package overlay                                              \
-      source /carma-msgs-ros1/install/setup.bash;                  \
+    source /carma-msgs-ros1/install/setup.bash;                  \
       # Apply ROS2 package overlay                                              \
-      source /carma-msgs-ros2/install/setup.bash;                  \
-    fi;                                                                         \
+    source /carma-msgs-ros2/install/setup.bash;                  \
+    #fi;                                                                         \
     #                                                                           \
     #-------------------------------------                                      \
     # Finally, build the Bridge                                                 \

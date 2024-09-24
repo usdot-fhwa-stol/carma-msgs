@@ -16,7 +16,7 @@
 
 cmake_minimum_required(VERSION 3.5)
 project(carma_driver_msgs)
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 
 find_package(carma_cmake_common REQUIRED)
 carma_check_ros_version(2)
@@ -28,7 +28,7 @@ find_package(ament_cmake REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(carma_msgs REQUIRED)
 
-## Generate messages 
+## Generate messages
 file(GLOB msg_files msg/*.msg)
 set(msgs )
 foreach(filePath ${msg_files})

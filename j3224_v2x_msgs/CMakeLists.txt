@@ -16,7 +16,7 @@
 
 cmake_minimum_required(VERSION 3.5)
 project(j3224_v2x_msgs)
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 
 find_package(carma_cmake_common REQUIRED)
 carma_package()
@@ -29,7 +29,7 @@ file(GLOB msg_files msg/*.msg)
 
 if(${ROS_VERSION} EQUAL 1) # ROS 1
 
-  find_package(catkin REQUIRED 
+  find_package(catkin REQUIRED
     COMPONENTS
     message_generation
     std_msgs
@@ -53,7 +53,7 @@ if(${ROS_VERSION} EQUAL 1) # ROS 1
   )
 
   catkin_package(
-    CATKIN_DEPENDS 
+    CATKIN_DEPENDS
     message_runtime
     std_msgs
     j2735_v2x_msgs

@@ -30,27 +30,27 @@
 #    accCfdYaw YawRateConfidence OPTIONAL,
 # }
 
-j3224_msgs/ObjectType obj_type
+j3224_v2x_msgs/ObjectType obj_type
 
-j3224_msgs/ClassificationConfidence obj_type_cfd
+j3224_v2x_msgs/ClassificationConfidence obj_type_cfd
 
-j3224_msgs/ObjectID detected_id 
+j3224_v2x_msgs/ObjectID detected_id 
 
 cav_msgs/MeasurementTimeOffset measurement_time
 
-j2735_msgs/TimeConfidence time_confidence
+j2735_v2x_msgs/TimeConfidence time_confidence
 
 cav_msgs/PositionOffsetXYZ pos
 
-j2735_msgs/PositionConfidenceSet pos_confidence
+j2735_v2x_msgs/PositionConfidenceSet pos_confidence
 
 cav_msgs/Speed speed 
 
-j2735_msgs/SpeedConfidence speed_confidence
+j2735_v2x_msgs/SpeedConfidence speed_confidence
 
 cav_msgs/Heading heading
 
-j2735_msgs/HeadingConfidence heading_conf
+j2735_v2x_msgs/HeadingConfidence heading_conf
 
 # A BIT STRING defining the presence of optional fields.
 # Compare with bitwise-and
@@ -69,14 +69,14 @@ uint8 HAS_ACC_CFD_YAW = 64
 
 cav_msgs/Speed speed_z
 
-j2735_msgs/SpeedConfidence speed_confidence_z
+j2735_v2x_msgs/SpeedConfidence speed_confidence_z
 
 cav_msgs/AccelerationSet4Way accel_4_way
 
-j2735_msgs/AccelerationConfidence acc_cfd_x
+j2735_v2x_msgs/AccelerationConfidence acc_cfd_x
 
-j2735_msgs/AccelerationConfidence acc_cfd_y
+j2735_v2x_msgs/AccelerationConfidence acc_cfd_y
 
-j2735_msgs/AccelerationConfidence acc_cfd_z
+j2735_v2x_msgs/AccelerationConfidence acc_cfd_z
 
-j2735_msgs/YawRateConfidence acc_cfd_yaw
+j2735_v2x_msgs/YawRateConfidence acc_cfd_yaw

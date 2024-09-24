@@ -21,7 +21,7 @@ uint16 presence_vector
 uint16 HAS_STATUS_REAR = 1
 uint16 HAS_RATE_REAR = 2
 
-j2735_msgs/WiperStatus status_front
+j2735_v2x_msgs/WiperStatus status_front
 
 cav_msgs/WiperRate rate_front
 
@@ -31,6 +31,6 @@ cav_msgs/WiperRate rate_front
 # The presence of a given field can be idenfied by checking the presence_vector
 ####
 
-j2735_msgs/WiperStatus status_rear
+j2735_v2x_msgs/WiperStatus status_rear
 
 cav_msgs/WiperRate rate_rear

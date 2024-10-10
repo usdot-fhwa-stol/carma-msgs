@@ -16,7 +16,7 @@
 
 cmake_minimum_required(VERSION 3.5)
 project(carma_debug_ros2_msgs)
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 
 find_package(carma_cmake_common REQUIRED)
 carma_check_ros_version(2)
@@ -50,7 +50,3 @@ ament_package()
 install(
   FILES rule.yml
   DESTINATION share/${PROJECT_NAME})
-
-
-
-

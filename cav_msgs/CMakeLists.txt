@@ -17,8 +17,8 @@
 cmake_minimum_required(VERSION 3.5)
 project(cav_msgs)
 
-## Compile as C++14, supported in ROS Noetic and newer
-add_compile_options(-std=c++14)
+## Compile as C++17, supported in ROS Noetic and newer
+add_compile_options(-std=c++17)
 
 find_package(carma_cmake_common REQUIRED)
 carma_check_ros_version(1)
@@ -228,5 +228,3 @@ install(DIRECTORY include/${PROJECT_NAME}/
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
-
-

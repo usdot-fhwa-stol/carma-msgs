@@ -94,11 +94,6 @@ else() # ROS 2
   if (BUILD_TESTING)
     enable_testing()
 
-    # These CMake commands were added to ament_cmake_auto in ROS 2 Humble. Until
-    # CARMA supports ROS 2 Humble, we will use package-local copies.
-    include(cmake/ament_auto_find_test_dependencies.cmake)
-    include(cmake/ament_auto_add_gtest.cmake)
-
     ament_auto_find_test_dependencies()
 
     ament_auto_add_gtest(j2735_v2x_msgs_tests

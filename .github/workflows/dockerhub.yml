@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - develop
+      - humble-develop
       - master
       - "release/*"
     tags:

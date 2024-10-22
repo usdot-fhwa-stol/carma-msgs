@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - develop
-      - humble-develop
+      - develop-humble
       - master
       - "release/*"
   pull_request:

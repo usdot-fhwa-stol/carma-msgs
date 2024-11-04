@@ -45,7 +45,7 @@ RUN apt-get -y install ros-desktop-dev --allow-downgrades --allow-remove-essenti
 
 ###########################
 # 6.) Restore the ROS2 apt repos and set compilation options.
-#     And install dependencies for ros1_bridge
+#     And install ROS2 dependencies for ros1_bridge
 ###########################
 RUN mv /root/ros2-latest.list /etc/apt/sources.list.d/
 
@@ -57,15 +57,15 @@ RUN apt-get -y update && apt-get install -y \
       wait-for-it
 
 ######################################
-# 6.2) Compile custom message
+# 7.) Compile custom message
 ######################################
 
 RUN  mkdir -p /home/carma/.base-image/ros1_msgs_ws/src/carma_msgs
 COPY . /home/carma/.base-image/ros1_msgs_ws/src/carma_msgs/
 
-# Since Noetic is not supported on Linux 22.04, this manually install dependency packages
+# Since Noetic is not supported on Linux 22.04, this manually installs the dependency packages
 # This is outside checkout.bash to not accidentally modify during release process and 
-# not to introduce indirect dependency between scripts
+# not to introduce indirect dependency between install and checkout scripts
 RUN vcs import --input /home/carma/.base-image/ros1_msgs_ws/src/carma_msgs/docker/noetic-dependencies.repos \
       /home/carma/.base-image/ros1_msgs_ws/src/
 
@@ -82,7 +82,7 @@ RUN /home/carma/.base-image/ros1_msgs_ws/src/carma_msgs/docker/install.sh
 RUN apt-get -y clean all; apt-get -y update
 
 ###########################
-# 10.0) Metadata
+# 9.) Metadata
 ###########################
 ARG VERSION="NULL"
 ARG VCS_REF="NULL"

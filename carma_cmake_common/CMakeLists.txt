@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(carma_cmake_common NONE)
+project(carma_cmake_common CXX)
 
 find_package(ros_environment REQUIRED)
 

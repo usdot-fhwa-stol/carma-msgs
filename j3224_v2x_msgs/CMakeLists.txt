@@ -16,7 +16,7 @@
 
 cmake_minimum_required(VERSION 3.5)
 project(j3224_v2x_msgs)
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 
 find_package(carma_cmake_common REQUIRED)
 carma_package()

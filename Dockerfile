@@ -80,18 +80,6 @@ RUN mkdir -p /home/carma/.base-image/workspace/src
 RUN /home/carma/.base-image/ros1_msgs_ws/src/carma_msgs/docker/checkout.bash -b ${GIT_BRANCH} -r \
       /home/carma/.base-image/workspace
 RUN /home/carma/.base-image/ros1_msgs_ws/src/carma_msgs/docker/install.sh
-
-# RUN   cd /home/carma/.base-image/workspace/src; \
-#       git clone https://github.com/usdot-fhwa-stol/ros1_bridge/ -b develop-humble-buildable; \
-#       cd ..;                    \
-#       source /opt/ros/humble/setup.bash; \
-#       source /home/carma/.base-image/ros1_msgs_ws/install/local_setup.bash; \
-#       source /home/carma/.base-image/ros2_msgs_ws/install/local_setup.bash; \
-#       MEMG=$(printf "%.0f" $(free -g | awk '/^Mem:/{print $2}'));                 \
-#       NPROC=$(nproc);  MIN=$((MEMG<NPROC ? MEMG : NPROC));                        \
-#       echo "Please wait...  running $MIN concurrent jobs to build ros1_bridge";   \
-#       time MAKEFLAGS="-j $MIN" colcon build --event-handlers console_direct+      \
-#       --cmake-args -DCMAKE_BUILD_TYPE=Release --packages-select ros1_bridge --cmake-force-configure
       
 ###########################
 # 8.) Clean up
@@ -119,7 +107,7 @@ RUN ROS1_LIBS="libxmlrpcpp.so";                                                 
       ROS1_LIBS="$ROS1_LIBS libaprutil-1.so";                                    \
       ROS1_LIBS="$ROS1_LIBS libapr-1.so";                                        \
       ROS1_LIBS="$ROS1_LIBS libactionlib.so.1d";                                 \
-      cd /ros-humble-ros1-bridge/install/ros1_bridge/lib;                        \
+      cd /home/carma/.base-image/workspace/install/ros1_bridge/lib;                        \
       for soFile in $ROS1_LIBS; do                                               \
             soFilePath=$(ldd libros1_bridge.so | grep $soFile | awk '{print $3;}');  \
             cp $soFilePath ./;                                                       \

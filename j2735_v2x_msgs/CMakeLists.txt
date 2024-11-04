@@ -100,7 +100,9 @@ else() # ROS 2
       test/test_to_floating_point.cpp
     )
 
-    rosidl_target_interfaces(j2735_v2x_msgs_tests ${PROJECT_NAME} "rosidl_typesupport_cpp")
+    target_link_libraries(j2735_v2x_msgs_tests
+      ${rosidl_get_typesupport_target(${PROJECT_NAME} "rosidl_typesupport_cpp")}
+    )
   endif()
 
 endif()

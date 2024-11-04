@@ -64,7 +64,3 @@ else
       cd ${dir}/src
       git clone https://github.com/usdot-fhwa-stol/ros1_bridge.git  --depth 1 --branch "develop-humble-buildable"
 fi
-
-# Since Noetic is not supported on Linux 22.04, prepare to manually install dependency packages
-# Using different method to checkout to make it clear not to change it during release process
-vcs import --input /home/carma/.base-image/ros1_msgs_ws/src/carma_msgs/docker/noetic-dependencies.repos /home/carma/.base-image/ros1_msgs_ws/src/

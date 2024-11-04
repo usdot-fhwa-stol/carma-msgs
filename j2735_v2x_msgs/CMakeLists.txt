@@ -101,7 +101,7 @@ else() # ROS 2
     )
 
     target_link_libraries(j2735_v2x_msgs_tests
-      ${rosidl_get_typesupport_target(${PROJECT_NAME} "rosidl_typesupport_cpp")}
+        ${rosidl_get_typesupport_target(${PROJECT_NAME} "rosidl_typesupport_cpp")}
     )
   endif()
 

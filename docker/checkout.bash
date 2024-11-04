@@ -52,7 +52,7 @@ if [[ "$BRANCH" == "develop" ]]; then
       cd /home/carma/
       git clone https://github.com/usdot-fhwa-stol/autoware.ai.git --depth 1 --branch carma-"$BRANCH"
       cd ${dir}/src
-      git clone  https://github.com/usdot-fhwa-stol/ros1_bridge.git --depth 1 --branch "$BRANCH"
+      git clone  https://github.com/usdot-fhwa-stol/ros1_bridge.git --depth 1 --branch "develop-humble-buildable"
 elif [[ "$BRANCH" == "master" ]]; then
       cd /home/carma/
       git clone https://github.com/usdot-fhwa-stol/autoware.ai.git --depth 1 --branch carma-"$BRANCH"
@@ -62,7 +62,7 @@ else
       cd /home/carma/
       git clone https://github.com/usdot-fhwa-stol/autoware.ai.git --depth 1 --branch "$BRANCH"
       cd ${dir}/src
-      git clone https://github.com/usdot-fhwa-stol/ros1_bridge.git  --depth 1 --branch "$BRANCH"
+      git clone https://github.com/usdot-fhwa-stol/ros1_bridge.git  --depth 1 --branch "develop-humble-buildable"
 fi
 
 # Since Noetic is not supported on Linux 22.04, prepare to manually install dependency packages

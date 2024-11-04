@@ -37,8 +37,7 @@ colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release --packages-up-to \
 source /opt/ros/humble/setup.bash
 source /home/carma/.base-image/ros1_msgs_ws/install/local_setup.bash
 source /home/carma/.base-image/ros2_msgs_ws/install/local_setup.bash
-cd /home/carma/.base-image/workspace/src
-cd ../
-#sudo apt-get update
-#colcon build --event-handlers console_direct+ --packages-select ros1_bridge --cmake-force-configure
-#sudo chmod -R ugo+x /home/carma/.base-image/workspace/install
+cd /home/carma/.base-image/workspace/
+colcon build --event-handlers console_direct+      \
+      --cmake-args -DCMAKE_BUILD_TYPE=Release --packages-select ros1_bridge --cmake-force-configure
+sudo chmod -R ugo+x /home/carma/.base-image/workspace/install

@@ -1,6 +1,6 @@
 FROM ros1-bridge-base-image:latest
 RUN   cd /ros-humble-ros1-bridge/src; \
-      git clone https://github.com/usdot-fhwa-stol/ros1_bridge/; \
+      git clone https://github.com/usdot-fhwa-stol/ros1_bridge/ -b develop-humble-buildable; \
       cd ..;                    \
       source /opt/ros/humble/setup.bash; \
       source /home/carma/.base-image/ros1_msgs_ws/install/local_setup.bash; \
@@ -42,11 +42,6 @@ RUN ROS1_LIBS="libxmlrpcpp.so";                                                 
        soFilePath=$(ldd libros1_bridge.so | grep $soFile | awk '{print $3;}');  \
        cp $soFilePath ./;                                                       \
      done
-
-###########################
-# 9.A.)Additions
-###########################
-RUN apt -y install wait-for-it ros-humble-rmw-cyclonedds-cpp
 
 ###########################
 # 10.0) Metadata

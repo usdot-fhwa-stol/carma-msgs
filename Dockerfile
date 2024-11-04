@@ -72,7 +72,7 @@ RUN vcs import --input /home/carma/.base-image/ros1_msgs_ws/src/carma_msgs/docke
 RUN  mkdir -p /home/carma/.base-image/ros2_msgs_ws/src/carma_msgs
 COPY . /home/carma/.base-image/ros2_msgs_ws/src/carma_msgs/
 RUN mkdir -p /home/carma/.base-image/workspace/src
-RUN /home/carma/.base-image/ros1_msgs_ws/src/carma_msgs/docker/checkout.bash -b ${GIT_BRANCH} -r \
+RUN /home/carma/.base-image/ros1_msgs_ws/src/carma_msgs/docker/checkout.bash -b develop-humble -r \
       /home/carma/.base-image/workspace
 RUN /home/carma/.base-image/ros1_msgs_ws/src/carma_msgs/docker/install.sh
       

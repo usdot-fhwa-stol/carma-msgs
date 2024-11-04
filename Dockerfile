@@ -43,11 +43,6 @@ RUN apt-get install -f
 ###########################
 RUN apt-get -y install ros-desktop-dev --allow-downgrades --allow-remove-essential --allow-change-held-packages
 
-# fix ARM64 pkgconfig path issue -- Fix provided by ambrosekwok
-RUN if [[ $(uname -m) = "arm64" || $(uname -m) = "aarch64" ]]; then                     \
-      cp /usr/lib/x86_64-linux-gnu/pkgconfig/* /usr/lib/aarch64-linux-gnu/pkgconfig/;   \
-    fi
-
 ###########################
 # 6.) Restore the ROS2 apt repos and set compilation options.
 #     And install dependencies for ros1_bridge
@@ -85,33 +80,6 @@ RUN /home/carma/.base-image/ros1_msgs_ws/src/carma_msgs/docker/install.sh
 # 8.) Clean up
 ###########################
 RUN apt-get -y clean all; apt-get -y update
-
-###########################
-# 9.) Pack all ROS1 dependent libraries
-###########################
-# fix ARM64 pkgconfig path issue -- Fix provided by ambrosekwok
-RUN if [[ $(uname -m) = "arm64" || $(uname -m) = "aarch64" ]]; then                    \
-      cp /usr/lib/x86_64-linux-gnu/pkgconfig/* /usr/lib/aarch64-linux-gnu/pkgconfig/;  \
-      fi
-
-RUN ROS1_LIBS="libxmlrpcpp.so";                                                 \
-      ROS1_LIBS="$ROS1_LIBS librostime.so";                                      \
-      ROS1_LIBS="$ROS1_LIBS libroscpp.so";                                       \
-      ROS1_LIBS="$ROS1_LIBS libroscpp_serialization.so";                         \
-      ROS1_LIBS="$ROS1_LIBS librosconsole.so";                                   \
-      ROS1_LIBS="$ROS1_LIBS librosconsole_log4cxx.so";                           \
-      ROS1_LIBS="$ROS1_LIBS librosconsole_backend_interface.so";                 \
-      ROS1_LIBS="$ROS1_LIBS liblog4cxx.so";                                      \
-      ROS1_LIBS="$ROS1_LIBS libcpp_common.so";                                   \
-      ROS1_LIBS="$ROS1_LIBS libb64.so";                                          \
-      ROS1_LIBS="$ROS1_LIBS libaprutil-1.so";                                    \
-      ROS1_LIBS="$ROS1_LIBS libapr-1.so";                                        \
-      ROS1_LIBS="$ROS1_LIBS libactionlib.so.1d";                                 \
-      cd /home/carma/.base-image/workspace/install/ros1_bridge/lib;                        \
-      for soFile in $ROS1_LIBS; do                                               \
-            soFilePath=$(ldd libros1_bridge.so | grep $soFile | awk '{print $3;}');  \
-            cp $soFilePath ./;                                                       \
-      done
 
 ###########################
 # 10.0) Metadata

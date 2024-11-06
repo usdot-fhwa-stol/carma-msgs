@@ -143,7 +143,7 @@ else
     #The addition of --network=host was a fix for a DNS resolution error that occured 
     #when running the platform inside an Ubuntu 20.04 virtual machine. The error and possible soliutions are 
     # discussed here: https://github.com/moby/moby/issues/41003
-    docker build --network=host --progress plain -t $USERNAME/$IMAGE:$COMPONENT_VERSION_STRING \
+    docker build --network=host -t $USERNAME/$IMAGE:$COMPONENT_VERSION_STRING \
         --build-arg VERSION="$COMPONENT_VERSION_STRING" \
         --build-arg VCS_REF=`git rev-parse --short HEAD` \
         --build-arg BUILD_DATE=`date -u +”%Y-%m-%dT%H:%M:%SZ”` .

@@ -7,7 +7,6 @@ on:
       - develop-humble
       - master
       - "release/*"
-      - arc-54-ros1-bridge
     tags:
       - "carma-system-*"
 jobs:

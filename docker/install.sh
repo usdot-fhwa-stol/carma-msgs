@@ -27,7 +27,6 @@ cp -R /home/carma/autoware.ai/jsk_recognition /home/carma/.base-image/ros2_msgs_
 rm -rf /home/carma/autoware.ai/
 
 cd /home/carma/.base-image/ros2_msgs_ws
-unset ROS_DISTRO
 source /opt/ros/humble/setup.bash
 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release --packages-up-to \
     autoware_msgs autoware_lanelet2_msgs can_msgs carma_debug_ros2_msgs carma_driver_msgs carma_localization_msgs \

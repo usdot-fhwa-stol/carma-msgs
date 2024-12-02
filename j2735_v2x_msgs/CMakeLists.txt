@@ -85,10 +85,9 @@ else() # ROS 2
     DESTINATION include/${PROJECT_NAME}
   )
 
-  set(INCLUDE_DESTINATION include/${PROJECT_NAME})
+  set(INCLUDE_DESTINATION include/${PROJECT_NAME}/${PROJECT_NAME})
 
   ament_export_dependencies(rosidl_default_runtime)
-  ament_export_include_directories(include)
   ament_package()
 
   if (BUILD_TESTING)
@@ -107,6 +106,6 @@ endif()
 
 install(DIRECTORY include/${PROJECT_NAME}/
   DESTINATION ${INCLUDE_DESTINATION}
-  FILES_MATCHING PATTERN "*.h"
+  FILES_MATCHING PATTERN "*.hpp"
   PATTERN ".svn" EXCLUDE
 )

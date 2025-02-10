@@ -8,6 +8,11 @@ on:
         type: "string"
         required: false
   workflow_dispatch:
+    inputs:
+      image_name:
+        description: "Optional: Custom image name to be used, defaults to branch name if not provided"
+        type: "string"
+        required: false
   push:
     branches:
       - develop

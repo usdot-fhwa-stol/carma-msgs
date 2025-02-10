@@ -22,7 +22,7 @@ on:
       - "carma-system-*"
 jobs:
   dockerhub:
-    uses: usdot-fhwa-stol/actions/.github/workflows/dockerhub.yml@main
+    uses: usdot-fhwa-stol/actions/.github/workflows/dockerhub.yml@arc-254-test
     with:
       image_name: inputs.image_name
     secrets:

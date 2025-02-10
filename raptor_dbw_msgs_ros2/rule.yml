@@ -1,0 +1,3 @@
+-
+  ros1_package_name: 'raptor_dbw_msgs'
+  ros2_package_name: 'raptor_dbw_msgs'

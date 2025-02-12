@@ -43,9 +43,16 @@ done
 
 cd /home/carma/
 # Sparse checkout to only get the messages we need
-# raptor_dbw_msgs (ROS1, ROS2 is installed through debian)
+# raptor_dbw_msgs (ROS1)
 git clone --depth 1 --filter=blob:none --sparse https://github.com/NewEagleRaptor/raptor-dbw-ros.git --depth 1 --branch master
 cd /home/carma/raptor-dbw-ros
+git sparse-checkout init --cone
+git sparse-checkout set raptor_dbw_msgs
+cd /home/carma
+
+# raptor_dbw_msgs (ROS2)
+git clone --depth 1 --filter=blob:none --sparse https://github.com/NewEagleRaptor/raptor-dbw-ros2.git --depth 1 --branch foxy
+cd /home/carma/raptor-dbw-ros2
 git sparse-checkout init --cone
 git sparse-checkout set raptor_dbw_msgs
 cd /home/carma

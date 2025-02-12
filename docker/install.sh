@@ -21,10 +21,10 @@ rm -rf /home/carma/carma-dbw-mkz-ros/
 rm -rf /home/carma/raptor-dbw-ros/
 
 # ROS1 message setup
-cd ~/.base-image/ros1_msgs_ws && source /opt/ros/noetic/setup.bash && colcon build --parallel-workers $(nproc) --packages-up-to autoware_msgs cav_msgs cav_srvs j2735_v2x_msgs can_msgs carma_debug_msgs autoware_lanelet2_msgs carma_cooperative_perception_interfaces
+cd ~/.base-image/ros1_msgs_ws && source /opt/ros/noetic/setup.bash && colcon build --parallel-workers $(nproc) --packages-up-to autoware_msgs cav_msgs cav_srvs j2735_v2x_msgs can_msgs carma_debug_msgs autoware_lanelet2_msgs carma_cooperative_perception_interfaces raptor_dbw_msgs dbw_mkz_msgs
 
 # ROS2 message setup
-cd ~/.base-image/ros2_msgs_ws && source /opt/ros/foxy/setup.bash && colcon build --parallel-workers $(nproc) --packages-up-to raptor_dbw_msgs dbw_mkz_msgs autoware_msgs autoware_lanelet2_msgs can_msgs carma_debug_ros2_msgs carma_driver_msgs carma_localization_msgs carma_msgs carma_perception_msgs carma_planning_msgs carma_v2x_msgs j2735_v2x_msgs carma_cooperative_perception_interfaces
+cd ~/.base-image/ros2_msgs_ws && source /opt/ros/foxy/setup.bash && colcon build --parallel-workers $(nproc) --packages-up-to raptor_dbw_msgs dbw_mkz_msgs autoware_msgs autoware_lanelet2_msgs can_msgs carma_debug_ros2_msgs carma_driver_msgs carma_localization_msgs carma_msgs carma_perception_msgs carma_planning_msgs carma_v2x_msgs j2735_v2x_msgs carma_cooperative_perception_interfaces dbw_mkz_msgs
 
 # Build the bridge
 source /opt/ros/noetic/setup.bash

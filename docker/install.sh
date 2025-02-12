@@ -5,15 +5,20 @@ set -e
 cp -R /home/carma/autoware.ai/messages /home/carma/.base-image/ros1_msgs_ws/src/autoware.ai/
 cp -R /home/carma/autoware.ai/jsk_common_msgs /home/carma/.base-image/ros1_msgs_ws/src/autoware.ai/
 cp -R /home/carma/autoware.ai/jsk_recognition /home/carma/.base-image/ros1_msgs_ws/src/autoware.ai/
+cp -R /home/carma/raptor-dbw-ros/raptor_dbw_msgs /home/carma/.base-image/ros1_msgs_ws/src/
+cp -R /home/carma/carma-dbw-mkz-ros/dbw_mkz_msgs /home/carma/.base-image/ros1_msgs_ws/src/
 
 # ROS 2 msgs setup
 mkdir -p ~/.base-image/ros2_msgs_ws/src/autoware.ai
 cp -R /home/carma/autoware.ai/messages /home/carma/.base-image/ros2_msgs_ws/src/autoware.ai/
 cp -R /home/carma/autoware.ai/jsk_common_msgs /home/carma/.base-image/ros2_msgs_ws/src/autoware.ai/
-cp -R /home/carma/autoware.ai/jsk_recognition /home/carma/.base-image/ros2_msgs_ws/src/autoware.ai/
+cp -R /home/carma/autoware.ai/raptor_dbw_msgs /home/carma/.base-image/ros2_msgs_ws/src/autoware.ai/
+cp -R /home/carma/carma-dbw-mkz-ros/dbw_mkz_msgs /home/carma/.base-image/ros2_msgs_ws/src/
 
-# Cleanup autoware repo once messages have been moved
+# Cleanup repos once messages have been moved
 rm -rf /home/carma/autoware.ai/
+rm -rf /home/carma/carma-dbw-mkz-ros/
+rm -rf /home/carma/carma-dbw-mkz-ros/
 
 # ROS1 message setup
 cd ~/.base-image/ros1_msgs_ws && source /opt/ros/noetic/setup.bash && colcon build --parallel-workers $(nproc) --packages-up-to autoware_msgs cav_msgs cav_srvs j2735_v2x_msgs can_msgs carma_debug_msgs autoware_lanelet2_msgs carma_cooperative_perception_interfaces

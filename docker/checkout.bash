@@ -63,6 +63,8 @@ cd /home/carma/carma-dbw-mkz-ros
 git sparse-checkout init --cone
 git sparse-checkout set dbw_mkz_msgs
 git sparse-checkout set dbw_mkz_msgs_ros2
+echo "Printing contents of carma-dbw-mkz-ros"
+ls -la
 cd /home/carma
 
 # clone carma repos

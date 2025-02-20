@@ -14,7 +14,7 @@ cp -R /home/carma/autoware.ai/messages /home/carma/.base-image/ros2_msgs_ws/src/
 cp -R /home/carma/autoware.ai/jsk_common_msgs /home/carma/.base-image/ros2_msgs_ws/src/autoware.ai/
 cp -R /home/carma/autoware.ai/jsk_recognition /home/carma/.base-image/ros2_msgs_ws/src/autoware.ai/
 cp -R /home/carma/raptor-dbw-ros2/raptor_dbw_msgs /home/carma/.base-image/ros2_msgs_ws/src/
-cp -R /home/carma/carma-dbw-mkz-ros/dbw_mkz_msgs /home/carma/.base-image/ros2_msgs_ws/src/
+cp -R /home/carma/carma-dbw-mkz-ros/dbw_mkz_msgs_ros2 /home/carma/.base-image/ros2_msgs_ws/src/
 
 # Cleanup repos once messages have been moved
 rm -rf /home/carma/autoware.ai/

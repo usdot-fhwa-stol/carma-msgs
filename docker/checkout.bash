@@ -62,6 +62,7 @@ git clone --depth 1 --filter=blob:none --sparse https://github.com/usdot-fhwa-st
 cd /home/carma/carma-dbw-mkz-ros
 git sparse-checkout init --cone
 git sparse-checkout set dbw_mkz_msgs
+git sparse-checkout set dbw_mkz_msgs_ros2
 cd /home/carma
 
 # clone carma repos

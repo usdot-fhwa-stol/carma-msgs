@@ -49,7 +49,7 @@ RUN apt-get -y install ros-desktop-dev --allow-downgrades --allow-remove-essenti
 ###########################
 RUN mv /root/ros2-latest.list /etc/apt/sources.list.d/
 
-RUN echo "deb [trusted=yes] https://s3.amazonaws.com/autonomoustuff-repo/ $(lsb_release -sc) main"
+RUN echo "deb [trusted=yes] https://s3.amazonaws.com/autonomoustuff-repo/ $(lsb_release -sc) main" \
       > /etc/apt/sources.list.d/autonomoustuff-public.list
 
 RUN apt-get -y update && apt-get install -y \

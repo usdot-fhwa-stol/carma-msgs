@@ -30,7 +30,7 @@ cd /home/carma/.base-image/ros1_msgs_ws
 unset ROS_DISTRO
 export ROS_VERSION=1
 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release --packages-up-to \
-    pcl_msgs raptor_dbw_msgs dbw_mkz_msgs
+    pcl_msgs raptor_dbw_msgs dbw_mkz_msgs \
     autoware_msgs cav_msgs cav_srvs j2735_v2x_msgs can_msgs carma_debug_msgs autoware_lanelet2_msgs carma_cooperative_perception_interfaces
 
 # ROS2 CARMA message and dependency setup

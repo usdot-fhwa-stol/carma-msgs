@@ -1,0 +1,5 @@
+repositories:
+    pcl_msgs:
+        type: git
+        url: https://github.com/ros-perception/pcl_msgs.git
+        version: noetic-devel

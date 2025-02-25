@@ -85,19 +85,13 @@ else() # ROS 2
     DESTINATION include/${PROJECT_NAME}
   )
 
-  set(INCLUDE_DESTINATION include/${PROJECT_NAME})
+  set(INCLUDE_DESTINATION include/${PROJECT_NAME}/${PROJECT_NAME})
 
   ament_export_dependencies(rosidl_default_runtime)
-  ament_export_include_directories(include)
   ament_package()
 
   if (BUILD_TESTING)
     enable_testing()
-
-    # These CMake commands were added to ament_cmake_auto in ROS 2 Humble. Until
-    # CARMA supports ROS 2 Humble, we will use package-local copies.
-    include(cmake/ament_auto_find_test_dependencies.cmake)
-    include(cmake/ament_auto_add_gtest.cmake)
 
     ament_auto_find_test_dependencies()
 
@@ -112,6 +106,6 @@ endif()
 
 install(DIRECTORY include/${PROJECT_NAME}/
   DESTINATION ${INCLUDE_DESTINATION}
-  FILES_MATCHING PATTERN "*.h"
+  FILES_MATCHING PATTERN "*.hpp"
   PATTERN ".svn" EXCLUDE
 )

@@ -49,11 +49,18 @@ RUN apt-get -y install ros-desktop-dev --allow-downgrades --allow-remove-essenti
 ###########################
 RUN mv /root/ros2-latest.list /etc/apt/sources.list.d/
 
+RUN echo "deb [trusted=yes] https://s3.amazonaws.com/autonomoustuff-repo/ $(lsb_release -sc) main" \
+      > /etc/apt/sources.list.d/autonomoustuff-public.list
+
 RUN apt-get -y update && apt-get install -y \
       ros-humble-rmw \
       ros-humble-rmw-implementation \
       ros-humble-rmw-fastrtps-cpp \
       ros-humble-rmw-cyclonedds-cpp \
+      ros-humble-automotive-autonomy-msgs \
+      ros-humble-automotive-navigation-msgs \
+      ros-humble-automotive-platform-msgs \
+      ros-humble-pacmod3-msgs \
       wait-for-it
 
 ######################################
@@ -64,7 +71,7 @@ RUN  mkdir -p /home/carma/.base-image/ros1_msgs_ws/src/carma_msgs
 COPY . /home/carma/.base-image/ros1_msgs_ws/src/carma_msgs/
 
 # Since Noetic is not supported on Linux 22.04, this manually installs the dependency packages
-# This is outside checkout.bash to not accidentally modify during release process and 
+# This is outside checkout.bash to not accidentally modify during release process and
 # not to introduce indirect dependency between install and checkout scripts
 RUN vcs import --input /home/carma/.base-image/ros1_msgs_ws/src/carma_msgs/docker/noetic-dependencies.repos \
       /home/carma/.base-image/ros1_msgs_ws/src/
@@ -75,7 +82,7 @@ RUN mkdir -p /home/carma/.base-image/workspace/src
 RUN /home/carma/.base-image/ros1_msgs_ws/src/carma_msgs/docker/checkout.bash -b develop-humble -r \
       /home/carma/.base-image/workspace
 RUN /home/carma/.base-image/ros1_msgs_ws/src/carma_msgs/docker/install.sh
-      
+
 ###########################
 # 8.) Clean up
 ###########################

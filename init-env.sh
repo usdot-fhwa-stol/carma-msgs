@@ -22,6 +22,11 @@ if [ -f "/opt/ros/humble/setup.bash" ]; then
     source /opt/ros/humble/setup.bash
 fi
 
+# Source the ROS1_bridge setup.bash that has CARMA msgs
+if [ -f "/home/carma/.base-image/workspace/install/setup.bash" ]; then
+    source /home/carma/.base-image/workspace/install/setup.bash
+fi
+
 # Always source environment variables as last step
 if [ -f "/opt/carma/vehicle/config/carma.env" ]; then
     source /opt/carma/vehicle/config/carma.env

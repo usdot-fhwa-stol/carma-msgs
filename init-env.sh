@@ -14,12 +14,6 @@
 #  License for the specific language governing permissions and limitations under
 #  the License.
 
-# Sets all environment variables and sources scripts necessary for CARMA to operate
-export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib/
-
-# Export QT X11 Forwarding variables
-export QT_X11_NO_MITSHM=1
-
 # Set Cyclone DDS as default RMW implementation
 export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
 

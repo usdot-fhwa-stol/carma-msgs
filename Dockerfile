@@ -104,3 +104,9 @@ LABEL org.label-schema.schema-version="1.0" \
       org.label-schema.vcs-url="https://github.com/usdot-fhwa-stol/carma-msgs" \
       org.label-schema.vcs-ref=${VCS_REF} \
       org.label-schema.build-date=${BUILD_DATE}
+
+
+# Copy environment initialization scripts
+COPY ./entrypoint.sh ./init-env.sh /home/carma/.base-image
+# Set the entrypoint
+ENTRYPOINT [ "/home/carma/.base-image/entrypoint.sh" ]

@@ -17,7 +17,7 @@
 cmake_minimum_required(VERSION 3.5)
 project(cav_srvs)
 
-## Compile as C++14, supported in ROS Noetic and newer
+## Compile as c++14, supported in ROS Noetic and newer
 # add_compile_options(-std=c++14)
 
 find_package(carma_cmake_common REQUIRED)

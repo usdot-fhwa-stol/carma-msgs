@@ -9,31 +9,27 @@ SHELL ["/bin/bash", "-o", "pipefail", "-o", "errexit", "-c"]
 ###########################
 # 1.) Bring system up to the latest ROS desktop configuration
 ###########################
-RUN apt-get -y update
-RUN apt-get -y upgrade
-RUN apt-get -y install ros-humble-desktop
+RUN apt-get -y update && apt-get -y upgrade && apt-get -y install ros-humble-desktop
 
 ###########################
 # 2.) Temporarily remove ROS2 apt repository
 ###########################
-RUN mv /etc/apt/sources.list.d/ros2-latest.list /root/
-RUN apt-get update
+RUN mv /etc/apt/sources.list.d/ros2-latest.list /root/ && apt-get update
 
 ###########################
 # 3.) comment out the catkin conflict
 ###########################
-RUN sed  -i -e 's|^Conflicts: catkin|#Conflicts: catkin|' /var/lib/dpkg/status
-RUN apt-get install -f
+RUN sed  -i -e 's|^Conflicts: catkin|#Conflicts: catkin|' /var/lib/dpkg/status && \
+    apt-get install -f
 
 ###########################
 # 4.) force install these packages
 ###########################
-RUN apt-get download python3-catkin-pkg
-RUN apt-get download python3-rospkg
-RUN apt-get download python3-rosdistro
-RUN dpkg --force-overwrite -i python3-catkin-pkg*.deb
-RUN dpkg --force-overwrite -i python3-rospkg*.deb
-RUN dpkg --force-overwrite -i python3-rosdistro*.deb
+RUN apt-get download python3-catkin-pkg python3-rospkg python3-rosdistro
+RUN dpkg --force-overwrite -i \
+      python3-catkin-pkg*.deb \
+      python3-rospkg*.deb \
+      python3-rosdistro*.deb
 RUN apt-get install -f
 
 ###########################

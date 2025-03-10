@@ -17,6 +17,4 @@ jobs:
       DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
     with:
       tag_name_suffix: humble
-        
-        
-      
+      remove_suffix: true

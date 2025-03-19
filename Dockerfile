@@ -1,7 +1,7 @@
 FROM ros:humble-ros-base-jammy as base-install
 
 ARG DEBIAN_FRONTEND="noninteractive"
-ARG GIT_BRANCH=develop
+ARG GIT_BRANCH=release/timtsp
 
 # Make sure bash catches errors (no need to chain commands with &&, use ; instead)
 SHELL ["/bin/bash", "-o", "pipefail", "-o", "errexit", "-c"]

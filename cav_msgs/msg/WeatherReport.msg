@@ -27,7 +27,7 @@ uint16 HAS_SOLAR_RADIATION = 4
 uint16 HAS_FRICTION = 8
 uint16 HAS_ROAD_FRICTION = 16
 
-j2735_msgs/NTCIPEssPrecipYesNo is_raining
+j2735_v2x_msgs/NTCIPEssPrecipYesNo is_raining
 
 ####
 # OPTIONAL FIELDS
@@ -37,10 +37,10 @@ j2735_msgs/NTCIPEssPrecipYesNo is_raining
 
 cav_msgs/NTCIPEssPrecipRate rain_rate
 
-j2735_msgs/NTCIPEssPrecipSituation precip_situation
+j2735_v2x_msgs/NTCIPEssPrecipSituation precip_situation
 
-j2735_msgs/NTCIPEssSolarRadiation solar_radiation
+j2735_v2x_msgs/NTCIPEssSolarRadiation solar_radiation
 
-j2735_msgs/NTCIPEssMobileFriction friction
+j2735_v2x_msgs/NTCIPEssMobileFriction friction
 
 cav_msgs/CoefficientOfFriction road_friction

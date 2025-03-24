@@ -7,6 +7,6 @@
 # For further usage details consult the specification. See note on SI units above.
 #
 
-j2735_msgs/TransmissionState transmission
+j2735_v2x_msgs/TransmissionState transmission
 
 cav_msgs/Velocity speed

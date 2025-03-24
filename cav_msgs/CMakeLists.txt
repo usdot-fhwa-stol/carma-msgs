@@ -17,7 +17,7 @@
 cmake_minimum_required(VERSION 3.5)
 project(cav_msgs)
 
-## Compile as C++14, supported in ROS Noetic and newer
+## Compile as c++14, supported in ROS Noetic and newer
 add_compile_options(-std=c++14)
 
 find_package(carma_cmake_common REQUIRED)
@@ -31,8 +31,8 @@ find_package(catkin REQUIRED COMPONENTS
   message_generation
   std_msgs
   geometry_msgs
-  j2735_msgs
-  j3224_msgs
+  j2735_v2x_msgs
+  j3224_v2x_msgs
 )
 
 ## System dependencies are found with CMake's conventions
@@ -100,8 +100,8 @@ generate_messages(
   DEPENDENCIES
   std_msgs
   geometry_msgs
-  j2735_msgs
-  j3224_msgs
+  j2735_v2x_msgs
+  j3224_v2x_msgs
 )
 
 ################################################
@@ -136,7 +136,7 @@ generate_messages(
 catkin_package(
  # INCLUDE_DIRS include
 #  LIBRARIES cav_msgs
- CATKIN_DEPENDS message_runtime std_msgs geometry_msgs j2735_msgs j3224_msgs
+ CATKIN_DEPENDS message_runtime std_msgs geometry_msgs j2735_v2x_msgs j3224_v2x_msgs
 #  DEPENDS system_lib
 )
 

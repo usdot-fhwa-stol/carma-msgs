@@ -14,4 +14,4 @@
 
 cav_msgs/ObstacleSize obst_size
 
-j3224_msgs/ObstacleSizeConfidence obst_size_confidence
+j3224_v2x_msgs/ObstacleSizeConfidence obst_size_confidence

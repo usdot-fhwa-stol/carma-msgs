@@ -53,9 +53,9 @@ uint16 HAS_STATUS = 64
 uint16 HAS_SPEED_PROFILE = 128
 uint16 HAS_THE_RTCM = 256
 
-j2735_msgs/BasicVehicleClass classification
+j2735_v2x_msgs/BasicVehicleClass classification
 
-j2735_msgs/VehicleClassification class_details
+j2735_v2x_msgs/VehicleClassification class_details
 
 cav_msgs/VehicleData vehicle_data
 
@@ -65,7 +65,7 @@ cav_msgs/WeatherProbe weather_probe
 
 cav_msgs/ObstacleDetection obstacle
 
-j2735_msgs/DisabledVehicle status 
+j2735_v2x_msgs/DisabledVehicle status 
 
 cav_msgs/GrossSpeed[] speed_profile
 

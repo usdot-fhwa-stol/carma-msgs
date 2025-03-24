@@ -24,13 +24,13 @@
 #   -- detected objects
 # } 
 
-j2735_msgs/MsgCount msg_cnt 
+j2735_v2x_msgs/MsgCount msg_cnt 
 
-j2735_msgs/TemporaryID source_id
+j2735_v2x_msgs/TemporaryID source_id
 
-j3224_msgs/EquipmentType equipment_type
+j3224_v2x_msgs/EquipmentType equipment_type
 
-j2735_msgs/DDateTime sdsm_time_stamp
+j2735_v2x_msgs/DDateTime sdsm_time_stamp
 
 cav_msgs/Position3D ref_pos
 
@@ -47,4 +47,4 @@ uint8 presence_vector
 
 uint8 HAS_REF_POS_EL_CONF = 1
 
-j2735_msgs/ElevationConfidence ref_pos_el_conf
+j2735_v2x_msgs/ElevationConfidence ref_pos_el_conf

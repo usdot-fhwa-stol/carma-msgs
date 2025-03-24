@@ -75,7 +75,7 @@ float32 ELEVATION_MIN = -409.5
 cav_msgs/PositionalAccuracy accuracy
 
 # Provide the current state of the vehicle transmission
-j2735_msgs/TransmissionState transmission
+j2735_v2x_msgs/TransmissionState transmission
 
 #Speed ::= INTEGER (0..8191) -- Units of 0.02 m/s
 #  -- The value 8191 indicates that speed is unavailable
@@ -108,7 +108,7 @@ float32 STEER_WHEEL_ANGLE_MIN = -189.0
 cav_msgs/AccelerationSet4Way accel_set
 
 # Conveys a variety of information about the current brake and system control activity of the vehicle.
-j2735_msgs/BrakeSystemStatus brakes
+j2735_v2x_msgs/BrakeSystemStatus brakes
 
 # The vehicle length and width
 cav_msgs/VehicleSize size

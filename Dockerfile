@@ -61,7 +61,7 @@ RUN apt-get -y update && apt-get install -y \
       ros-humble-rmw \
       ros-humble-rmw-implementation \
       ros-humble-rmw-fastrtps-cpp \
-      ros-humble-rmw-cyclonedx-cpp \
+      ros-humble-rmw-cyclonedds-cpp \
       ros-humble-automotive-autonomy-msgs \
       ros-humble-automotive-navigation-msgs \
       ros-humble-automotive-platform-msgs \

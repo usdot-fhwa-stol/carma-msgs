@@ -43,7 +43,7 @@ RUN apt-get -y install ros-desktop-dev --allow-downgrades --allow-remove-essenti
 # 6.) Restore the ROS2 apt repos and set compilation options.
 #     And install ROS2 dependencies for ros1_bridge
 ###########################
-RUN mv /etc/apt/sources.list.d/ros2.sources /etc/apt/sources.list.d/
+RUN mv /root/ros2.sources /etc/apt/sources.list.d/
 
 RUN echo "deb [trusted=yes] https://s3.amazonaws.com/autonomoustuff-repo/ $(lsb_release -sc) main" \
       > /etc/apt/sources.list.d/autonomoustuff-public.list

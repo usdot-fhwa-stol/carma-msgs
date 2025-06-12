@@ -14,7 +14,6 @@ There are both ROS1 and ROS2 packages in this repo. Building of these packages w
 it is important to be careful to not mix the install path for the distributions. Therefore different install and build paths should be used for each ROS version.
 
 For example:
-
 ROS 2
 
 ```bash

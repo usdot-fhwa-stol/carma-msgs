@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       docker_organization: ${{ steps.docker-org-and-tag.outputs.docker_organization }}
-      docker_image_tag: ${{ steps.docker-org-and-tag.outputs.docker_image_tag }}
+      docker_image_tag: ${{ steps.docker-org-and-tag.outputs.docker_image_tag }}-humble
     steps:
       - id: docker-org-and-tag
         uses: usdot-fhwa-stol/actions/docker-org-and-tag@main
@@ -22,12 +22,13 @@ jobs:
       run:
         shell: bash
         working-directory: "/opt/carma/"
-    runs-on: ubuntu-latest
+    # Specify the runner environment
+    runs-on: ubuntu-latest-16-cores
     container:
       image: ${{ needs.determine_docker_org_and_tag.outputs.docker_organization }}/carma-base:${{ needs.determine_docker_org_and_tag.outputs.docker_image_tag }}
       env:
         INIT_ENV: "/home/carma/.base-image/init-env.sh"
-        ROS_2_ENV: "/opt/ros/foxy/setup.bash"
+        ROS_2_ENV: "/opt/ros/humble/setup.bash"
         TERM: xterm
       options: "--user root"
     steps:
@@ -54,7 +55,7 @@ jobs:
     - name: Build
       run: |
         source "$INIT_ENV"
-        source "$ROS_2_ENV" 
+        source "$ROS_2_ENV"
         PACKAGES=$(find . -maxdepth 2 -type f -name package.xml | sed 's/\.\///' | cut -d/ -f1)
         sed -i '/colcon build/ s/$/ --parallel-workers 4 --packages-up-to $PACKAGES/' /home/carma/.ci-image/engineering_tools/code_coverage/make_with_coverage.bash
         make_with_coverage.bash -m -e /opt/carma/ -o ./coverage_reports/gcov

@@ -32,7 +32,7 @@ cav_msgs/ObstacleDistance ob_dist
 
 cav_msgs/ObstacleDirection ob_direct
 
-j2735_msgs/DDateTime date_time
+j2735_v2x_msgs/DDateTime date_time
 
 ####
 # OPTIONAL FIELDS
@@ -40,8 +40,8 @@ j2735_msgs/DDateTime date_time
 # The presence of a given field can be idenfied by checking the presence_vector
 ####
 
-j2735_msgs/ITIScodes description
+j2735_v2x_msgs/ITIScodes description
 
-j2735_msgs/ITISGenericLocations location_details
+j2735_v2x_msgs/ITISGenericLocations location_details
 
-j2735_msgs/VerticalAccelerationThreshold vert_event
+j2735_v2x_msgs/VerticalAccelerationThreshold vert_event

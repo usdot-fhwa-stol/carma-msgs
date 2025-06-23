@@ -8,7 +8,7 @@
 #    status     GNSSstatus,
 #    offsetSet  AntennaOffsetSet
 #    }
-j2735_msgs/GNSSStatus status
+j2735_v2x_msgs/GNSSStatus status
 
 # AntennaOffsetSet ::= SEQUENCE { 
 #    antOffsetX  Offset-B12, -- a range of +- 20.47 meters

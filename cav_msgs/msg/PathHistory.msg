@@ -25,4 +25,4 @@ cav_msgs/PathHistoryPointList crumb_data
 # The presence of a given field can be idenfied by checking the precense_vector
 ####
 cav_msgs/FullPositionVector initial_position
-j2735_msgs/GNSSStatus curr_gnss_status
+j2735_v2x_msgs/GNSSStatus curr_gnss_status

@@ -1,7 +1,7 @@
 #
 # SupplementalVehicleExtensions.msg
 #
-# J2735 2016 message format.
+# J2735 2024 message format.
 #
 
 # SupplementalVehicleExtensions ::= SEQUENCE {
@@ -15,25 +15,37 @@
 #    vehicleData      VehicleData              OPTIONAL,
 # 
 #    -- Various V2V Probe Data
-#    weatherReport    WeatherReport            OPTIONAL, 
-#    weatherProbe     WeatherProbe             OPTIONAL, 
+#    doNotUse1       	WeatherReport           OPTIONAL, 
+#    --Do not use
+#    doNotUse2       	WeatherProbe            OPTIONAL, 
+#    --Do not use
 # 
 #    -- Detected Obstacle data
-#    obstacle         ObstacleDetection        OPTIONAL,
+#    doNotUse3       	ObstacleDetection       OPTIONAL, 
+#    --Do not use
 # 
 #    -- Disabled Vehicle Report
 #    status           DisabledVehicle          OPTIONAL,
-#    
+# 
 #    -- Oncoming lane speed reporting
-#    speedProfile     SpeedProfile             OPTIONAL, 
+#    doNotUse4       	SpeedProfile            OPTIONAL, 
+#    --Do not use
 # 
 #    -- Raw GNSS measurements
-#    theRTCM          RTCMPackage              OPTIONAL, 
+#    doNotUse5       	RTCMPackage             OPTIONAL, 
+#    --Do not use
 # 
 #    regional  SEQUENCE (SIZE(1..4)) OF 
-#              RegionalExtension {{REGION.Reg-SupplementalVehicleExtensions}} OPTIONAL,
-#    ...
+#              RegionalExtension {{Reg-SupplementalVehicleExtensions}} OPTIONAL,
+#    ...,
+#    fhwaVehicleClass  RptVehicleClass,
+#    -- Use FHWA vehicle classes, defined in J2945/C ProbeDataReport
 # 
+#    trailers         TrailersJ2945Slash1B     OPTIONAL,   
+#    -- Used in J2945/1B
+# 
+#    schoolBus      	SchoolBusJ2945Slash1C	 OPTIONAL
+#    -- Used in J2945/1C
 #    }
 
 # A BIT STRING defining the presence of optional fields.

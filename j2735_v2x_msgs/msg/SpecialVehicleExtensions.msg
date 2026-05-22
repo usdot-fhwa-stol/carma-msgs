@@ -1,19 +1,18 @@
 #
 # SpecialVehicleExtensions.msg
 #
-# J2735 2016 message format.
+# J2735 2024 message format.
 #
 
 # SpecialVehicleExtensions ::= SEQUENCE {
-#    -- The content below requires SSP permissions to transmit
-# 
 #    -- The entire EVA message has been reduced to these items
 #    vehicleAlerts  EmergencyDetails OPTIONAL,
 #    -- Description or Direction from an emergency vehicle
 #    description    EventDescription  OPTIONAL, -- short ITIS description
 #    
 #    -- Trailers for both passenger vehicles and heavy trucks
-#    trailers       TrailerData OPTIONAL,
+#    doNotUse       TrailerData OPTIONAL, 
+#    --Do not use
 # 
 #    -- HAZMAT and Cargo details to be added in a future revision
 # 

@@ -38,4 +38,4 @@ carma_v2x_msgs/PivotPointDescription rear_pivot
 
 carma_v2x_msgs/BumperHeights bumpers
 
-carma_v2x_msgs/Axles axles
+j2735_v2x_msgs/Axles axles

@@ -65,6 +65,9 @@ uint16 HAS_STATUS = 64
 # HAS_SPEED_PROFILE = 128    -- removed (doNotUse4 in J2735 2024)
 # HAS_THE_RTCM = 256         -- removed (doNotUse5 in J2735 2024)
 
+uint16 HAS_TRAILERS = 512
+uint16 HAS_SCHOOL_BUS = 1024
+
 j2735_v2x_msgs/BasicVehicleClass classification
 
 j2735_v2x_msgs/VehicleClassification class_details
@@ -74,3 +77,9 @@ j2735_v2x_msgs/VehicleData vehicle_data
 j2735_v2x_msgs/DisabledVehicle status
 
 # regional #TODO: RegionalExtensions are not yet supported for this message type
+
+j2735_v2x_msgs/RptVehicleClass fhwa_vehicle_class
+
+j2735_v2x_msgs/TrailersJ2945Slash1B trailers
+
+j2735_v2x_msgs/SchoolBusJ2945Slash1C school_bus

@@ -46,12 +46,12 @@ uint16 presence_vector
 uint16 HAS_CLASSIFICATION = 1
 uint16 HAS_CLASS_DETAILS = 2
 uint16 HAS_VEHICLE_DATA = 4
-uint16 HAS_WEATHER_REPORT = 8
-uint16 HAS_WEATHER_PROBE = 16
-uint16 HAS_OBSTACLE = 32
+# HAS_WEATHER_REPORT = 8     -- removed (doNotUse1 in J2735 2024)
+# HAS_WEATHER_PROBE = 16     -- removed (doNotUse2 in J2735 2024)
+# HAS_OBSTACLE = 32          -- removed (doNotUse3 in J2735 2024)
 uint16 HAS_STATUS = 64
-uint16 HAS_SPEED_PROFILE = 128
-uint16 HAS_THE_RTCM = 256
+# HAS_SPEED_PROFILE = 128    -- removed (doNotUse4 in J2735 2024)
+# HAS_THE_RTCM = 256         -- removed (doNotUse5 in J2735 2024)
 
 j2735_v2x_msgs/BasicVehicleClass classification
 
@@ -59,16 +59,6 @@ j2735_v2x_msgs/VehicleClassification class_details
 
 carma_v2x_msgs/VehicleData vehicle_data
 
-carma_v2x_msgs/WeatherReport weather_report
-
-carma_v2x_msgs/WeatherProbe weather_probe
-
-carma_v2x_msgs/ObstacleDetection obstacle
-
-j2735_v2x_msgs/DisabledVehicle status 
-
-carma_v2x_msgs/GrossSpeed[] speed_profile
-
-carma_v2x_msgs/RTCMPackage the_rtcm
+j2735_v2x_msgs/DisabledVehicle status
 
 # regional #TODO: RegionalExtensions are not yet supported for this message type

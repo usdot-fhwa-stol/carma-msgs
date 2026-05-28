@@ -1,39 +1,46 @@
 #
 # SupplementalVehicleExtensions.msg
 #
-# Modified J2735 2016 message format, adjusted to use base SI units (m,s, etc) in most case.
+# Modified J2735 2024 message format, adjusted to use base SI units (m,s, etc) in most case.
 #
 
 # SupplementalVehicleExtensions ::= SEQUENCE {
-#    -- Note that VehicleEventFlags, ExteriorLights, 
-#    -- PathHistory, and PathPrediction are in VehicleSafetyExtensions 
-# 
+#    -- Note that VehicleEventFlags, ExteriorLights,
+#    -- PathHistory, and PathPrediction are in VehicleSafetyExtensions
+#
 #    -- Vehicle Type Classification Data
 #    classification   BasicVehicleClass        OPTIONAL,
 #                     -- May be required to be present for non passenger vehicles
 #    classDetails     VehicleClassification    OPTIONAL,
 #    vehicleData      VehicleData              OPTIONAL,
-# 
+#
 #    -- Various V2V Probe Data
-#    weatherReport    WeatherReport            OPTIONAL, 
-#    weatherProbe     WeatherProbe             OPTIONAL, 
-# 
+#    doNotUse1        WeatherReport            OPTIONAL,
+#    --Do not use
+#    doNotUse2        WeatherProbe             OPTIONAL,
+#    --Do not use
+#
 #    -- Detected Obstacle data
-#    obstacle         ObstacleDetection        OPTIONAL,
-# 
+#    doNotUse3        ObstacleDetection        OPTIONAL,
+#    --Do not use
+#
 #    -- Disabled Vehicle Report
 #    status           DisabledVehicle          OPTIONAL,
-#    
+#
 #    -- Oncoming lane speed reporting
-#    speedProfile     SpeedProfile             OPTIONAL, 
-# 
+#    doNotUse4        SpeedProfile             OPTIONAL,
+#    --Do not use
+#
 #    -- Raw GNSS measurements
-#    theRTCM          RTCMPackage              OPTIONAL, 
-# 
-#    regional  SEQUENCE (SIZE(1..4)) OF 
-#              RegionalExtension {{REGION.Reg-SupplementalVehicleExtensions}} OPTIONAL,
-#    ...
-# 
+#    doNotUse5        RTCMPackage              OPTIONAL,
+#    --Do not use
+#
+#    regional  SEQUENCE (SIZE(1..4)) OF
+#              RegionalExtension {{Reg-SupplementalVehicleExtensions}} OPTIONAL,
+#    ...,
+#    fhwaVehicleClass  RptVehicleClass,
+#    trailers         TrailersJ2945Slash1B     OPTIONAL,
+#    schoolBus        SchoolBusJ2945Slash1C    OPTIONAL
 #    }
 
 # A BIT STRING defining the presence of optional fields.
@@ -53,6 +60,10 @@ uint16 HAS_STATUS = 64
 # HAS_SPEED_PROFILE = 128    -- removed (doNotUse4 in J2735 2024)
 # HAS_THE_RTCM = 256         -- removed (doNotUse5 in J2735 2024)
 
+uint16 HAS_FHWA_VEHICLE_CLASS = 512
+uint16 HAS_TRAILERS = 1024
+uint16 HAS_SCHOOL_BUS = 2048
+
 j2735_v2x_msgs/BasicVehicleClass classification
 
 j2735_v2x_msgs/VehicleClassification class_details
@@ -62,3 +73,9 @@ carma_v2x_msgs/VehicleData vehicle_data
 j2735_v2x_msgs/DisabledVehicle status
 
 # regional #TODO: RegionalExtensions are not yet supported for this message type
+
+j2735_v2x_msgs/RptVehicleClass fhwa_vehicle_class
+
+carma_v2x_msgs/TrailersJ2945Slash1B trailers
+
+j2735_v2x_msgs/SchoolBusJ2945Slash1C school_bus

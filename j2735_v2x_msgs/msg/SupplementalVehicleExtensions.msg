@@ -65,8 +65,9 @@ uint16 HAS_STATUS = 64
 # HAS_SPEED_PROFILE = 128    -- removed (doNotUse4 in J2735 2024)
 # HAS_THE_RTCM = 256         -- removed (doNotUse5 in J2735 2024)
 
-uint16 HAS_TRAILERS = 512
-uint16 HAS_SCHOOL_BUS = 1024
+uint16 HAS_FHWA_VEHICLE_CLASS = 512
+uint16 HAS_TRAILERS = 1024
+uint16 HAS_SCHOOL_BUS = 2048
 
 j2735_v2x_msgs/BasicVehicleClass classification
 

@@ -1,9 +1,9 @@
 #
 # CoarseHeading.msg
 #
-# Modified J2735 2016 message format, adjusted to use base SI units (m,s, etc) in most case.
+# Modified J2735 2024 message format, adjusted to use base SI units (m,s, etc) in most case.
 #
-# Parsed description of CoarseHeading from the SAE J2735 2016 specification.
+# Parsed description of CoarseHeading from the SAE J2735 2024 specification.
 # For further usage details consult the specification. See note on SI units above.
 #
 # CoarseHeading in degrees (0..358.5) derived from 1.5 resolution data

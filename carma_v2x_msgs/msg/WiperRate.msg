@@ -1,7 +1,7 @@
 #
 # WiperRate.msg
 #
-# Modified J2735 2016 message format, adjusted to use base SI units (m,s, etc) in most case.
+# Modified J2735 2024 message format, adjusted to use base SI units (m,s, etc) in most case.
 #
 
 # WiperRate in units of sweeps per second in range [0..2.12] sweeps per second

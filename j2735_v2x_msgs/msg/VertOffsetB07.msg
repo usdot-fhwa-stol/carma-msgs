@@ -1,7 +1,7 @@
 #
 # VertOffsetB07.msg
 #
-# J2735 2016 message format.
+# J2735 2024 message format.
 #
 
 # VertOffset-B07 ::= INTEGER (-64..63)  

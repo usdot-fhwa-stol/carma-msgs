@@ -1,7 +1,7 @@
 #
 # Position3D.msg
 #
-# J2735 2016 message format.
+# J2735 2024 message format.
 #
 # @author Mae Fromm
 # @version 0.1

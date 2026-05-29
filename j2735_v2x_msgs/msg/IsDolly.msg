@@ -1,7 +1,7 @@
 #
 # IsDolly.msg
 #
-# J2735 2016 message format.
+# J2735 2024 message format.
 #
 
 # IsDolly ::= BOOLEAN -- When false indicates a trailer unit

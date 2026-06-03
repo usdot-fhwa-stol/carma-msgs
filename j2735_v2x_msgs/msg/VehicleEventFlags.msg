@@ -1,7 +1,7 @@
 #
 # VehicleEventFLags.msg
 #
-# J2735 2016 message format.
+# J2735 2024 message format.
 #
 
 # VehicleEventFlags ::= BIT STRING {
@@ -17,8 +17,9 @@
 #    eventWipersChanged              (9),
 #    eventFlatTire                   (10),
 #    eventDisabledVehicle            (11), -- The DisabledVehicle DF may also be sent
-#    eventAirBagDeployment           (12)
-#    } (SIZE (13, ...))
+#    eventAirBagDeployment           (12),
+#    eventJackKnife                  (13)
+#    } (SIZE (14, ...))
 
 uint16 vehicle_event_flag
 
@@ -35,3 +36,4 @@ uint16 EVENT_WIPERS_CHANGED=256
 uint16 EVENT_FLAT_TIRE=512
 uint16 EVENT_DISABLED_VEHICLE=1024
 uint16 EVENT_AIR_BAG_DEPLOYMENT=2048
+uint16 EVENT_JACK_KNIFE=8192

@@ -1,7 +1,7 @@
 #
 # LaneSharing.msg
 #
-# J2735 2016 message format.
+# J2735 2024 message format.
 #
 # @author Mae Fromm
 # @version 0.1
@@ -24,7 +24,7 @@
 # pedestriansTraffic (6),
 # cyclistVehicleTraffic (7),
 # trackedVehicleTraffic (8),
-# pedestrianTraffic (9)
+# reserved (9)          -- was pedestrianTraffic in J2735 2024; renamed in J2735 2024
 # } (SIZE (10))
 # -- All zeros would indicate 'not shared' and 'not overlapping'
 

@@ -1,7 +1,7 @@
 #
 # NTCIPEssPrecipYesNo.msg
 #
-# J2735 2016 message format.
+# J2735 2024 message format.
 #
 
 # EssPrecipYesNo ::= ENUMERATED {precip (1), noPrecip (2), error (3)} 

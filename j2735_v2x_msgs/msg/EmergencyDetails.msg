@@ -1,11 +1,11 @@
 #
 # EmergencyDetails.msg
 #
-# J2735 2016 message format.
+# J2735 2024 message format.
 #
 
 # EmergencyDetails ::= SEQUENCE {
-#  notUsed SSPindex,
+#  doNotUse SSPindex,
 # -- always set to 0 and carries no meaning;
 # -- legacy field maintained for backward compatibility
 #  sirenUse SirenInUse,

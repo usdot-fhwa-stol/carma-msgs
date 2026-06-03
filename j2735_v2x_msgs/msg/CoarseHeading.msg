@@ -1,9 +1,9 @@
 #
 # CoarseHeading.msg
 #
-# J2735 2016 message format.
+# J2735 2024 message format.
 #
-# Parsed description of CoarseHeading from the SAE J2735 2016 specification.
+# Parsed description of CoarseHeading from the SAE J2735 2024 specification.
 # For further usage details consult the specification.
 #
 # CoarseHeading ::= INTEGER (0..240)

@@ -1,7 +1,7 @@
 #
 # AmbientAirTemperature.msg
 #
-# J2735 2016 message format.
+# J2735 2024 message format.
 #
 
 # AmbientAirTemperature ::= INTEGER (0..191) -- in deg C with a -40 offset

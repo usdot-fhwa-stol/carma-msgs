@@ -1,14 +1,13 @@
 #
 # TrailerData.msg
 #
-# Modified J2735 2016 message format, adjusted to use base SI units (m,s, etc) in most case.
+# J2735 2024 message format, adjusted to use base SI units (m,s, etc) in most case.
 #
 
 # TrailerData ::= SEQUENCE {
-#    notUsed SSPindex,
+#    doNotUse SSPindex,
 #    -- always set to 0 and carries no meaning;
 #    -- legacy field maintained for backward compatibility
-uint8 ssp_index
 
 #    -- Offset connection point details from the 
 #    -- hauling vehicle to the first trailer unit

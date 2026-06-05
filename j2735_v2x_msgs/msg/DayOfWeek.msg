@@ -11,24 +11,25 @@
 # Description
 # ...
 
-# DayOfWeek ::= BIT STRING //only J
-# {
-# 	sun (6), 
-# 	mon (5), 
-# 	tue (4), 
-# 	wed (3), 
-# 	thu (2), 
-# 	fri (1), 
-# 	sat (0)
-# }
+# DayOfWeek ::= BIT STRING {
+# 	unknown (0),
+# 	monday (1),
+# 	tuesday (2),
+# 	wednesday (3),
+# 	thursday (4),
+# 	friday (5),
+# 	saturday (6),
+# 	sunday (7)
+# } (SIZE(8))
 
 uint8 dow
 
 # Bit flags
-uint8 SAT = 1
-uint8 FRI = 2
-uint8 THU = 4
-uint8 WED = 8
-uint8 TUE = 16
-uint8 MON = 32
-uint8 SUN = 64
+uint8 UNKNOWN = 1
+uint8 MONDAY = 2
+uint8 TUESDAY = 4
+uint8 WEDNESDAY = 8
+uint8 THURSDAY = 16
+uint8 FRIDAY = 32
+uint8 SATURDAY = 64
+uint8 SUNDAY = 128

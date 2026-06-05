@@ -29,4 +29,13 @@
 # -- Bits 7~15 reserved and set to zero
 # } (SIZE (16))
 
-uint16  lane_attributes_parking
+uint16 lane_attributes_parking
+
+# Bit flags
+uint16 PARKING_REVOCABLE_LANE=1
+uint16 PARALLEL_PARKING_IN_USE=2
+uint16 HEAD_IN_PARKING_IN_USE=4
+uint16 DO_NOT_PARK_ZONE=8
+uint16 PARKING_FOR_BUS_USE=16
+uint16 PARKING_FOR_TAXI_USE=32
+uint16 NO_PUBLIC_PARKING_USE=64

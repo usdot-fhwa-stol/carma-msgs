@@ -22,13 +22,13 @@
 # 	sat (0)
 # }
 
-uint8[7] dow
+uint8 dow
 
-# enumeration values for day of week
-uint8 SUN = 6  
-uint8 MON = 5
-uint8 TUE = 4  
-uint8 WED = 3  
-uint8 THU = 2  
-uint8 FRI = 1  
-uint8 SAT = 0
+# Bit flags
+uint8 SAT = 1
+uint8 FRI = 2
+uint8 THU = 4
+uint8 WED = 8
+uint8 TUE = 16
+uint8 MON = 32
+uint8 SUN = 64

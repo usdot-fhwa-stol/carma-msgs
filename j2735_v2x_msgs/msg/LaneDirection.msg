@@ -25,3 +25,7 @@
 # } (SIZE (2))
 
 uint8 lane_direction
+
+# Bit flags
+uint8 INGRESS_PATH=1
+uint8 EGRESS_PATH=2

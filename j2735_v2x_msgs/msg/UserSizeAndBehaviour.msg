@@ -21,8 +21,8 @@
 # sizes_and_behaviors = activities | SMALL_STATURE
 uint8 sizes_and_behaviors
 
-uint8 UNAVAILABLE = 0
-uint8 SMALL_STATURE = 1
-uint8 LARGE_STATURE = 2
-uint8 ERRATIC_MOVING = 4
-uint8 SLOW_MOVING = 8
+uint8 UNAVAILABLE = 1
+uint8 SMALL_STATURE = 2
+uint8 LARGE_STATURE = 4
+uint8 ERRATIC_MOVING = 8
+uint8 SLOW_MOVING = 16

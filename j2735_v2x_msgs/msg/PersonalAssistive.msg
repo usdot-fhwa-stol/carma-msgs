@@ -22,9 +22,9 @@
 # types = types | OTHER_TYPE
 uint8 types
 
-uint8 UNAVAILABLE = 0
-uint8 OTHER_TYPE = 1
-uint8 VISION = 2
-uint8 HEARING = 4
-uint8 MOVEMENT = 8
-uint8 COGNITION = 16
+uint8 UNAVAILABLE = 1
+uint8 OTHER_TYPE = 2
+uint8 VISION = 4
+uint8 HEARING = 8
+uint8 MOVEMENT = 16
+uint8 COGNITION = 32

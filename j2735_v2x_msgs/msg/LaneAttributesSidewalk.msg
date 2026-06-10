@@ -25,3 +25,9 @@
 # } (SIZE (16))
 
 uint16 lane_attributes_sidewalk
+
+# Bit flags
+uint16 SIDEWALK_REVOCABLE_LANE=1
+uint16 BICYLE_USE_ALLOWED=2
+uint16 IS_SIDEWALK_FLY_OVER_LANE=4
+uint16 WALK_BIKES=8

@@ -42,4 +42,15 @@
 # 		-- which are not part of a signal group ID
 # } (SIZE (16))
 
-uint16  lane_attributes_crosswalk
+uint16 lane_attributes_crosswalk
+
+# Bit flags
+uint16 CROSSWALK_REVOCABLE_LANE=1
+uint16 BICYLE_USE_ALLOWED=2
+uint16 IS_XWALK_FLY_OVER_LANE=4
+uint16 FIXED_CYCLE_TIME=8
+uint16 BI_DIRECTIONAL_CYCLE_TIMES=16
+uint16 HAS_PUSH_TO_WALK_BUTTON=32
+uint16 AUDIO_SUPPORT=64
+uint16 RF_SIGNAL_REQUEST_PRESENT=128
+uint16 UNSIGNALIZED_SEGMENTS_PRESENT=256

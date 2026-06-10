@@ -14,8 +14,8 @@
 # A bit string enumerating when a preset threshold for vertical acceleration is exceeded at each wheel
 uint8 exceeded_wheels
 
-uint8 NOT_EQUIPPED=0
-uint8 LEFT_FRONT=1
-uint8 LEFT_REAR=2
-uint8 RIGHT_FRONT=4
-uint8 RIGHT_REAR=8
+uint8 NOT_EQUIPPED=1
+uint8 LEFT_FRONT=2
+uint8 LEFT_REAR=4
+uint8 RIGHT_FRONT=8
+uint8 RIGHT_REAR=16

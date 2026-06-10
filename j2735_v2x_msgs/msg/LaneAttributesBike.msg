@@ -25,3 +25,9 @@
 #	} (SIZE (16))
 
 uint16 lane_attributes_bike
+
+# Bit flags
+uint16 BIKE_REVOCABLE_LANE=1
+uint16 PEDESTRIAN_USE_ALLOWED=2
+uint16 IS_BIKE_FLY_OVER_LANE=4
+uint16 FIXED_CYCLE_TIME=8

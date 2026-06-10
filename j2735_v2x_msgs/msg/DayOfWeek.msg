@@ -11,24 +11,25 @@
 # Description
 # ...
 
-# DayOfWeek ::= BIT STRING //only J
-# {
-# 	sun (6), 
-# 	mon (5), 
-# 	tue (4), 
-# 	wed (3), 
-# 	thu (2), 
-# 	fri (1), 
-# 	sat (0)
+# DayOfWeek ::= ENUMERATED {
+# 	unknown (0),
+# 	monday (1),
+# 	tuesday (2),
+# 	wednesday (3),
+# 	thursday (4),
+# 	friday (5),
+# 	saturday (6),
+# 	sunday (7)
 # }
 
-uint8[7] dow
+uint8 dow
 
-# enumeration values for day of week
-uint8 SUN = 6  
-uint8 MON = 5
-uint8 TUE = 4  
-uint8 WED = 3  
-uint8 THU = 2  
-uint8 FRI = 1  
-uint8 SAT = 0
+# Enumeration values
+uint8 UNKNOWN = 0
+uint8 MONDAY = 1
+uint8 TUESDAY = 2
+uint8 WEDNESDAY = 3
+uint8 THURSDAY = 4
+uint8 FRIDAY = 5
+uint8 SATURDAY = 6
+uint8 SUNDAY = 7

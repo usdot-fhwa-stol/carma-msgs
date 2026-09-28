@@ -1,7 +1,7 @@
 #
 # OffsetB10.msg
 #
-# J2735 2016 message format.
+# J2735 2024 message format.
 #
 
 # Offset-B10 ::= INTEGER (-512..511)

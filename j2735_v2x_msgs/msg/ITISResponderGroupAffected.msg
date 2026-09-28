@@ -1,7 +1,7 @@
 #
 # ITISResponderGroupAffected.msg
 #
-# J2735 2016 message format.
+# J2735 2024 message format.
 #
 
 # ResponderGroupAffected ::= ENUMERATED { 
@@ -31,7 +31,8 @@ uint16 responder_group_affected
 uint16 EMERGENCY_VEHICLE_UNITS=9729
 uint16 FEDERAL_LAW_ENFORCEMENT_UNITS=9730
 uint16 STATE_POLICE_UNITS=9731
-uint16 LOCAL_POLICE_UNITS=9732
+uint16 COUNTY_POLICE_UNITS=9732
+uint16 LOCAL_POLICE_UNITS=9733
 uint16 AMBULANCE_UNITS=9734
 uint16 RESCUE_UNITS=9735
 uint16 FIRE_UNITS=9736

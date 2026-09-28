@@ -1,9 +1,9 @@
 #
 # PersonalDeviceUsageState.msg
 #
-# J2735 2016 message format.
+# J2735 2024 message format.
 #
-# Parsed description of PersonalDeviceUsageState from the SAE J2735 2016 specification.
+# Parsed description of PersonalDeviceUsageState from the SAE J2735 2024 specification.
 # For further usage details consult the specification.
 #
 # PersonalDeviceUsageState ::= BIT STRING {  
@@ -29,12 +29,12 @@
 # states = states | IDLE
 uint16 states
 
-uint16 UNAVAILABLE=0
-uint16 OTHER=1
-uint16 IDLE=2
-uint16 LISTENING_TO_AUDIO=4
-uint16 TYPING=8
-uint16 CALLING=16
-uint16 PLAYING_GAMES=32
-uint16 READING=64
-uint16 VIEWING=128
+uint16 UNAVAILABLE=1
+uint16 OTHER=2
+uint16 IDLE=4
+uint16 LISTENING_TO_AUDIO=8
+uint16 TYPING=16
+uint16 CALLING=32
+uint16 PLAYING_GAMES=64
+uint16 READING=128
+uint16 VIEWING=256

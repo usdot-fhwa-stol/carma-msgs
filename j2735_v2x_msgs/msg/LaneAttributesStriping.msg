@@ -1,7 +1,7 @@
 #
 # LaneAttributesBarrier.msg
 #
-# J2735 2016 message format.
+# J2735 2024 message format.
 #
 # @author Mae Fromm
 # @version 0.1
@@ -30,3 +30,11 @@
 # } (SIZE (16))
 
 uint16 lane_attributes_striping
+
+# Bit flags
+uint16 STRIPE_TO_CONNECTING_LANES_REVOCABLE_LANE=1
+uint16 STRIPE_DRAW_ON_LEFT=2
+uint16 STRIPE_DRAW_ON_RIGHT=4
+uint16 STRIPE_TO_CONNECTING_LANES_LEFT=8
+uint16 STRIPE_TO_CONNECTING_LANES_RIGHT=16
+uint16 STRIPE_TO_CONNECTING_LANES_AHEAD=32

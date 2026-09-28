@@ -1,7 +1,7 @@
 #
 # GrossSpeed.msg
 #
-# J2735 2016 message format.
+# J2735 2024 message format.
 #
 
 # GrossSpeed ::= INTEGER (0..31) -- Units of 1.00 m/s

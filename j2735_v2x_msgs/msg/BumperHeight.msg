@@ -1,7 +1,7 @@
 #
 # BumperHeight.msg
 #
-# J2735 2016 message format.
+# J2735 2024 message format.
 #
 
 # BumperHeight ::= INTEGER (0..127) 

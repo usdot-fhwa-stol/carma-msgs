@@ -1,7 +1,7 @@
 #
 # WeatherProbe.msg
 #
-# Modified J2735 2016 message format, adjusted to use base SI units (m,s, etc) in most case.
+# Modified J2735 2024 message format, adjusted to use base SI units (m,s, etc) in most case.
 #
 
 # WeatherProbe ::= SEQUENCE {
@@ -19,8 +19,8 @@
 uint32 presence_vector
 
 uint32 HAS_AIR_TEMP = 1
-uint16 HAS_AIR_PRESSURE = 2
-uint16 HAS_RAIN_RATES = 4
+uint32 HAS_AIR_PRESSURE = 2
+uint32 HAS_RAIN_RATES = 4
 
 carma_v2x_msgs/AmbientAirTemperature air_temp
 

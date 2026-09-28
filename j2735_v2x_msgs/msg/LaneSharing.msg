@@ -1,7 +1,7 @@
 #
 # LaneSharing.msg
 #
-# J2735 2016 message format.
+# J2735 2024 message format.
 #
 # @author Mae Fromm
 # @version 0.1
@@ -24,8 +24,20 @@
 # pedestriansTraffic (6),
 # cyclistVehicleTraffic (7),
 # trackedVehicleTraffic (8),
-# pedestrianTraffic (9)
+# reserved (9)          -- was pedestrianTraffic in J2735 2024; renamed in J2735 2024
 # } (SIZE (10))
 # -- All zeros would indicate 'not shared' and 'not overlapping'
 
 uint16 lane_sharing
+
+# Bit flags
+uint16 OVERLAPPING_LANE_DESCRIPTION_PROVIDED=1
+uint16 MULTIPLE_LANES_TREATED_AS_ONE_LANE=2
+uint16 OTHER_NON_MOTORIZED_TRAFFIC_TYPES=4
+uint16 INDIVIDUAL_MOTORIZED_VEHICLE_TRAFFIC=8
+uint16 BUS_VEHICLE_TRAFFIC=16
+uint16 TAXI_VEHICLE_TRAFFIC=32
+uint16 PEDESTRIANS_TRAFFIC=64
+uint16 CYCLIST_VEHICLE_TRAFFIC=128
+uint16 TRACKED_VEHICLE_TRAFFIC=256
+uint16 RESERVED=512

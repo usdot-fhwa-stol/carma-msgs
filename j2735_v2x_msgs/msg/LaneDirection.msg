@@ -1,7 +1,7 @@
 #
 # LaneDirection.msg
 #
-# J2735 2016 message format.
+# J2735 2024 message format.
 #
 # @author Mae Fromm
 # @version 0.1
@@ -25,3 +25,7 @@
 # } (SIZE (2))
 
 uint8 lane_direction
+
+# Bit flags
+uint8 INGRESS_PATH=1
+uint8 EGRESS_PATH=2

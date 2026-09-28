@@ -1,7 +1,7 @@
 #
 # ObstacleDistance.msg
 #
-# J2735 2016 message format.
+# J2735 2024 message format.
 #
 
 # ObstacleDistance ::= INTEGER (0..32767) -- LSB units of meters

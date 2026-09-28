@@ -1,7 +1,7 @@
 #
 # NodeXY24b.msg
 #
-# J2735 2016 message format.
+# J2735 2024 message format.
 #
 # A 24-bit node type with offset values from the last point in X and Y.
 #

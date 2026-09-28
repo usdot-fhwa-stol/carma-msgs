@@ -1,7 +1,7 @@
 #
 # TimeChangeDetails.msg
 #
-# J2735 2016 message format.
+# J2735 2024 message format.
 #
 # @author Mae Fromm
 # @version 0.1
@@ -13,30 +13,31 @@
 #
 #
 # TimeChangeDetails ::= SEQUENCE {
-# startTime TimeMark OPTIONAL,
-# -- When this phase 1st started
-# minEndTime TimeMark,
-# -- Expected shortest end time
-# maxEndTime TimeMark OPTIONAL,
-# -- Expected longest end time
-# likelyTime TimeMark OPTIONAL,
-# -- Best predicted value based on other data
-# confidence TimeIntervalConfidence OPTIONAL,
-# -- Applies to above time element only
-# nextTime TimeMark OPTIONAL
-# -- A rough estimate of time when
-# -- this phase may next occur again
-# -- used to support various ECO driving power
-# -- management needs.
-# }
+#    startTime   TimeMark           OPTIONAL,
+#                -- When this future phase will start
+#    minEndTime  TimeMark,
+#                -- Expected shortest end time
+#    maxEndTime  TimeMark           OPTIONAL,
+#                -- Expected longest end time
+#
+#    likelyTime  TimeMark           OPTIONAL,
+#                -- Best predicted value based on other data
+#    confidence  TimeIntervalConfidence OPTIONAL,
+#                -- Applies to above time element only
+#
+#    nextTime    TimeMark           OPTIONAL
+#                -- A rough estimate of time when
+#                -- this phase may next occur again
+#                -- used to support various ECO driving power
+#                -- management needs.
+#    }
 
-# TimeMark ::= INTEGER (0..36001)
-# -- Tenths of a second in the current or next hour
+# TimeMark ::= INTEGER (0..36111)
 # -- In units of 1/10th second from UTC time
-# -- A range of 0~36000 covers one hour
-# -- The values 35991..35999 are used when a leap second occurs
-# -- The value 36000 is used to indicate time >3600 seconds
-# -- 36001 is to be used when value undefined or unknown
+# -- A range of 0~35999 covers one hour
+# -- The values 36000..36009 are used when a leap second occurs
+# -- The values 36010..36110 are reserved for future use
+# -- 36111 is to be used when the value is undefined or unknown
 # -- Note that this is NOT expressed in GPS time
 # -- or in local time
 uint16 start_time
@@ -54,7 +55,7 @@ bool likely_time_exists
 uint8 confidence
 bool confidence_exists
 
-# TimeMark ::= INTEGER (0..36001)
+# TimeMark ::= INTEGER (0..36111)
 uint16 next_time
 bool next_time_exists
 

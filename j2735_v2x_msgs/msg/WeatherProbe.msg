@@ -1,7 +1,7 @@
 #
 # WeatherProbe.msg
 #
-# J2735 2016 message format.
+# J2735 2024 message format.
 #
 
 # WeatherProbe ::= SEQUENCE {
@@ -19,8 +19,8 @@
 uint32 presence_vector
 
 uint32 HAS_AIR_TEMP = 1
-uint16 HAS_AIR_PRESSURE = 2
-uint16 HAS_RAIN_RATES = 4
+uint32 HAS_AIR_PRESSURE = 2
+uint32 HAS_RAIN_RATES = 4
 
 j2735_v2x_msgs/AmbientAirTemperature air_temp
 

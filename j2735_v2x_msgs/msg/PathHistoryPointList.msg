@@ -1,9 +1,9 @@
 #
 # PathHistoryPointList.msg
 #
-# J2735 2016 message format.
+# J2735 2024 message format.
 #
-# Parsed description of PathHistoryPointList from the SAE J2735 2016 specification.
+# Parsed description of PathHistoryPointList from the SAE J2735 2024 specification.
 # For further usage details consult the specification.
 #
 # PathHistoryPointList ::= SEQUENCE (SIZE(1..23)) OF PathHistoryPoint

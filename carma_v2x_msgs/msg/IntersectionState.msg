@@ -1,7 +1,7 @@
 #
 # IntersectionState.msg
 #
-# J2735 2016 message format.
+# J2735 2024 message format.
 #
 # @author Mae Fromm
 # @version 0.1
@@ -104,4 +104,9 @@ carma_v2x_msgs/MovementState[] movement_list
 j2735_v2x_msgs/ConnectionManeuverAssist[] connection_maneuver_assist_list
 bool maneuever_assist_list_exists
 
-# regional #TODO: RegionalExtensions are not yet implemented in asn1c
+# regional #TODO: RegionalExtensions are not yet supported for this message type
+
+# roadAuthorityID RoadAuthorityID OPTIONAL
+# -- Mandatory if roadRegulatorID is set to 0
+j2735_v2x_msgs/RoadAuthorityID road_authority_id
+bool road_authority_id_exists

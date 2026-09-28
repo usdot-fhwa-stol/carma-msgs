@@ -1,9 +1,9 @@
 #
 # PersonalAssistive.msg
 #
-# J2735 2016 message format.
+# J2735 2024 message format.
 #
-# Parsed description of PersonalAssistive from the SAE J2735 2016 specification.
+# Parsed description of PersonalAssistive from the SAE J2735 2024 specification.
 # For further usage details consult the specification.
 #
 # PersonalAssistive::= BIT STRING {
@@ -22,9 +22,9 @@
 # types = types | OTHER_TYPE
 uint8 types
 
-uint8 UNAVAILABLE = 0
-uint8 OTHER_TYPE = 1
-uint8 VISION = 2
-uint8 HEARING = 4
-uint8 MOVEMENT = 8
-uint8 COGNITION = 16
+uint8 UNAVAILABLE = 1
+uint8 OTHER_TYPE = 2
+uint8 VISION = 4
+uint8 HEARING = 8
+uint8 MOVEMENT = 16
+uint8 COGNITION = 32

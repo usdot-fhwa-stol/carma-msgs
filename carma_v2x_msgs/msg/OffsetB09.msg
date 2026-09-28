@@ -1,7 +1,7 @@
 #
 # OffsetB09.msg
 #
-# J2735 2016 message format.
+# J2735 2024 message format.
 #
 
 # Offset-B09 delta offset in meters in range [-2.55..2.5] meters

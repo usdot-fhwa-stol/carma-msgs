@@ -1,9 +1,9 @@
 #
 # OffsetLLB18.msg
 #
-# J2735 2016 message format.
+# J2735 2024 message format.
 #
-# Parsed description of OffsetLL-B18 from the SAE J2735 2016 specification.
+# Parsed description of OffsetLL-B18 from the SAE J2735 2024 specification.
 # For further usage details consult the specification.
 #
 # OffsetLL-B18 ::= INTEGER (-131072..131071)     

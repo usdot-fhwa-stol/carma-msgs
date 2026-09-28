@@ -1,9 +1,9 @@
 #
 # PublicSafetyAndRoadWorkerActivity.msg
 #
-# J2735 2016 message format.
+# J2735 2024 message format.
 #
-# Parsed description of PropelledInformation from the SAE J2735 2016 specification.
+# Parsed description of PropelledInformation from the SAE J2735 2024 specification.
 # For further usage details consult the specification.
 #
 # PublicSafetyAndRoadWorkerActivity ::= BIT STRING {
@@ -44,9 +44,9 @@
 # activities = activities | SETTING_UP_CLOSURES
 uint8 activities
 
-uint8 UNAVAILABLE=0
-uint8 WORKING_ON_ROAD=1
-uint8 SETTING_UP_CLOSURES=2
-uint8 RESPONDING_TO_EVENTS=4
-uint8 DIRECTING_TRAFFIC=8
-uint8 OTHER_ACTIVITIES=16
+uint8 UNAVAILABLE=1
+uint8 WORKING_ON_ROAD=2
+uint8 SETTING_UP_CLOSURES=4
+uint8 RESPONDING_TO_EVENTS=8
+uint8 DIRECTING_TRAFFIC=16
+uint8 OTHER_ACTIVITIES=32

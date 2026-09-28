@@ -1,7 +1,7 @@
 #
 # LaneAttributesTrackedVehicle.msg
 #
-# J2735 2016 message format.
+# J2735 2024 message format.
 #
 # @author Mae Fromm
 # @version 0.1
@@ -25,3 +25,10 @@
 # } (SIZE (16))
 
 uint16 lane_attributes_trackedvehicle
+
+# Bit flags
+uint16 SPEC_REVOCABLE_LANE=1
+uint16 SPEC_COMMUTER_RAIL_ROAD_TRACK=2
+uint16 SPEC_LIGHT_RAIL_ROAD_TRACK=4
+uint16 SPEC_HEAVY_RAIL_ROAD_TRACK=8
+uint16 SPEC_OTHER_RAIL_TYPE=16

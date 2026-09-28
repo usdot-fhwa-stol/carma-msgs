@@ -1,7 +1,7 @@
 #
 # SupplementalVehicleExtensions.msg
 #
-# J2735 2016 message format.
+# J2735 2024 message format.
 #
 
 # SupplementalVehicleExtensions ::= SEQUENCE {
@@ -15,25 +15,37 @@
 #    vehicleData      VehicleData              OPTIONAL,
 # 
 #    -- Various V2V Probe Data
-#    weatherReport    WeatherReport            OPTIONAL, 
-#    weatherProbe     WeatherProbe             OPTIONAL, 
+#    doNotUse1       	WeatherReport           OPTIONAL, 
+#    --Do not use
+#    doNotUse2       	WeatherProbe            OPTIONAL, 
+#    --Do not use
 # 
 #    -- Detected Obstacle data
-#    obstacle         ObstacleDetection        OPTIONAL,
+#    doNotUse3       	ObstacleDetection       OPTIONAL, 
+#    --Do not use
 # 
 #    -- Disabled Vehicle Report
 #    status           DisabledVehicle          OPTIONAL,
-#    
+# 
 #    -- Oncoming lane speed reporting
-#    speedProfile     SpeedProfile             OPTIONAL, 
+#    doNotUse4       	SpeedProfile            OPTIONAL, 
+#    --Do not use
 # 
 #    -- Raw GNSS measurements
-#    theRTCM          RTCMPackage              OPTIONAL, 
+#    doNotUse5       	RTCMPackage             OPTIONAL, 
+#    --Do not use
 # 
 #    regional  SEQUENCE (SIZE(1..4)) OF 
-#              RegionalExtension {{REGION.Reg-SupplementalVehicleExtensions}} OPTIONAL,
-#    ...
+#              RegionalExtension {{Reg-SupplementalVehicleExtensions}} OPTIONAL,
+#    ...,
+#    fhwaVehicleClass  RptVehicleClass,
+#    -- Use FHWA vehicle classes, defined in J2945/C ProbeDataReport
 # 
+#    trailers         TrailersJ2945Slash1B     OPTIONAL,   
+#    -- Used in J2945/1B
+# 
+#    schoolBus      	SchoolBusJ2945Slash1C	 OPTIONAL
+#    -- Used in J2945/1C
 #    }
 
 # A BIT STRING defining the presence of optional fields.
@@ -46,12 +58,16 @@ uint16 presence_vector
 uint16 HAS_CLASSIFICATION = 1
 uint16 HAS_CLASS_DETAILS = 2
 uint16 HAS_VEHICLE_DATA = 4
-uint16 HAS_WEATHER_REPORT = 8
-uint16 HAS_WEATHER_PROBE = 16
-uint16 HAS_OBSTACLE = 32
+# HAS_WEATHER_REPORT = 8     -- removed (doNotUse1 in J2735 2024)
+# HAS_WEATHER_PROBE = 16     -- removed (doNotUse2 in J2735 2024)
+# HAS_OBSTACLE = 32          -- removed (doNotUse3 in J2735 2024)
 uint16 HAS_STATUS = 64
-uint16 HAS_SPEED_PROFILE = 128
-uint16 HAS_THE_RTCM = 256
+# HAS_SPEED_PROFILE = 128    -- removed (doNotUse4 in J2735 2024)
+# HAS_THE_RTCM = 256         -- removed (doNotUse5 in J2735 2024)
+
+uint16 HAS_FHWA_VEHICLE_CLASS = 512
+uint16 HAS_TRAILERS = 1024
+uint16 HAS_SCHOOL_BUS = 2048
 
 j2735_v2x_msgs/BasicVehicleClass classification
 
@@ -59,16 +75,12 @@ j2735_v2x_msgs/VehicleClassification class_details
 
 j2735_v2x_msgs/VehicleData vehicle_data
 
-j2735_v2x_msgs/WeatherReport weather_report
-
-j2735_v2x_msgs/WeatherProbe weather_probe
-
-j2735_v2x_msgs/ObstacleDetection obstacle
-
-j2735_v2x_msgs/DisabledVehicle status 
-
-j2735_v2x_msgs/GrossSpeed[] speed_profile
-
-j2735_v2x_msgs/RTCMPackage the_rtcm
+j2735_v2x_msgs/DisabledVehicle status
 
 # regional #TODO: RegionalExtensions are not yet supported for this message type
+
+j2735_v2x_msgs/RptVehicleClass fhwa_vehicle_class
+
+j2735_v2x_msgs/TrailersJ2945Slash1B trailers
+
+j2735_v2x_msgs/SchoolBusJ2945Slash1C school_bus

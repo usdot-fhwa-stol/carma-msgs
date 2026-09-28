@@ -1,9 +1,9 @@
 #
 # VertOffsetB12.msg
 #
-# J2735 2016 message format.
+# J2735 2024 message format.
 #
-# Parsed description of VertOffset-B12 from the SAE J2735 2016 specification.
+# Parsed description of VertOffset-B12 from the SAE J2735 2024 specification.
 # For further usage details consult the specification.
 #
 # VertOffset-B12 ::= INTEGER (-2048..2047)  

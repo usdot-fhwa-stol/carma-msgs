@@ -1,7 +1,7 @@
 #
 # CoefficientOfFriction.msg
 #
-# J2735 2016 message format.
+# J2735 2024 message format.
 #
 
 # CoefficientOfFriction ::= INTEGER (0..50) 
